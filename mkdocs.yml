@@ -31,7 +31,13 @@ theme:
     - tabs
 
 nav:
-  - Home: index.md
+  - Início: index.md
+  - Documentação: 
+    - Visão de Produto e Projeto: "visao.md"
+  - Entregas: 
+    - Unidade 1:
+      - Visão Geral do Produto: "entrega-visao.md"
+      - Material do Seminario - Processo Unificado: "entrega-material.md"
 
 markdown_extensions:
   - tables
