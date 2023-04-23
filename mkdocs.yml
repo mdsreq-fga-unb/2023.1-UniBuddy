@@ -33,11 +33,11 @@ theme:
 nav:
   - Início: index.md
   - Documentação: 
-    - Visão de Produto e Projeto: "visao.md"
+    - Visão de Produto e Projeto: "visao-produto-projeto.md"
   - Entregas: 
     - Unidade 1:
-      - Visão Geral do Produto: "entrega-visao.md"
-      - Material do Seminario - Processo Unificado: "entrega-material.md"
+      - Visão Geral do Produto: "material-processo-er.md"
+      - Material do Seminario - Processo Unificado: "material-seminario-processo.md"
 
 markdown_extensions:
   - tables
