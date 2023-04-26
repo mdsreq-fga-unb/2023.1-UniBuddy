@@ -41,7 +41,7 @@ Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
 Desenvolvedor | Codificar o produto, realizar refatoração | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
 Dono do Produto | Atualizar o escopo do produto, organizar o escopo das sprints, validar as entregas | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
-Mestre do Scrum | Delegar tarefas, duração da sprint e sprint review | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
+Líder do Time | Delegar tarefas, duração da sprint e sprint review | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
 
 ### 2.2	Planejamento das Fases e/ou Iterações do Projeto
 Sprint | Produto (Entrega) | Data Início | Data Fim
@@ -160,64 +160,105 @@ Para a execução dessa metodologia, escolheu-se as seguintes Ferramentas de org
 - Gerenciamento de tarefas: GitHub Projects
 - Comunicação: WhatsApp e Teams
 - Versionamento: GitHub
+- Interface de Desenvolvimento: VSCode
 
 ### 3.3 Processos e Procedimentos
 ![RAD](assets/RAD-model.png)
-#### 3.3.1	Requisitos e Planejamento
-##### 3.3.1.1	ELICITAÇÃO DE REQUISITOS
+
+#### 3.3.1 Requisitos e Planejamento
+Nesta fase, coletamos os requisitos de negócios, 
+#### 3.3.2 Prototipação e Feedback
+#### 3.3.3 Construção
+#### 3.3.4 Teste de Produto
+
+
+
+
+
+
+#### 3.3.1	REQUISITOS E PLANEJAMENTO
+##### 3.3.1.1 Escolhas do Processo de Engenharia de Requisitos
+![ER](assets/er_facetas_ireb.png)
+Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 1. Alvo é o mercado; 2. O propósito é exploratório; 3. Tempo é interativo.
+
+##### 3.3.1.2  Atividades do Processo de Engenharia de Requisitos
+![ER](assets/er_atividades_marsicano.png)
+Assim, incluímos as atividades de ER (MARSICANO, 2023) dentro dos procedimentos do processo de desenvolvimento de software RAD, pontuado no tópico 3.
+
+###### 3.3.1.2.1 DESCOBERTA E ELICITAÇÃO DE REQUISITOS
+Fase focada em encontrar, extrair, obter ou provocar uma resposta, reação, informação dos usuários para construção dos requisitos (MARSICANO, 2023).
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 ELI-01 | ? | ?| ? |  ?
 
-##### 3.3.1.2	GERENCIAMENTO DE REQUISITOS
+###### 3.3.1.2.1 ANALISE E CONSENSO DE REQUISITOS
+Fase focada em analisar os requisitos brutos e conciliar os interesses dos _stakeholders_ (MARSICANO, 2023).
+
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+ELI-01 | ? | ?| ? |  ?
+
+###### 3.3.1.2.1 DECLARAÇÃO DE REQUISITOS
+Fase focada em comunicar os requisitos para os interessados em diferentes níveis de glanularidade e dividindo entre funcionais e não funcionais (MARSICANO, 2023)
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+ELI-01 | ? | ?| ? |  ?
+
+###### 3.3.1.2.1 GERENCIAMENTO DE REQUISITOS (ORGANIZAÇÃO E ATUALIZAÇÃO)
+Fase focada em manter os requisitos do produto 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 GEREN-01 | ? | ? | ? | ?
 
-##### 3.3.1.3 DOCUMENTAÇÃO DE REQUISITOS
-Identificador | Atividade | Método | Ferramenta | Entrega
-------------- | --------- | ------ | ---------- | -------
-DOC-01 | ? | ? | ? | ?
 
-##### 3.3.1.4	ANÁLISE E NEGOCIAÇÃO DE REQUISITOS
-Identificador | Atividade | Método | Ferramenta | Entrega
-------------- | --------- | ------ | ---------- | -------
-ANA-01 | ? | ?| ?| ?
+#### 3.3.2 PROTOTIPAÇÃO E FEEDBACK
 
-#### 3.3.2 Descrição do Usuário
-
-##### 3.3.2.3 PROTOTIPAÇÃO
+##### 3.3.2.3 REPRESENTAÇÃO DE REQUISITOS (PROTÓTIPO)
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 PRO-01 | ? | ? | ? | ?
 
-##### 3.3.2.4	VALIDAÇÃO DE PROTÓTIPO
+##### 3.3.2.4	VALIDAÇÃO E VERIFICAÇÃO DE REQUISITOS (PROTÓTIPO)
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-VAL-01 | ? | ? | ?| ?
+VAP-01 | ? | ? | ?| ?
 
-##### 3.3.2.5 IMPLEMENTAÇÃO
+
+#### 3.3.4 CONSTRUÇÃO
+##### 3.3.3.1 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 IMP-01 | ? | ? | ? | ?
+##### 3.3.3.2 VALIDAÇÃO MÓDULO
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+VAM-01 | ? | ? | ? | ?
 
-#### 3.3.3 Construção   
+#### 3.3.4 Geração da aplicação
+##### 3.3.4.1 INTEGRAÇÃO MÓDULOS
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+ITM-01 | ? | ? | ? | ?
 
-#### 3.3.4 Cutover  
-
+##### 3.3.4.1 TESTE PRODUTO
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+ITM-01 | ? | ? | ? | ?
 
 ### 3.4 Arquitetura do Projeto
 ?
 
-## 4 LIÇÕES APRENDIDAS
+
+## 5 LIÇÕES APRENDIDAS
 ### Unidade 1
 ?
 
-## 5 A MELHORAR
+## 6 A MELHORAR
 ### Unidade 1
 ?
 
-## 6 REFERÊNCIAS BIBLIOGRÁFICAS 
+## 7 REFERÊNCIAS BIBLIOGRÁFICAS 
 
 1. https://www.atlassian.com/br/agile/scrum/roles#:~: texto%20 Scrum%20 tem%20 tr%C3%AAs%20 pap%C3%A9is,membros%20da%20 equipe%20de%20desenvolvimento
 2. Raja Gupta. Fundamentals of Software Engineering. Engineering Handbook. 2019
