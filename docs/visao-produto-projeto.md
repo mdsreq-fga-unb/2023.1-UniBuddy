@@ -5,6 +5,7 @@
 Data | Versão | Descrição | Autor | Revisores
 ---- | ------ | --------- | ----- | ---------
 24/04/23 | 1.0 | Criação do documento | Juan | ?
+25/04/23 | 1.1 | Finalização do documento | Juan | ?
 
 
 ## 1	VISÃO GERAL DO PRODUTO
@@ -29,7 +30,7 @@ Nosso produto | Ofertará caronas solidárias acessíveis e organizadas
 O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro entre motoristas dispostos a oferecer carona solidária e passageiros que precisam recebê-las. Isso será feito através de uma aplicação que se nutre a partir dos dados dos usuários para disponibilzar como informações úteis e organizadas para os interessados em utilizá-las para encontrar parceiros com o mesmo destino e de confiança. 
 
 ### 1.4	Tecnologias a Serem Utilizadas
-- React native
+- React Native
 - Javascript
 - Node.js
 - ?
@@ -40,7 +41,7 @@ Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
 Desenvolvedor | Codificar o produto, realizar refatoração | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
 Dono do Produto | Atualizar o escopo do produto, organizar o escopo das sprints, validar as entregas | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
-Mestre do Scrum | Delegar tarefas, duração da sprint e sprint review | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
+Líder do Time | Delegar tarefas, duração da sprint e sprint review | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
 
 ### 2.2	Planejamento das Fases e/ou Iterações do Projeto
 Sprint | Produto (Entrega) | Data Início | Data Fim
@@ -143,7 +144,7 @@ O projeto é melhoria de um sistema existente? | Não.
 O financiamento está estável para o projeto? | Sim.
 Requisitos de alta confiabilidade? | Não.
 Cronograma do projeto é apertado? | Sim.
-Uso de componentes reutilizáveis? | Sim.
+Uso de componentes reutilizáveis? | Sim.image.png
 Os recursos (Tempo, dinheiro, pessoas etc) estão escassos? | Sim.   
 
 Conclusão: Em termos de Tipo de Projeto e Risco Associado, temos o indicativo para o Protótipo e RAD
@@ -151,74 +152,114 @@ Conclusão: Em termos de Tipo de Projeto e Risco Associado, temos o indicativo p
 #### 3.1.5 Escolha do Processo de Desenvolvimento de Software
 ![Gupta](assets/rapid_application_development.png)
 
-Considerando o foco principal no nosso usuário, a pouca experiência dos membros da equipe e o risco associado, entendemos que o processo de desenvolvimento software deve ser o RAD (Rapid Application Development). Assim, teremos uma abordagem ágil, com processo de desenvolvimento RAD.
+Considerando o foco principal no nosso usuário, a pouca experiência dos membros da equipe e o risco associado, entendemos que devemos utilizar o método ágil de desenvolvimento RAD (Rapid Application Development) (SWEBOK, p. 170).
 
 ### 3.2 Ferramentas
 Para a execução dessa metodologia, escolheu-se as seguintes Ferramentas de organização e controle da equipe:
 
-- ?
+- Gerenciamento de tarefas: GitHub Projects
+- Comunicação: WhatsApp e Teams
+- Versionamento: GitHub
+- Interface de Desenvolvimento: VSCode
 
 ### 3.3 Processos e Procedimentos
-?
+![RAD](assets/RAD-model.png)
 
-#### 3.3.1	PLANNING
-##### 3.3.1.1	ELICITAÇÃO DE REQUISITOS
+#### 3.3.1 Requisitos e Planejamento
+Nesta fase, coletamos os requisitos de negócios, 
+#### 3.3.2 Prototipação e Feedback
+#### 3.3.3 Construção
+#### 3.3.4 Teste de Produto
+
+
+
+
+
+
+#### 3.3.1	REQUISITOS E PLANEJAMENTO
+##### 3.3.1.1 Escolhas do Processo de Engenharia de Requisitos
+![ER](assets/er_facetas_ireb.png)
+Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 1. Alvo é o mercado; 2. O propósito é exploratório; 3. Tempo é interativo.
+
+##### 3.3.1.2  Atividades do Processo de Engenharia de Requisitos
+![ER](assets/er_atividades_marsicano.png)
+Assim, incluímos as atividades de ER (MARSICANO, 2023) dentro dos procedimentos do processo de desenvolvimento de software RAD, pontuado no tópico 3.
+
+###### 3.3.1.2.1 DESCOBERTA E ELICITAÇÃO DE REQUISITOS
+Fase focada em encontrar, extrair, obter ou provocar uma resposta, reação, informação dos usuários para construção dos requisitos (MARSICANO, 2023).
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 ELI-01 | ? | ?| ? |  ?
 
-##### 3.3.2.1	GERENCIAMENTO DE REQUISITOS
+###### 3.3.1.2.1 ANALISE E CONSENSO DE REQUISITOS
+Fase focada em analisar os requisitos brutos e conciliar os interesses dos _stakeholders_ (MARSICANO, 2023).
+
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+ELI-01 | ? | ?| ? |  ?
+
+###### 3.3.1.2.1 DECLARAÇÃO DE REQUISITOS
+Fase focada em comunicar os requisitos para os interessados em diferentes níveis de glanularidade e dividindo entre funcionais e não funcionais (MARSICANO, 2023)
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+ELI-01 | ? | ?| ? |  ?
+
+###### 3.3.1.2.1 GERENCIAMENTO DE REQUISITOS (ORGANIZAÇÃO E ATUALIZAÇÃO)
+Fase focada em manter os requisitos do produto 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 GEREN-01 | ? | ? | ? | ?
 
-#### 3.3.2 EXECUÇÃO 
 
-##### 3.3.2.1 DOCUMENTAÇÃO DE REQUISITOS
-Identificador | Atividade | Método | Ferramenta | Entrega
-------------- | --------- | ------ | ---------- | -------
-DOC-01 | ? | ? | ? | ?
+#### 3.3.2 PROTOTIPAÇÃO E FEEDBACK
 
-
-##### 3.3.2.2	ANÁLISE E NEGOCIAÇÃO DE REQUISITOS
-Identificador | Atividade | Método | Ferramenta | Entrega
-------------- | --------- | ------ | ---------- | -------
-ANA-01 | ? | ?| ?| ?
-
-##### 3.3.2.3 PROTOTIPAÇÃO
+##### 3.3.2.3 REPRESENTAÇÃO DE REQUISITOS (PROTÓTIPO)
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 PRO-01 | ? | ? | ? | ?
 
-##### 3.3.3.3 IMPLEMENTAÇÃO
+##### 3.3.2.4	VALIDAÇÃO E VERIFICAÇÃO DE REQUISITOS (PROTÓTIPO)
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+VAP-01 | ? | ? | ?| ?
+
+
+#### 3.3.4 CONSTRUÇÃO
+##### 3.3.3.1 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 IMP-01 | ? | ? | ? | ?
-
-#### 3.3.3 REVIEW   
-##### 3.3.3.1	VALIDAÇÃO DE REQUISITOS
+##### 3.3.3.2 VALIDAÇÃO MÓDULO
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-VAL-01 | ? | ? | ?| ?
+VAM-01 | ? | ? | ? | ?
 
-#### 3.3.4 RETRO
-##### 3.3.4.1 VERIFICAÇÃO DE REQUISITOS
+#### 3.3.4 Geração da aplicação
+##### 3.3.4.1 INTEGRAÇÃO MÓDULOS
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-VER-01 | ? | ? | ? | ?
+ITM-01 | ? | ? | ? | ?
+
+##### 3.3.4.1 TESTE PRODUTO
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+ITM-01 | ? | ? | ? | ?
 
 ### 3.4 Arquitetura do Projeto
 ?
 
-## 4 LIÇÕES APRENDIDAS
+
+## 5 LIÇÕES APRENDIDAS
 ### Unidade 1
 ?
 
-## 5 A MELHORAR
+## 6 A MELHORAR
 ### Unidade 1
 ?
 
-## 6 REFERÊNCIAS BIBLIOGRÁFICAS 
+## 7 REFERÊNCIAS BIBLIOGRÁFICAS 
 
 1. https://www.atlassian.com/br/agile/scrum/roles#:~: texto%20 Scrum%20 tem%20 tr%C3%AAs%20 pap%C3%A9is,membros%20da%20 equipe%20de%20desenvolvimento
 2. Raja Gupta. Fundamentals of Software Engineering. Engineering Handbook. 2019
+3. SWEBOK. v3
