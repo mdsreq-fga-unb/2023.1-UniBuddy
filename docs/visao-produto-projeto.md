@@ -39,24 +39,25 @@ O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro 
 ### 2.1	Organização do Projeto
 Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
-Desenvolvedor | Codificar o produto, realizar refatoração | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
-Dono do Produto | Atualizar o escopo do produto, organizar o escopo das sprints, validar as entregas | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
-Líder do Time | Delegar tarefas, duração da sprint e sprint review | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
+Desenvolvedor | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
+Líder do Time | Delegar tarefas, duração da sprint e sprint review | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
+Cliente Motorista | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Juan | Victor Eduardo 
+Cliente Passageiro | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Juan | ?
 
 ### 2.2	Planejamento das Fases e/ou Iterações do Projeto
-Sprint | Produto (Entrega) | Data Início | Data Fim
+Iterações | Produto (Entrega) | Data Início | Data Fim
 ------ | ----------------- | ----------- | --------
-Sprint 1 | ? | ? | ?
-Sprint 2 | ? | ? | ?
+Interações 1 | ? | ? | ?
+Interações 2 | ? | ? | ?
 
 
 ### 2.3	Matriz de Comunicação
 Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados
 --------- | ----------------- | ----------- | ----------------
-Daily | Equipe do Projeto | Diário | Relato por parte dos membros da equipe no WhatsApp sobre o andamento individual das partes do projeto
-Sprint Planning | Equipe do Projeto e Dono do Produto | Semanal | Relatório Sprint Planning, Planejamento do que será feito no ciclo da Sprint
-Sprint Review | Equipe do Projeto e Dono do Produto | Junto ao Sprint Planning | Relatório Sprint Review, Validação do Produto
-Retrospectiva | Equipe do Projeto | Semanalmente | Tabela de check com uma verificação da implementação
+Acompanhamento Diário | Equipe do Projeto | Diário | Relato por parte dos membros da equipe no WhatsApp sobre o andamento individual das partes do projeto
+Iteração | Equipe do Projeto e Dono do Produto | Semanal | Relatório Sprint Planning, Planejamento do que será feito no ciclo da Sprint
+Revisão de Entregas | Equipe do Projeto e Dono do Produto | Junto ao Sprint Planning | Relatório Sprint Review, Validação do Produto
+ | Equipe do Projeto | Semanalmente | Tabela de check com uma verificação da implementação
 Comunicar a situação do projeto | Equipe do Projeto e Professor | Mensalmente | Apresentações da Entrega de cada Unidade
 
 
@@ -78,14 +79,14 @@ Sprint | Risco Encontrado | Nível
 ? | ? | ?
 
 ### 2.5	Critérios de Replanejamento
-Os critérios de replanejamento referem-se à identificação dos pontos que, caso ocorram, causarão um replanejamento do projeto. Precisam ser acompanhados a cada sprint, referindo-se assim, ao projeto como um todo e não apenas ao produto.
+Os critérios de replanejamento referem-se à identificação dos pontos que, caso ocorram, causarão um replanejamento do projeto. Precisam ser acompanhados a cada iteração, referindo-se assim, ao projeto como um todo e não apenas ao produto.
 
 - Alteração nos prazos das entregas da Disciplina ou do Cliente
 - Alteração das ferramentas do projeto
 - Alteração no Processo de Engenharia de Requisito ou Desenvolvimento de Software
 - Saída de algum membro da equipe
 
-Sprint | Solução Encontrada | Resultado Esperado
+Iteração | Solução Encontrada | Resultado Esperado
 ------ | ------------------ | ------------------
 ? | ? | ?
 
@@ -163,50 +164,42 @@ Para a execução dessa metodologia, escolheu-se as seguintes Ferramentas de org
 - Interface de Desenvolvimento: VSCode
 
 ### 3.3 Processos e Procedimentos
-![RAD](assets/RAD-model.png)
 
-#### 3.3.1 Requisitos e Planejamento
-Nesta fase, coletamos os requisitos de negócios, 
-#### 3.3.2 Prototipação e Feedback
-#### 3.3.3 Construção
-#### 3.3.4 Teste de Produto
-
-
-
-
-
-
-#### 3.3.1	REQUISITOS E PLANEJAMENTO
-##### 3.3.1.1 Escolhas do Processo de Engenharia de Requisitos
+##### 3.3.1 Escolhas do Processo de Engenharia de Requisitos
 ![ER](assets/er_facetas_ireb.png)
 Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 1. Alvo é o mercado; 2. O propósito é exploratório; 3. Tempo é interativo.
 
-##### 3.3.1.2  Atividades do Processo de Engenharia de Requisitos
+##### 3.3.2 Atividades do Processo de Engenharia de Requisitos
 ![ER](assets/er_atividades_marsicano.png)
 Assim, incluímos as atividades de ER (MARSICANO, 2023) dentro dos procedimentos do processo de desenvolvimento de software RAD, pontuado no tópico 3.
 
-###### 3.3.1.2.1 DESCOBERTA E ELICITAÇÃO DE REQUISITOS
+##### 3.3.3 ATIVIDADES RAD
+![RAD](assets/RAD-model.png)
+#### 3.3.3.1	REQUISITOS E PLANEJAMENTO
+###### 3.3.3.1.1 DESCOBERTA E ELICITAÇÃO DE REQUISITOS
 Fase focada em encontrar, extrair, obter ou provocar uma resposta, reação, informação dos usuários para construção dos requisitos (MARSICANO, 2023).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 ELI-01 | ? | ?| ? |  ?
 
-###### 3.3.1.2.1 ANALISE E CONSENSO DE REQUISITOS
+###### 3.3.3.1.1 ANALISE E CONSENSO DE REQUISITOS
 Fase focada em analisar os requisitos brutos e conciliar os interesses dos _stakeholders_ (MARSICANO, 2023).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-ELI-01 | ? | ?| ? |  ?
+AA-01 | ? | ?| ? |  ?
 
-###### 3.3.1.2.1 DECLARAÇÃO DE REQUISITOS
+###### 3.3.3.1.1 DECLARAÇÃO DE REQUISITOS
 Fase focada em comunicar os requisitos para os interessados em diferentes níveis de glanularidade e dividindo entre funcionais e não funcionais (MARSICANO, 2023)
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-ELI-01 | ? | ?| ? |  ?
+DEC-01 | ? | ?| ? |  ?
 
-###### 3.3.1.2.1 GERENCIAMENTO DE REQUISITOS (ORGANIZAÇÃO E ATUALIZAÇÃO)
-Fase focada em manter os requisitos do produto 
+###### 3.3.3.1.1 GERENCIAMENTO DE REQUISITOS (ORGANIZAÇÃO E ATUALIZAÇÃO)
+Fase focada em manter os requisitos do produto estruturados, organizados e atualizados (MARSICANO, 2023)
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 GEREN-01 | ? | ? | ? | ?
@@ -215,6 +208,7 @@ GEREN-01 | ? | ? | ? | ?
 #### 3.3.2 PROTOTIPAÇÃO E FEEDBACK
 
 ##### 3.3.2.3 REPRESENTAÇÃO DE REQUISITOS (PROTÓTIPO)
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 PRO-01 | ? | ? | ? | ?
@@ -226,25 +220,19 @@ VAP-01 | ? | ? | ?| ?
 
 
 #### 3.3.4 CONSTRUÇÃO
-##### 3.3.3.1 
+##### 3.3.3.1 CONSTRUÇÃO MÓDULOS
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-IMP-01 | ? | ? | ? | ?
-##### 3.3.3.2 VALIDAÇÃO MÓDULO
+CM-01 | ? | ? | ? | ?
+##### 3.3.3.2 VALIDAÇÃO MÓDULOS
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 VAM-01 | ? | ? | ? | ?
 
-#### 3.3.4 Geração da aplicação
-##### 3.3.4.1 INTEGRAÇÃO MÓDULOS
-Identificador | Atividade | Método | Ferramenta | Entrega
-------------- | --------- | ------ | ---------- | -------
-ITM-01 | ? | ? | ? | ?
-
 ##### 3.3.4.1 TESTE PRODUTO
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-ITM-01 | ? | ? | ? | ?
+TP-01 | ? | ? | ? | ?
 
 ### 3.4 Arquitetura do Projeto
 ?
@@ -263,3 +251,5 @@ ITM-01 | ? | ? | ? | ?
 1. https://www.atlassian.com/br/agile/scrum/roles#:~: texto%20 Scrum%20 tem%20 tr%C3%AAs%20 pap%C3%A9is,membros%20da%20 equipe%20de%20desenvolvimento
 2. Raja Gupta. Fundamentals of Software Engineering. Engineering Handbook. 2019
 3. SWEBOK. v3
+4. Facetas IREB
+5. George Marsicano
