@@ -4,9 +4,10 @@
 
 Data | Versão | Descrição | Autor | Revisores
 ---- | ------ | --------- | ----- | ---------
-24/04/23 | 0.1 | Criação do documento | Juan | ?
-25/04/23 | 0.1 | Evolução do documento | Juan | ?
-26/04/23 | 0.2 | Correções do documento | Juan | ?
+24/04/23 | 0.1 | Criação do documento | Juan | Pedro Henrique
+25/04/23 | 0.1 | Evolução do documento | Juan | Pedro Henrique
+26/04/23 | 0.2 | Correções do documento | Juan | Pedro Henrique
+26/04/23 | 0.3 | Correções do documento | Juan | 
 
 
 ## 1	VISÃO GERAL DO PRODUTO
@@ -42,8 +43,8 @@ Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
 Desenvolvedor | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar, documentar, ata das reuniões, estratégia de código | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
 Líder do Time | Delegar tarefas, duração da iteração, organização das atividades, one-to-one com os membros, estratégia de produto | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
-Cliente Motorista | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Juan | Victor Eduardo 
-Cliente Passageiro | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Juan | ?
+Cliente Motorista | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | Victor Eduardo 
+Cliente Passageiro | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | ?
 
 ### 2.2	Planejamento das Fases e/ou Iterações do Projeto
 Iterações | Produto (Entrega) | Data Início | Data Fim
@@ -175,7 +176,7 @@ Assim, incluímos as atividades de ER (MARSICANO, 2023) dentro dos procedimentos
 
 ##### 3.3.3 ATIVIDADES RAD
 ![RAD](assets/RAD-model.png)
-#### 3.3.3.1	REQUISITOS E PLANEJAMENTO
+###### 3.3.3.1	REQUISITOS E PLANEJAMENTO
 ###### 3.3.3.1.1 DESCOBERTA E ELICITAÇÃO DE REQUISITOS
 Fase focada em encontrar, extrair, obter ou provocar uma resposta, reação, informação dos usuários para construção dos requisitos (MARSICANO, 2023).
 
@@ -183,21 +184,21 @@ Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 ELI-01 | ? | ?| ? |  ?
 
-###### 3.3.3.1.1 ANALISE E CONSENSO DE REQUISITOS
+###### 3.3.3.1.2 ANALISE E CONSENSO DE REQUISITOS
 Fase focada em analisar os requisitos brutos e conciliar os interesses dos _stakeholders_ (MARSICANO, 2023).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 AA-01 | ? | ?| ? |  ?
 
-###### 3.3.3.1.1 DECLARAÇÃO DE REQUISITOS
+###### 3.3.3.1.3 DECLARAÇÃO DE REQUISITOS
 Fase focada em comunicar os requisitos para os interessados em diferentes níveis de glanularidade e dividindo entre funcionais e não funcionais (MARSICANO, 2023)
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 DEC-01 | ? | ?| ? |  ?
 
-###### 3.3.3.1.1 GERENCIAMENTO DE REQUISITOS (ORGANIZAÇÃO E ATUALIZAÇÃO)
+###### 3.3.3.1.4 GERENCIAMENTO DE REQUISITOS (ORGANIZAÇÃO E ATUALIZAÇÃO)
 Fase focada em manter os requisitos do produto estruturados, organizados e atualizados (MARSICANO, 2023)
 
 Identificador | Atividade | Método | Ferramenta | Entrega
@@ -205,15 +206,15 @@ Identificador | Atividade | Método | Ferramenta | Entrega
 GEREN-01 | ? | ? | ? | ?
 
 
-#### 3.3.2 PROTOTIPAÇÃO E FEEDBACK
-##### 3.3.2.3 REPRESENTAÇÃO DE REQUISITOS (PROTÓTIPO)
+##### 3.3.3.2 PROTOTIPAÇÃO E FEEDBACK
+###### 3.3.3.2.1 REPRESENTAÇÃO DE REQUISITOS (PROTÓTIPO)
 Apresentação dos requisitos em modelos e/ou visualizações do produto (MARSICANO, 2023)
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 PRO-01 | ? | ? | ? | ?
 
-##### 3.3.2.4	VALIDAÇÃO E VERIFICAÇÃO DE REQUISITOS (PROTÓTIPO)
+###### 3.3.3.2.2	VALIDAÇÃO E VERIFICAÇÃO DE REQUISITOS (PROTÓTIPO)
 Validação é confirmar ou não se os requisitos definem a solução correta conforme consensuado entre os _stakeholders_ (MARSICANO, 2023). Enquanto verificação é garantir se os requisitos foram ou não executados na maneira correta (MARSICANO, 2023). Assim como faz parte dessa fase, definir o preparado (DoR) e o pronto (DoD).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
@@ -221,24 +222,28 @@ Identificador | Atividade | Método | Ferramenta | Entrega
 VAP-01 | ? | ? | ?| ?
 
 
-#### 3.3.3 CONSTRUÇÃO
-##### 3.3.3.1 CONSTRUÇÃO MÓDULOS
+##### 3.3.3.3 CONSTRUÇÃO
+###### 3.3.3.3.1 CONSTRUÇÃO MÓDULOS
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 CM-01 | ? | ? | ? | ?
 
-##### 3.3.3.2 VALIDAÇÃO MÓDULOS
+###### 3.3.3.3.1 VALIDAÇÃO MÓDULOS
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 VAM-01 | ? | ? | ? | ?
 
-#### 3.3.4 CUTOVER
-##### 3.3.4.1 INTEGRAÇÃO MÓDULOS
+##### 3.3.3.4 CUTOVER
+###### 3.3.3.4.1 INTEGRAÇÃO MÓDULOS
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 IT-01 | ? | ? | ? | ?
 
-##### 3.3.4.2 TESTE PRODUTO
+###### 3.3.3.4.2 TESTE PRODUTO
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 TP-01 | ? | ? | ? | ?
