@@ -4,8 +4,9 @@
 
 Data | Versão | Descrição | Autor | Revisores
 ---- | ------ | --------- | ----- | ---------
-24/04/23 | 1.0 | Criação do documento | Juan | ?
-25/04/23 | 1.1 | Finalização do documento | Juan | ?
+24/04/23 | 0.1 | Criação do documento | Juan | ?
+25/04/23 | 0.1 | Evolução do documento | Juan | ?
+26/04/23 | 0.2 | Correções do documento | Juan | ?
 
 
 ## 1	VISÃO GERAL DO PRODUTO
@@ -27,7 +28,7 @@ Nosso produto | Ofertará caronas solidárias acessíveis e organizadas
 
 ### 1.3	Objetivos do Produto
 
-O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro entre motoristas dispostos a oferecer carona solidária e passageiros que precisam recebê-las. Isso será feito através de uma aplicação que se nutre a partir dos dados dos usuários para disponibilzar como informações úteis e organizadas para os interessados em utilizá-las para encontrar parceiros com o mesmo destino e de confiança. 
+O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro entre motoristas dispostos a oferecer carona solidária e passageiros que precisam recebê-las. Isso será feito através de uma aplicação que se nutre a partir dos dados dos usuários para disponibilizar informações úteis e organizadas para os interessados, facilitando o encontro de parceiros com o mesmo destino e de confiança. 
 
 ### 1.4	Tecnologias a Serem Utilizadas
 - React Native
@@ -39,8 +40,8 @@ O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro 
 ### 2.1	Organização do Projeto
 Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
-Desenvolvedor | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas 
-Líder do Time | Delegar tarefas, duração da sprint e sprint review | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
+Desenvolvedor | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar, documentar, ata das reuniões, estratégia de código | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
+Líder do Time | Delegar tarefas, duração da iteração, organização das atividades, one-to-one com os membros, estratégia de produto | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
 Cliente Motorista | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Juan | Victor Eduardo 
 Cliente Passageiro | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Juan | ?
 
@@ -55,12 +56,9 @@ Interações 2 | ? | ? | ?
 Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados
 --------- | ----------------- | ----------- | ----------------
 Acompanhamento Diário | Equipe do Projeto | Diário | Relato por parte dos membros da equipe no WhatsApp sobre o andamento individual das partes do projeto
-Iteração | Equipe do Projeto e Dono do Produto | Semanal | Relatório Sprint Planning, Planejamento do que será feito no ciclo da Sprint
-Revisão de Entregas | Equipe do Projeto e Dono do Produto | Junto ao Sprint Planning | Relatório Sprint Review, Validação do Produto
- | Equipe do Projeto | Semanalmente | Tabela de check com uma verificação da implementação
-Comunicar a situação do projeto | Equipe do Projeto e Professor | Mensalmente | Apresentações da Entrega de cada Unidade
-
-
+Iteração | Equipe do Projeto e Clientes | Semanal | Ata da Reunião, Relação de módulos/fases a serem produzidos/finalizados, Relação de Feedbacks dos Módulos
+Revisão de Entregas | Equipe do Projeto e Clientes | Mensalmente | Ata da Reunião, Relação de Feedbacks do Produto
+Comunicar a situação do projeto | Equipe do Projeto e Professor | Mensalmente | Artefatos solicitados, Relação de Feedbacks do Professor
 
 ### 2.4	Gerenciamento de Riscos
 A análise e gerenciamento de riscos referem-se à identificação dos possíveis pontos que podem representar riscos para o projeto. Precisam ser acompanhados, a cada sprint, se referindo assim, ao projeto como um todo e não apenas ao produto.
@@ -74,7 +72,7 @@ Riscos de negócio ameaçam a viabilidade do software e do produto. Existem cinc
 
 #### 2.4.1 Histórico de Riscos
 
-Sprint | Risco Encontrado | Nível
+Iteração | Risco Encontrado | Nível
 ------ | ---------------- | -----
 ? | ? | ?
 
@@ -145,7 +143,7 @@ O projeto é melhoria de um sistema existente? | Não.
 O financiamento está estável para o projeto? | Sim.
 Requisitos de alta confiabilidade? | Não.
 Cronograma do projeto é apertado? | Sim.
-Uso de componentes reutilizáveis? | Sim.image.png
+Uso de componentes reutilizáveis? | Sim.
 Os recursos (Tempo, dinheiro, pessoas etc) estão escassos? | Sim.   
 
 Conclusão: Em termos de Tipo de Projeto e Risco Associado, temos o indicativo para o Protótipo e RAD
@@ -167,10 +165,12 @@ Para a execução dessa metodologia, escolheu-se as seguintes Ferramentas de org
 
 ##### 3.3.1 Escolhas do Processo de Engenharia de Requisitos
 ![ER](assets/er_facetas_ireb.png)
+
 Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 1. Alvo é o mercado; 2. O propósito é exploratório; 3. Tempo é interativo.
 
 ##### 3.3.2 Atividades do Processo de Engenharia de Requisitos
 ![ER](assets/er_atividades_marsicano.png)
+
 Assim, incluímos as atividades de ER (MARSICANO, 2023) dentro dos procedimentos do processo de desenvolvimento de software RAD, pontuado no tópico 3.
 
 ##### 3.3.3 ATIVIDADES RAD
@@ -206,30 +206,39 @@ GEREN-01 | ? | ? | ? | ?
 
 
 #### 3.3.2 PROTOTIPAÇÃO E FEEDBACK
-
 ##### 3.3.2.3 REPRESENTAÇÃO DE REQUISITOS (PROTÓTIPO)
+Apresentação dos requisitos em modelos e/ou visualizações do produto (MARSICANO, 2023)
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 PRO-01 | ? | ? | ? | ?
 
 ##### 3.3.2.4	VALIDAÇÃO E VERIFICAÇÃO DE REQUISITOS (PROTÓTIPO)
+Validação é confirmar ou não se os requisitos definem a solução correta conforme consensuado entre os _stakeholders_ (MARSICANO, 2023). Enquanto verificação é garantir se os requisitos foram ou não executados na maneira correta (MARSICANO, 2023). Assim como faz parte dessa fase, definir o preparado (DoR) e o pronto (DoD).
+
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 VAP-01 | ? | ? | ?| ?
 
 
-#### 3.3.4 CONSTRUÇÃO
+#### 3.3.3 CONSTRUÇÃO
 ##### 3.3.3.1 CONSTRUÇÃO MÓDULOS
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 CM-01 | ? | ? | ? | ?
+
 ##### 3.3.3.2 VALIDAÇÃO MÓDULOS
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 VAM-01 | ? | ? | ? | ?
 
-##### 3.3.4.1 TESTE PRODUTO
+#### 3.3.4 CUTOVER
+##### 3.3.4.1 INTEGRAÇÃO MÓDULOS
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+IT-01 | ? | ? | ? | ?
+
+##### 3.3.4.2 TESTE PRODUTO
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 TP-01 | ? | ? | ? | ?
@@ -248,8 +257,8 @@ TP-01 | ? | ? | ? | ?
 
 ## 7 REFERÊNCIAS BIBLIOGRÁFICAS 
 
-1. https://www.atlassian.com/br/agile/scrum/roles#:~: texto%20 Scrum%20 tem%20 tr%C3%AAs%20 pap%C3%A9is,membros%20da%20 equipe%20de%20desenvolvimento
+1. MARSICANO, George. Slides: Escolhas da Engenharia de Software. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518488/mod_folder/content/0/Unidade%201%20-%20Aula%20-%20Escolhas%20da%20ESW.pdf>
 2. Raja Gupta. Fundamentals of Software Engineering. Engineering Handbook. 2019
-3. SWEBOK. v3
-4. Facetas IREB
-5. George Marsicano
+3. IEEE. SWEBOK. Version 3. 2014.
+4. Handbook IREB CPRE Foundation Level, Version 1.1.0, september 2022.
+5. MARSICANO, George. Slides: Introdução a Engenharia de Requisitos. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518489/mod_folder/content/0/Unidade%201%20-%20Aula%20-%20Introducao%20a%20ER.pdf> 
