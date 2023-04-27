@@ -39,6 +39,8 @@ nav:
       - Visão Geral do Produto: "material-processo-er.md"
       - Material do Seminario - Processo Unificado: "material-seminario-processo.md"
 
+
+
 markdown_extensions:
   - tables
   - attr_list
@@ -49,3 +51,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+    - mkdocs-video
