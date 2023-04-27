@@ -9,6 +9,7 @@ Data | Versão | Descrição | Autor | Revisores
 26/04/23 | 0.3 | Correções do documento | Juan | Pedro Henrique
 26/04/23 | 0.4 | Correções do documento | Juan | João
 26/04/23 | 1.0 | Primeira versão de entrega | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
+27/04/23 | 1.1 | Inclusão lições aprendidas | Juan | João
 
 
 ## 1	VISÃO GERAL DO PRODUTO
@@ -252,11 +253,15 @@ TP-01 | ? | ? | ? | ?
 ?
 
 
-## 5 LIÇÕES APRENDIDAS
+## 4 LIÇÕES APRENDIDAS
 ### Unidade 1
-?
+Com base nos feedbacks recebidos, podemos extrair algumas lições aprendidas importantes no projeto. Primeiramente, é notável que a interação entre os membros do grupo está positiva e a comunicação está fluindo bem, o que pode ser atribuído ao fato de que o grupo está unido como um time e está passando feedbacks constantes. Além disso, o grupo está sendo proativo nas entregas e as tarefas estão bem divididas, o que demonstra organização e alinhamento, principalmente em momentos de necessidade.
 
-## 6 A MELHORAR
+Por outro lado, os feedbacks construtivos indicam que o grupo precisa melhorar em alguns aspectos, como a qualidade das atividades entregues, divisão equilibrada das responsabilidades entre os membros e organização da comunicação. Em relação à qualidade das entregas, o feedback construtivo recebido trás como medida sugestiva uma revisão mais criteriosa antes da entrega. Em seguida, é necessário repensar a forma como as atividades são divididas de modo a permitir que todos os membros do grupo produzam efetivamente. Além disso, a comunicação precisa ser mais organizada para evitar a mistura de informações importantes e irrelevantes simultaneamente.
+
+Por fim, é essencial que todos os membros do grupo estejam acompanhando bem as atividades e assumindo responsabilidades equilibradas, além de cada membro ter um papel claro dentro do grupo e que esteja engajado em acompanhar as atividades propostas, garantindo que não haja atrasos ou sobrecarga de responsabilidades em alguns membros. Como resultado, espera-se que após uma gestão de equipe eficiente e equilibrada, teremos uma maior efetividade do projeto.
+
+## 5 A MELHORAR
 ### Unidade 1
 ?
 
