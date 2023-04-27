@@ -5,9 +5,10 @@
 Data | Versão | Descrição | Autor | Revisores
 ---- | ------ | --------- | ----- | ---------
 24/04/23 | 0.1 | Criação do documento | Juan | Pedro Henrique
-25/04/23 | 0.1 | Evolução do documento | Juan | Pedro Henrique
-26/04/23 | 0.2 | Correções do documento | Juan | Pedro Henrique
-26/04/23 | 0.3 | Correções do documento | Juan | 
+25/04/23 | 0.2 | Evolução do documento | Juan | Pedro Henrique
+26/04/23 | 0.3 | Correções do documento | Juan | Pedro Henrique
+26/04/23 | 0.4 | Correções do documento | Juan | João
+26/04/23 | 1.0 | Primeira versão de entrega | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
 
 
 ## 1	VISÃO GERAL DO PRODUTO
@@ -32,16 +33,15 @@ Nosso produto | Ofertará caronas solidárias acessíveis e organizadas
 O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro entre motoristas dispostos a oferecer carona solidária e passageiros que precisam recebê-las. Isso será feito através de uma aplicação que se nutre a partir dos dados dos usuários para disponibilizar informações úteis e organizadas para os interessados, facilitando o encontro de parceiros com o mesmo destino e de confiança. 
 
 ### 1.4	Tecnologias a Serem Utilizadas
-- React Native
-- Javascript
+- React
 - Node.js
-- ?
+- MySQL
 
 ## 2	VISÃO GERAL DO PROJETO
 ### 2.1	Organização do Projeto
 Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
-Desenvolvedor | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar, documentar, ata das reuniões, estratégia de código | ? | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
+Desenvolvedor | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar, documentar, ata das reuniões, estratégia de código | Leonardo | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
 Líder do Time | Delegar tarefas, duração da iteração, organização das atividades, one-to-one com os membros, estratégia de produto | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
 Cliente Motorista | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | Victor Eduardo 
 Cliente Passageiro | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | ?
