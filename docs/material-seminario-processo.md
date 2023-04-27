@@ -16,6 +16,10 @@ Este artefato consiste no material que foi desenvolvido para a apresentação do
 </div>
 <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFg8eNsems&#x2F;view?utm_content=DAFg8eNsems&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Seminário sobre RUP</a> de Pedro Henrique da Silva Melo
 
+## Apresentação em video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YAGTzficrPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 </center>
 
 ## Historico de revisão
@@ -23,3 +27,5 @@ Este artefato consiste no material que foi desenvolvido para a apresentação do
 Data | Versão | Descrição | Autor(es) | Revisor(es)
 ---- | ------ | --------- | ----- | ---------
 26/04/23 | `1.0` | Página e apresentação do seminário | Pedro Henrique | Juan
+27/04/23 | `1.1` | Adição de video | João Vítor | Juan
+27/04/23 | `1.2` | Correção código | Juan | João
