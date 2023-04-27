@@ -9,7 +9,7 @@ Data | Versão | Descrição | Autor | Revisores
 26/04/23 | 0.3 | Correções do documento | Juan | Pedro Henrique
 26/04/23 | 0.4 | Correções do documento | Juan | João
 26/04/23 | 1.0 | Primeira versão de entrega | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
-27/04/23 | 1.1 | Inclusão lições aprendidas | Juan | João
+27/04/23 | 1.1 | Inclusão lições aprendidas | Juan | João, Pedro Lucas
 
 
 ## 1	VISÃO GERAL DO PRODUTO
