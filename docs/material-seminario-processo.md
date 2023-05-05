@@ -18,7 +18,7 @@ Este artefato consiste no material que foi desenvolvido para a apresentação do
 
 ## Apresentação em video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YAGTzficrPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0jn-AWc_2kQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </center>
 
@@ -29,3 +29,4 @@ Data | Versão | Descrição | Autor(es) | Revisor(es)
 26/04/23 | `1.0` | Página e apresentação do seminário | Pedro Henrique | Juan
 27/04/23 | `1.1` | Adição de video | João Vítor | Juan
 27/04/23 | `1.2` | Correção código | Juan | João
+05/05/23 | `1.3` | Correção de endereço URL do vídeo | Juan | João
