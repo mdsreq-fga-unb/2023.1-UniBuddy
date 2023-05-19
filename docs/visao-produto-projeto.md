@@ -10,6 +10,7 @@ Data | Versão | Descrição | Autor | Revisores
 26/04/23 | 0.4 | Correções do documento | Juan | João
 26/04/23 | 1.0 | Primeira versão de entrega | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
 27/04/23 | 1.1 | Inclusão lições aprendidas | Juan | Pedro Lucas
+19/05/23 | 1.2 | Correção do Planejamento do projeto, das fases e da matriz de comunicação | Juan | João
 
 
 ## 1	VISÃO GERAL DO PRODUTO
@@ -34,6 +35,9 @@ Nosso produto | Ofertará caronas solidárias acessíveis e organizadas
 O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro entre motoristas dispostos a oferecer carona solidária e passageiros que precisam recebê-las. Isso será feito através de uma aplicação que se nutre a partir dos dados dos usuários para disponibilizar informações úteis e organizadas para os interessados, facilitando o encontro de parceiros com o mesmo destino e de confiança. 
 
 ### 1.4	Tecnologias a Serem Utilizadas
+- Javascript
+- HTML
+- CSS
 - React
 - Node.js
 - MySQL
@@ -42,23 +46,32 @@ O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro 
 ### 2.1	Organização do Projeto
 Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
-Desenvolvedor | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar, documentar, ata das reuniões, estratégia de código | Leonardo | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
-Líder do Time | Delegar tarefas, duração da iteração, organização das atividades, one-to-one com os membros, estratégia de produto | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
-Cliente Motorista | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | Victor Eduardo 
-Cliente Passageiro | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | ?
+Pessoa Desenvolvedora | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar, documentar, ata das reuniões, estratégia de código | Leonardo | João, Juan, Pedro Henrique, Pedro Lucas
+Líder do Time | Delegar tarefas, duração da iteração, organização das atividades, one-to-one com os membros, estratégia de produto | Juan | Leonardo
+Pessoa Engenheira de Requisitos | Descobrir, elicitar, analisar, consensuar, declarar, representar, organizar e atualizar requisitos | Juan | João, Leonardo, Pedro Henrique, Pedro Lucas
+Cliente Motorista | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | Victor Eduardo Araújo Ribeiro
+Cliente Passageiro | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | Arthur Mariano de Sousa
+Monitor | Verificar requisitos, fornecer feedbacks sobre o processo de ER, auxiliar em dúvidas da equipe acerca da disciplina de requisitos, articular os interesses do professor | Juan | Victor Cabral
 
-### 2.2	Planejamento das Fases e/ou Iterações do Projeto
-Iterações | Produto (Entrega) | Data Início | Data Fim
------- | ----------------- | ----------- | --------
-Interações 1 | ? | ? | ?
-Interações 2 | ? | ? | ?
-
+### 2.2	Planejamento das Fases do Projeto
+Fase | Produto (Entrega) | Data Início | Data Fim
+---- | ----------------- | ----------- | --------
+Fase Requisitos MVP1 e MVP2 | Backlog dos MVPs 1 e 2 | 02/05/23 | 20/05/23
+Fase Protótipo MVP1 | Protótipo de Baixa Fidelidade e Média Fidelidade | 21/05/23 | 27/05/23
+Fase Feedback MVP1 | Protótipo de Alta Fidelidade | 28/05/23 | 04/06/23
+Fase Construção MVP1 | Aplicação Web do MVP1 | 05/06/23 | 15/06/23
+Fase Protótipo MVP2 | Protótipo de Baixa Fidelidade e Média Fidelidade | 22/06/23 | 28/06/23
+Fase Feedback MVP2 | Protótipo de Alta Fidelidade | 29/06/23 | 05/07/23
+Fase Construção MVP2 | Aplicação Web do MVP2 e Correções do MVP1 | 06/07/23 | 18/07/23
 
 ### 2.3	Matriz de Comunicação
 Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados
 --------- | ----------------- | ----------- | ----------------
 Acompanhamento Diário | Equipe do Projeto | Diário | Relato por parte dos membros da equipe no WhatsApp sobre o andamento individual das partes do projeto
-Iteração | Equipe do Projeto e Clientes | Semanal | Ata da Reunião, Relação de módulos/fases a serem produzidos/finalizados, Relação de Feedbacks dos Módulos
+Acompanhamento de Requisitos | Equipe do Projeto | Semanal | Ata da Reunião, Relação de Feedbacks sobre os Requisitos
+Acompanhamento de Protótipo | Equipe do Projeto e Monitor | Semanal | Ata da Reunião, Relação de Feedbacks sobre os Protótipos de Baixa e Média fidelidade, Relação de Itens de validação pelo cliente
+Acompanhamento de Feedback | Equipe do Projeto e Clientes | Semanal | Ata da Reunião, Relação de Feedbacks sobre os Protótipos de Alta fidelidade, Relação de Feedbacks do Cliente
+Acompanhamento de Construção | Equipe do Projeto | Semanal | Ata da Reunião,  Relação de Feedbacks sobre os Módulos Desenvolvidos
 Revisão de Entregas | Equipe do Projeto e Clientes | Mensalmente | Ata da Reunião, Relação de Feedbacks do Produto
 Comunicar a situação do projeto | Equipe do Projeto e Professor | Mensalmente | Artefatos solicitados, Relação de Feedbacks do Professor
 
@@ -263,7 +276,11 @@ Por fim, é essencial que todos os membros do grupo estejam acompanhando bem as 
 
 ## 5 A MELHORAR
 ### Unidade 1
-?
+- Lições Aprendidas
+- Planejamento das iterações
+- Critérios de riscos
+- Critérios de replanejamento
+- Processos e atividade de Requisitos
 
 ## 7 REFERÊNCIAS BIBLIOGRÁFICAS 
 
