@@ -11,6 +11,7 @@ Data | Versão | Descrição | Autor | Revisores
 26/04/23 | 1.0 | Primeira versão de entrega | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
 27/04/23 | 1.1 | Inclusão lições aprendidas | Juan | Pedro Lucas
 19/05/23 | 1.2 | Correção do Planejamento do projeto, das fases e da matriz de comunicação | Juan | João
+22/05/23 | 1.3 | Inserção de detalhes na matriz de comunicação, revisão da análise de risco e critérios de replanejamento | Juan | João
 
 
 ## 1	VISÃO GERAL DO PRODUTO
@@ -68,28 +69,37 @@ Fase Construção MVP2 | Aplicação Web do MVP2 e Correções do MVP1 | 06/07/2
 Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados
 --------- | ----------------- | ----------- | ----------------
 Acompanhamento Diário | Equipe do Projeto | Diário | Relato por parte dos membros da equipe no WhatsApp sobre o andamento individual das partes do projeto
-Acompanhamento de Requisitos | Equipe do Projeto | Semanal | Ata da Reunião, Relação de Feedbacks sobre os Requisitos
-Acompanhamento de Protótipo | Equipe do Projeto e Monitor | Semanal | Ata da Reunião, Relação de Feedbacks sobre os Protótipos de Baixa e Média fidelidade, Relação de Itens de validação pelo cliente
-Acompanhamento de Feedback | Equipe do Projeto e Clientes | Semanal | Ata da Reunião, Relação de Feedbacks sobre os Protótipos de Alta fidelidade, Relação de Feedbacks do Cliente
-Acompanhamento de Construção | Equipe do Projeto | Semanal | Ata da Reunião,  Relação de Feedbacks sobre os Módulos Desenvolvidos
+Acompanhamento de Requisitos | Equipe do Projeto | Semanal (Até o fim da fase de Requisitos)| Ata da Reunião, Relação de Feedbacks sobre os Requisitos
+Acompanhamento de Protótipo | Equipe do Projeto e Monitor | Semanal (Até o fim da fase de Protótipo) | Ata da Reunião, Relação de Feedbacks sobre os Protótipos de Baixa e Média fidelidade, Relação de Itens de validação pelo cliente
+Acompanhamento de Feedback | Equipe do Projeto e Clientes | Semanal (Até o fim da fase de Feedbacks)| Ata da Reunião, Relação de Feedbacks sobre os Protótipos de Alta fidelidade, Relação de Feedbacks do Cliente
+Acompanhamento de Construção | Equipe do Projeto | Semanal (Até o fim da fase de Construção)| Ata da Reunião,  Relação de Feedbacks sobre os Módulos Desenvolvidos
 Revisão de Entregas | Equipe do Projeto e Clientes | Mensalmente | Ata da Reunião, Relação de Feedbacks do Produto
 Comunicar a situação do projeto | Equipe do Projeto e Professor | Mensalmente | Artefatos solicitados, Relação de Feedbacks do Professor
 
 ### 2.4	Gerenciamento de Riscos
-A análise e gerenciamento de riscos referem-se à identificação dos possíveis pontos que podem representar riscos para o projeto. Precisam ser acompanhados, a cada sprint, se referindo assim, ao projeto como um todo e não apenas ao produto.
+A análise e gerenciamento de riscos referem-se à identificação dos possíveis pontos que podem representar riscos para o projeto. Precisam ser acompanhados, a cada acompanhamento das fases, se referindo assim, ao projeto como um todo e não apenas ao produto.
 
 Segundo Charette, existem três tipos de riscos de Software (PRESSMAN,2006):
-Riscos de projeto mostram problemas potenciais de orçamento, cronograma, organizacionais que impactam o projeto. (PRESSMAN,2006)
-Riscos técnicos perturbam a qualidade e a entrega do software. Também mostram problemas potenciais de projeto, implementação, interface, verificação e manutenção. (PRESSMAN,2006)
-Riscos de negócio ameaçam a viabilidade do software e do produto. Existem cinco principais riscos de negócios que são: (1) criar um excelente produto ou sistema que ninguém realmente quer (risco de mercado), (2) criar um produto que não se encaixe mais na estratégia geral de negócios da empresa (risco estratégico), (3) criar um produto que a equipe de vendas não sabe como vender (risco de vendas), (4) perda de suporte da alta gerência devido à mudança no foco ou mudança de profissionais (risco gerencial), e (5)perda do orçamento ou do comprometimento dos profissionais (riscos de orçamento). (PRESSMAN,2006)
+
+1. Riscos de projeto: mostram problemas potenciais de orçamento, cronograma, organizacionais que impactam o projeto;
+2. Riscos técnicos: perturbam a qualidade e a entrega do software. Também mostram problemas potenciais de projeto, implementação, interface, verificação e manutenção;
+3. Riscos de negócio: ameaçam a viabilidade do software e do produto e apresentam 5 variações:
+    1. Risco de Mercado: criar um excelente produto ou sistema que ninguém realmente quer;
+    2. Risco Estratégico: criar um produto que não se encaixe mais na estratégia geral de negócios da empresa;
+    3. Risco de Vendas: criar um produto que a equipe de vendas não sabe como vender;
+    4. Risco Gerencial: perda de suporte da alta gerência devido à mudança no foco ou mudança de profissionais;
+    5. Risco de Orçamento: perda do orçamento ou do comprometimento dos profissionais.
+
+Com isso, podemos avaliar o impacto causado pela consequência desse risco, segundo a categoria e os componentes, como vemos na imagem abaixo.
 
 ![Riscos](assets/avaliacao_impacto.png)
 
 #### 2.4.1 Histórico de Riscos
 
-Iteração | Risco Encontrado | Nível
+Fase | Risco Encontrado | Categoria
 ------ | ---------------- | -----
-? | ? | ?
+Requisitos | Risco de Projeto | Crítico 2
+Requisitos | Risco Técnicos | Crítico 2
 
 ### 2.5	Critérios de Replanejamento
 Os critérios de replanejamento referem-se à identificação dos pontos que, caso ocorram, causarão um replanejamento do projeto. Precisam ser acompanhados a cada iteração, referindo-se assim, ao projeto como um todo e não apenas ao produto.
@@ -97,13 +107,16 @@ Os critérios de replanejamento referem-se à identificação dos pontos que, ca
 - Alteração nos prazos das entregas da Disciplina ou do Cliente
 - Alteração das ferramentas do projeto
 - Alteração no Processo de Engenharia de Requisito ou Desenvolvimento de Software
+- Alteração no Escopo do Projeto, a pedido do professor
+- Atrasos de mais de 2 semanas nas entregas
+- Barreiras externas para execução do projeto, tais como: aparatos legais, valor financeiro inacessível, capacidade dos hardwares dos desenvolvedores etc
 - Saída de algum membro da equipe
 
-Iteração | Solução Encontrada | Resultado Esperado
+Fase | Solução Encontrada | Resultado Esperado
 ------ | ------------------ | ------------------
 ? | ? | ?
 
-Os critérios de replanejamento do projeto devem ser acompanhados e atualizados a cada ciclo. E, aplicados, conforme necessidade.
+Os critérios de replanejamento do projeto devem ser acompanhados e atualizados a cada fase. E, aplicados, conforme necessidade.
 
 ## 3 PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
 ### 3.1 Metodologia
