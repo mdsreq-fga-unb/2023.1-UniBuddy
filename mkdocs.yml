@@ -38,6 +38,9 @@ nav:
     - Unidade 1:
       - Visão Geral do Produto: "material-processo-er.md"
       - Material do Seminario - Processo Unificado: "material-seminario-processo.md"
+    - Unidade 2:
+      - Atualização da Visão Geral: "material-processo-er-atualizado.md"
+      - Backlog do Produto: "backlog_mvps.md"
 
 markdown_extensions:
   - tables
