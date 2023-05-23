@@ -194,17 +194,17 @@ Para a execução dessa metodologia, escolheu-se as seguintes Ferramentas de org
 
 ### 3.3 Processos e Procedimentos
 
-##### 3.3.1 Escolhas do Processo de Engenharia de Requisitos
+#### 3.3.1 Escolhas do Processo de Engenharia de Requisitos
 ![ER](assets/er_facetas_ireb.png)
 
 Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 1. Alvo é o mercado; 2. O propósito é exploratório; 3. Tempo é interativo.
 
-##### 3.3.2 Atividades do Processo de Engenharia de Requisitos
+#### 3.3.2 Atividades do Processo de Engenharia de Requisitos
 ![ER](assets/er_atividades_marsicano.png)
 
 Assim, incluímos as atividades de ER (MARSICANO, 2023) dentro dos procedimentos do processo de desenvolvimento de software RAD, pontuado no tópico 3.
 
-##### 3.3.3 ATIVIDADES RAD
+#### 3.3.3 ATIVIDADES RAD
 ![RAD](assets/RAD-model.png)
 ###### 3.3.3.1	REQUISITOS E PLANEJAMENTO
 ###### 3.3.3.1.1 DESCOBERTA E ELICITAÇÃO DE REQUISITOS
