@@ -112,11 +112,14 @@ Os critérios de replanejamento referem-se à identificação dos pontos que, ca
 - Barreiras externas para execução do projeto, tais como: aparatos legais, valor financeiro inacessível, capacidade dos hardwares dos desenvolvedores etc
 - Saída de algum membro da equipe
 
-Fase | Solução Encontrada | Resultado Esperado
------- | ------------------ | ------------------
-? | ? | ?
-
 Os critérios de replanejamento do projeto devem ser acompanhados e atualizados a cada fase. E, aplicados, conforme necessidade.
+
+#### 2.5.1 Histórico de Replanejamento
+Fase | Problema | Solução Encontrada | Resultado Esperado
+------ | -------- |------------------ | ------------------
+Requisitos | Alteração nos prazos das entregas da Disciplina  | Alterar cronograma do projeto | Adequação aos prazos solicitados
+Requisitos | Atrasos de mais de 2 semanas  | Alterar cronograma do projeto | Adequação aos prazos solicitados
+
 
 ## 3 PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
 ### 3.1 Metodologia
