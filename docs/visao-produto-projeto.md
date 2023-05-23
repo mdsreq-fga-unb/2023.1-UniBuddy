@@ -206,7 +206,7 @@ Assim, incluímos as atividades de ER (MARSICANO, 2023) dentro dos procedimentos
 
 #### 3.3.3 ATIVIDADES RAD
 ![RAD](assets/RAD-model.png)
-###### 3.3.3.1	REQUISITOS E PLANEJAMENTO
+##### 3.3.3.1	REQUISITOS E PLANEJAMENTO
 ###### 3.3.3.1.1 DESCOBERTA E ELICITAÇÃO DE REQUISITOS
 Fase focada em encontrar, extrair, obter ou provocar uma resposta, reação, informação dos usuários para construção dos requisitos (MARSICANO, 2023).
 
