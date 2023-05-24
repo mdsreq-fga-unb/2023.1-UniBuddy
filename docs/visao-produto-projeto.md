@@ -12,6 +12,7 @@ Data | Versão | Descrição | Autor | Revisores
 27/04/23 | 1.1 | Inclusão lições aprendidas | Juan | Pedro Lucas
 19/05/23 | 1.2 | Correção do Planejamento do projeto, das fases e da matriz de comunicação | Juan | João
 22/05/23 | 1.3 | Inserção de detalhes na matriz de comunicação, revisão da análise de risco e critérios de replanejamento | Juan | João
+24/05/23 | 1.4 | Correção do Planejamento do projeto, da abordagem de desenvolvimneto, das entregas, e da matriz de comunicação, inclusão de item no histórico de replanejamento | Juan | João
 
 
 ## 1	VISÃO GERAL DO PRODUTO
@@ -49,31 +50,30 @@ Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
 Pessoa Desenvolvedora | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar, documentar, ata das reuniões, estratégia de código | Leonardo | João, Juan, Pedro Henrique, Pedro Lucas
 Líder do Time | Delegar tarefas, duração da iteração, organização das atividades, one-to-one com os membros, estratégia de produto | Juan | Leonardo
-Pessoa Engenheira de Requisitos | Descobrir, elicitar, analisar, consensuar, declarar, representar, organizar e atualizar requisitos | Juan | João, Leonardo, Pedro Henrique, Pedro Lucas
+Pessoa Engenheira de Requisitos | Descobrir, elicitar, analisar, consensuar, declarar, representar, organizar e atualizar requisitos | Pedro Lucas | João, Leonardo, Pedro Henrique, Juan
 Cliente Motorista | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | Victor Eduardo Araújo Ribeiro
 Cliente Passageiro | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | Arthur Mariano de Sousa
 Monitor | Verificar requisitos, fornecer feedbacks sobre o processo de ER, auxiliar em dúvidas da equipe acerca da disciplina de requisitos, articular os interesses do professor | Juan | Victor Cabral
 
 ### 2.2	Planejamento das Fases do Projeto
-Fase | Produto (Entrega) | Data Início | Data Fim
+Iterações | Produto (Entrega) | Data Início | Data Fim
 ---- | ----------------- | ----------- | --------
-Fase Requisitos MVP1 e MVP2 | Backlog dos MVPs 1 e 2 | 02/05/23 | 20/05/23
-Fase Protótipo MVP1 | Protótipo de Baixa Fidelidade e Média Fidelidade | 21/05/23 | 27/05/23
-Fase Feedback MVP1 | Protótipo de Alta Fidelidade | 28/05/23 | 04/06/23
-Fase Construção MVP1 | Aplicação Web do MVP1 | 05/06/23 | 15/06/23
-Fase Protótipo MVP2 | Protótipo de Baixa Fidelidade e Média Fidelidade | 22/06/23 | 28/06/23
-Fase Feedback MVP2 | Protótipo de Alta Fidelidade | 29/06/23 | 05/07/23
-Fase Construção MVP2 | Aplicação Web do MVP2 e Correções do MVP1 | 06/07/23 | 18/07/23
+Iteração 1 | Requisitos descobertos, elicitados, analisados e consensuados | 02/05/23 | 08/05/23
+Iteração 2 | Requisitos validados, verificados e declarados | 09/05/23 | 15/05/23
+Iteração 3 | Requisitos organizados e atualizados, escopo MVP1 e MVP2  | 16/05/23 | 25/05/23
+Iteração 4 | Primeira versão MVP1 | 26/05/23 | 05/06/23
+Iteração 5 | Versão prévia MVP1 | 06/06/23 | 12/06/23
+Iteração 6 | Versão definitiva MVP1 | 13/06/23 | 19/06/23
+Iteração 7 | Correções MVP1 | 20/06/23 | 26/06/23
+Iteração 8 | Primeira versão MVP2 | 27/06/23 | 03/07/23
+Iteração 9 | Versão prévia MVP2 | 04/07/23 | 10/07/23
+Iteração 10 | Versão definitiva MVP2 | 11/07/23 | 18/07/23
 
 ### 2.3	Matriz de Comunicação
 Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados
 --------- | ----------------- | ----------- | ----------------
 Acompanhamento Diário | Equipe do Projeto | Diário | Relato por parte dos membros da equipe no WhatsApp sobre o andamento individual das partes do projeto
-Acompanhamento de Requisitos | Equipe do Projeto | Semanal (Até o fim da fase de Requisitos)| Ata da Reunião, Relação de Feedbacks sobre os Requisitos
-Acompanhamento de Protótipo | Equipe do Projeto e Monitor | Semanal (Até o fim da fase de Protótipo) | Ata da Reunião, Relação de Feedbacks sobre os Protótipos de Baixa e Média fidelidade, Relação de Itens de validação pelo cliente
-Acompanhamento de Feedback | Equipe do Projeto e Clientes | Semanal (Até o fim da fase de Feedbacks)| Ata da Reunião, Relação de Feedbacks sobre os Protótipos de Alta fidelidade, Relação de Feedbacks do Cliente
-Acompanhamento de Construção | Equipe do Projeto | Semanal (Até o fim da fase de Construção)| Ata da Reunião,  Relação de Feedbacks sobre os Módulos Desenvolvidos
-Revisão de Entregas | Equipe do Projeto e Clientes | Mensalmente | Ata da Reunião, Relação de Feedbacks do Produto
+Acompanhamento de Iteração | Equipe do Projeto e Monitor | Semanal | Ata da Reunião, Relação de Feedbacks sobre as entregas do produto
 Comunicar a situação do projeto | Equipe do Projeto e Professor | Mensalmente | Artefatos solicitados, Relação de Feedbacks do Professor
 
 ### 2.4	Gerenciamento de Riscos
@@ -117,8 +117,8 @@ Os critérios de replanejamento do projeto devem ser acompanhados e atualizados 
 #### 2.5.1 Histórico de Replanejamento
 Fase | Problema | Solução Encontrada | Resultado Esperado
 ------ | -------- |------------------ | ------------------
-Requisitos | Alteração nos prazos das entregas da Disciplina  | Alterar cronograma do projeto | Adequação aos prazos solicitados
-Requisitos | Atrasos de mais de 2 semanas  | Alterar cronograma do projeto | Adequação aos prazos solicitados
+Interação 3 | Atrasos de mais de 2 semanas  | Alterar cronograma do projeto | Adequação aos prazos solicitados
+Interação 3 | Alteração no Processo de Engenharia de Requisito ou Desenvolvimento de Software | Alterar cronograma do projeto e entregas | Adequação aos prazos solicitados
 
 
 ## 3 PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
@@ -182,7 +182,7 @@ Conclusão: Em termos de Tipo de Projeto e Risco Associado, temos o indicativo p
 #### 3.1.5 Escolha do Processo de Desenvolvimento de Software
 ![Gupta](assets/rapid_application_development.png)
 
-Considerando o foco principal no nosso usuário, a pouca experiência dos membros da equipe e o risco associado, entendemos que devemos utilizar o método ágil de desenvolvimento RAD (Rapid Application Development) (SWEBOK, p. 170).
+Considerando o foco principal no nosso usuário, a pouca experiência dos membros da equipe e o risco associado, além do cronograma da disciplina, entendemos que devemos utilizar uma abordagem híbrida, com uma abordagem dirigida a plano, com o método cascata, na fase de requisitos e com as fases seguintes, utilizando o método ágil de desenvolvimento RAD (Rapid Application Development) (SWEBOK, p. 170).
 
 ### 3.2 Ferramentas
 Para a execução dessa metodologia, escolheu-se as seguintes Ferramentas de organização e controle da equipe:
