@@ -96,10 +96,10 @@ Com isso, podemos avaliar o impacto causado pela consequência desse risco, segu
 
 #### 2.4.1 Histórico de Riscos
 
-Fase | Risco Encontrado | Categoria
+Iteração | Risco Encontrado | Categoria
 ------ | ---------------- | -----
-Requisitos | Risco de Projeto | Crítico 2
-Requisitos | Risco Técnicos | Crítico 2
+Iteração 2 | Risco de Projeto | Crítico 2
+Iteração 3 | Risco Técnicos | Crítico 2
 
 ### 2.5	Critérios de Replanejamento
 Os critérios de replanejamento referem-se à identificação dos pontos que, caso ocorram, causarão um replanejamento do projeto. Precisam ser acompanhados a cada iteração, referindo-se assim, ao projeto como um todo e não apenas ao produto.
@@ -115,7 +115,7 @@ Os critérios de replanejamento referem-se à identificação dos pontos que, ca
 Os critérios de replanejamento do projeto devem ser acompanhados e atualizados a cada fase. E, aplicados, conforme necessidade.
 
 #### 2.5.1 Histórico de Replanejamento
-Fase | Problema | Solução Encontrada | Resultado Esperado
+Iteração | Problema | Solução Encontrada | Resultado Esperado
 ------ | -------- |------------------ | ------------------
 Interação 3 | Atrasos de mais de 2 semanas  | Alterar cronograma do projeto | Adequação aos prazos solicitados
 Interação 3 | Alteração no Processo de Engenharia de Requisito ou Desenvolvimento de Software | Alterar cronograma do projeto e entregas | Adequação aos prazos solicitados
@@ -124,6 +124,7 @@ Interação 3 | Alteração no Processo de Engenharia de Requisito ou Desenvolvi
 ## 3 PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
 ### 3.1 Metodologia
 Baseado na proposta do Gupta (2019), foi respondido um conjunto de questões distintas sobre determinados tópicos para definir a abordagem que melhor se encaixa ao projeto e time. Tópicos norteadores:
+
 1. Requisitos
 2. Equipe de Desenvolvimento
 3. Usuários
@@ -197,7 +198,10 @@ Para a execução dessa metodologia, escolheu-se as seguintes Ferramentas de org
 #### 3.3.1 Escolhas do Processo de Engenharia de Requisitos
 ![ER](assets/er_facetas_ireb.png)
 
-Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 1. Alvo é o mercado; 2. O propósito é exploratório; 3. Tempo é interativo.
+Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 
+1. Alvo é o mercado; 
+2. O propósito é exploratório; 
+3. Tempo é interativo.
 
 #### 3.3.2 Atividades do Processo de Engenharia de Requisitos
 ![ER](assets/er_atividades_marsicano.png)
