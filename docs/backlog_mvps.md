@@ -4,4 +4,4 @@
 
 Data | Versão | Descrição | Autor(es) | Revisor(es)
 ---- | ------ | --------- | ----- | ---------
-23/05/23 | `0.1` | Criação da página | Juan | ?
+24/05/23 | `1.0` | Vídeo sobre a apresentação do Backlog | Pedro Lucas | João Vitor
