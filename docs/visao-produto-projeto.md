@@ -13,6 +13,7 @@ Data | Versão | Descrição | Autor | Revisores
 19/05/23 | 1.2 | Correção do Planejamento do projeto, das fases e da matriz de comunicação | Juan | João
 22/05/23 | 1.3 | Inserção de detalhes na matriz de comunicação, revisão da análise de risco e critérios de replanejamento | Juan | João
 24/05/23 | 1.4 | Correção do Planejamento do projeto, da abordagem de desenvolvimneto, das entregas, e da matriz de comunicação, inclusão de item no histórico de replanejamento | Juan | João
+25/05/23 | 2.0 | Segunda versão de entrega | Juan, João, Pedro Henrique, Pedro Lucas | João
 
 
 ## 1.	VISÃO GERAL DO PRODUTO
