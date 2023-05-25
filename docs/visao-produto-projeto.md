@@ -15,12 +15,18 @@ Data | Versão | Descrição | Autor | Revisores
 24/05/23 | 1.4 | Correção do Planejamento do projeto, da abordagem de desenvolvimneto, das entregas, e da matriz de comunicação, inclusão de item no histórico de replanejamento | Juan | João
 
 
-## 1	VISÃO GERAL DO PRODUTO
+## 1.	VISÃO GERAL DO PRODUTO
 ### 1.1 Problema
 
 O problema se sustenta sobre a falta de meios organizados para realização de caronas solidárias, devido a diversos grupos e situações que podem acontecer quando os usuários (motoristas e passageiros) tentam encontrar caronas solidárias através desses meios. 
 Para se entender melhor o problema, foi utilizada a técnica diagrama de ishikawa, também chamado de diagrama da espinha de peixe, com o auxílio da técnica 5 porquês para encontrar as causas raízes e seus principais motivadores. Assim, foram encontradas 4 causas raízes: Tempo do usuário, valor do produto, informação dos usuários e centralização das informações.
+<center>
+
 ![Problema](assets/problema_ishikawa.png)
+
+Figura 1 - Diagrama de Ishikawa do grupo (fonte: autores, 2023)
+
+</center>
 
 ### 1.2	Declaração de Posição do Produto
 
@@ -44,7 +50,7 @@ O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro 
 - Node.js
 - MySQL
 
-## 2	VISÃO GERAL DO PROJETO
+## 2.	VISÃO GERAL DO PROJETO
 ### 2.1	Organização do Projeto
 Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
@@ -92,7 +98,13 @@ Segundo Charette, existem três tipos de riscos de Software (PRESSMAN,2006):
 
 Com isso, podemos avaliar o impacto causado pela consequência desse risco, segundo a categoria e os componentes, como vemos na imagem abaixo.
 
+<center>
+
 ![Riscos](assets/avaliacao_impacto.png)
+
+Figura 2 - Avaliação de impacto (fonte: autoures, 2023)
+
+</center>
 
 #### 2.4.1 Histórico de Riscos
 
@@ -131,7 +143,13 @@ Baseado na proposta do Gupta (2019), foi respondido um conjunto de questões dis
 4. Tipo de Projeto e Riscos Associados
 
 #### 3.1.1 Requisitos
+<center>
+
 ![Gupta](assets/gupta_requisitos.png)
+
+Figura 3 - Modelo Gupta para requisitos (fonte: Gupta, 2019)
+
+</center>
 
 Pergunta | Nosso contexto
 -------- | --------------- 
@@ -143,7 +161,13 @@ Os requisitos estão indicando um sistema complexo para se construir? | Sim.
 Conclusão: Em termos de requisitos, temos o indicativo para o RAD e Desenvolvimento Evolutivo.
 
 #### 3.1.2 Equipe de Desenvolvimento
+<center>
+
 ![Gupta](assets/gupta_equipe_desenvolvimento.png)
+
+Figura 4 - Modelo Gupta para equipe de desenvolvimento (fonte: Gupta, 2019)
+
+</center>
 
 Pergunta | Nosso contexto
 -------- | --------------
@@ -155,7 +179,13 @@ Disponibilidade para treinamento, se necessário | Sim.
 Conclusão: Em termos de equipe de desenvolvimento, temos o indicativo para o Spiral e o RAD.
 
 #### 3.1.3 Usuários
+<center>
+
 ![Gupta](assets/gupta_usuario.png)
+
+Figura 5 - Modelo Gupta para usuários (fonte: Gupta, 2019)
+
+</center>
 
 Pergunta | Nosso contexto 
 -------- | -------------- 
@@ -167,7 +197,13 @@ Usuário são especialistas no domínio do problema? | Sim.
 Conclusão: Em termos de usuário, temos o indicativo para o RAD e Protótipo
 
 #### 3.1.4 Tipo de Projeto e Risco Associado
+<center>
+
 ![Gupta](assets/gupta_projeto_risco.png)
+
+Figura 6 - Modelo Gupta para tipo de projeto e risco associado (fonte: Gupta, 2019)
+
+</center>
 
 Pergunta | Nosso contexto
 -------- | --------------
@@ -181,7 +217,13 @@ Os recursos (Tempo, dinheiro, pessoas etc) estão escassos? | Sim.
 Conclusão: Em termos de Tipo de Projeto e Risco Associado, temos o indicativo para o Protótipo e RAD
 
 #### 3.1.5 Escolha do Processo de Desenvolvimento de Software
-![Gupta](assets/rapid_application_development.png)
+<center>
+
+![RAD](assets/rapid_application_development.png)
+
+Figura 7 - Procedimento do RAD (fonte: MARSICANO, 2023)
+
+</center>
 
 Considerando o foco principal no nosso usuário, a pouca experiência dos membros da equipe e o risco associado, além do cronograma da disciplina, entendemos que devemos utilizar uma abordagem híbrida, com uma abordagem dirigida a plano, com o método cascata, na fase de requisitos e com as fases seguintes, utilizando o método ágil de desenvolvimento RAD (Rapid Application Development) (SWEBOK, p. 170).
 
@@ -196,7 +238,14 @@ Para a execução dessa metodologia, escolheu-se as seguintes Ferramentas de org
 ### 3.3 Processos e Procedimentos
 
 #### 3.3.1 Escolhas do Processo de Engenharia de Requisitos
+
+<center>
+
 ![ER](assets/er_facetas_ireb.png)
+
+Figura 8 - Faceta da engenharia de requisitos (fonte: MARSICANO, 2023)
+
+</center>
 
 Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 
 1. Alvo é o mercado; 
@@ -204,12 +253,30 @@ Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é process
 3. Tempo é interativo.
 
 #### 3.3.2 Atividades do Processo de Engenharia de Requisitos
+
+<center>
+
 ![ER](assets/er_atividades_marsicano.png)
+
+Figura 9 - Atividades da ER (fonte: MARSICANO, 2023)
+
+</center>
 
 Assim, incluímos as atividades de ER (MARSICANO, 2023) dentro dos procedimentos do processo de desenvolvimento de software RAD, pontuado no tópico 3.
 
 #### 3.3.3 ATIVIDADES RAD
+A metodologia *Rapid Application Development*, também chamado de RAD é um processo incremental na qual desenvolvemos as atividades descritas na figura 10. A metodologia envolve desenvolver módulos que apresentam as fases de análise, design, codificação e testagem. Esses módulos são desenvolvidos por equipes específicas, de forma paralela, e isso é desenvolvido a partir dos requisitos que foram elicitados e modularizados na iteração. Assim, várias técnicas e ferramentas de desenvolvimento são utilizadas para o desenvolvimento desses módulos. A ideia é que ao integrar esses módulos, o produto final é testado e entregado.
+
+Nosso grupo optou por utilizar um método híbrido que envolve o uso de cascata nos requisitos iniciais que elicitamos, enquanto que nas fases posteriores utilizaremos de abordagens ágeis e o processo do RAD como um todo. Com isso, vamos separar nossos 5 membros em dois times que vão estar trabalhando paralelamente em módulos diferentes.
+
+<center>
+
 ![RAD](assets/RAD-model.png)
+
+Figura 10 - Modelo de trabalho do RAD (fonte: *Software Engineering | Rapid application development model*, 2023)
+
+</center>
+
 ##### 3.3.3.1	REQUISITOS E PLANEJAMENTO
 ###### 3.3.3.1.1 DESCOBERTA E ELICITAÇÃO DE REQUISITOS
 Fase focada em encontrar, extrair, obter ou provocar uma resposta, reação, informação dos usuários para construção dos requisitos (MARSICANO, 2023).
@@ -293,7 +360,7 @@ TP-01 | Testagem do Produto | Teste Manual, Teste de Módulo, Teste de Integraç
 ?
 
 
-## 4 LIÇÕES APRENDIDAS
+## 4. LIÇÕES APRENDIDAS
 ### Unidade 1
 Com base nos feedbacks recebidos, podemos extrair algumas lições aprendidas importantes no projeto. Primeiramente, é notável que a interação entre os membros do grupo está positiva e a comunicação está fluindo bem, o que pode ser atribuído ao fato de que o grupo está unido como um time e está passando feedbacks constantes. Além disso, o grupo está sendo proativo nas entregas e as tarefas estão bem divididas, o que demonstra organização e alinhamento, principalmente em momentos de necessidade.
 
@@ -301,7 +368,7 @@ Por outro lado, os feedbacks construtivos indicam que o grupo precisa melhorar e
 
 Por fim, é essencial que todos os membros do grupo estejam acompanhando bem as atividades e assumindo responsabilidades equilibradas, além de cada membro ter um papel claro dentro do grupo e que esteja engajado em acompanhar as atividades propostas, garantindo que não haja atrasos ou sobrecarga de responsabilidades em alguns membros. Como resultado, espera-se que após uma gestão de equipe eficiente e equilibrada, teremos uma maior efetividade do projeto.
 
-## 5 A MELHORAR
+## 5. A MELHORAR
 ### Unidade 1
 - Lições Aprendidas
 - Planejamento das iterações
@@ -309,10 +376,11 @@ Por fim, é essencial que todos os membros do grupo estejam acompanhando bem as 
 - Critérios de replanejamento
 - Processos e atividade de Requisitos
 
-## 7 REFERÊNCIAS BIBLIOGRÁFICAS 
+## 6. REFERÊNCIAS BIBLIOGRÁFICAS 
 
-1. MARSICANO, George. Slides: Escolhas da Engenharia de Software. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518488/mod_folder/content/0/Unidade%201%20-%20Aula%20-%20Escolhas%20da%20ESW.pdf>
-2. Raja Gupta. Fundamentals of Software Engineering. Engineering Handbook. 2019
-3. IEEE. SWEBOK. Version 3. 2014.
-4. Handbook IREB CPRE Foundation Level, Version 1.1.0, september 2022.
-5. MARSICANO, George. Slides: Introdução a Engenharia de Requisitos. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518489/mod_folder/content/0/Unidade%201%20-%20Aula%20-%20Introducao%20a%20ER.pdf> 
+> 1. MARSICANO, George. Slides: Escolhas da Engenharia de Software. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518488/mod_folder/content/0/Unidade%201%20-%20Aula%20-%20Escolhas%20da%20ESW.pdf>
+> 2. Raja Gupta. Fundamentals of Software Engineering. Engineering Handbook. 2019
+> 3. IEEE. SWEBOK. Version 3. 2014.
+> 4. Handbook IREB CPRE Foundation Level, Version 1.1.0, september 2022.
+> 5. MARSICANO, George. Slides: Introdução a Engenharia de Requisitos. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518489/mod_folder/content/0/Unidade%201%20-%20Aula%20-%20Introducao%20a%20ER.pdf> 
+> 6. Software Engineering | Rapid application development model, 2023. Disponível em <https://www.geeksforgeeks.org/software-engineering-rapid-application-development-model-rad/> Acesso em 24 de maio de 2023.
