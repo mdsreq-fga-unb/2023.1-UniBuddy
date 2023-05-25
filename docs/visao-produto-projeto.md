@@ -290,7 +290,15 @@ Por outro lado, os feedbacks construtivos indicam que o grupo precisa melhorar e
 
 Sendo assim, é essencial que todos os membros do grupo estejam acompanhando bem as atividades e assumindo responsabilidades equilibradas, além de cada membro ter um papel claro dentro do grupo e que esteja engajado em acompanhar as atividades propostas, garantindo que não haja atrasos ou sobrecarga de responsabilidades em alguns membros. Como resultado, espera-se que após uma gestão de equipe eficiente e equilibrada, teremos uma maior efetividade do projeto.
 
-Além disso, sobre o conteudo que aprendemos em sala de aula, revisamos sobre metodologia de desevolvimento de software, porem dessa vez sobe a perspectiva de Engenharia de Requisitos,
+Além disso, aprendemos em sala de aula sobre processos, ciclos de vida e Abordagens de software sob a perspectiva de Engenharia de Requisitos. Também aprendemos sobre Atividades de Engenharia de Requisitos (MARSICANO, 2023), facetas de ER (IREB, 2022), etc.
+
+Nas atividades práticas aprendemos como analisar um problema e suas causas para depois pensar sobre uma possível solução que irá resolver ou minimizar esse problema, propondo assim o objetivo da nossa aplicação.
+
+Também Aprendemos sobre quais critérios devemos observar para selecionar nossa abordagem de desenvolvimento (GUPTA), para que nos possemos planejar as Atividades de Engenharia de Requisitos (MARSICANO, 2023).
+
+### Unidade 2
+
+Na unidade 2 realizamos as Atividades de Engenharia de Requisitos (MARSICANO, 2023) que havíamos planejado. Iniciamos pela Elicitação e Descoberta através de conversa com inteligência artificial (ChatGPT), listagem dos requisitos funcionais e não funcionais, assim conseguimos entender melhor os problemas e necessidades do nosso cliente. Seguimos com a Análise e Consenso através de negociações e análises. Com isso, prosseguimos para a Declaração e a fizemos através de Temas, Épicos e User Stories. Posteriormente fizemos a Verificação e Validação através de revisão em pares e feedbacks. Por fim, fizemos a Organização e Atualização através da técnica MoSCoW.
 
 ## 5 A MELHORAR
 ### Unidade 1
