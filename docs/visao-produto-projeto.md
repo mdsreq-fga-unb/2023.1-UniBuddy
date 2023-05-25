@@ -108,10 +108,10 @@ Figura 2 - Avaliação de impacto (fonte: autoures, 2023)
 
 #### 2.4.1 Histórico de Riscos
 
-Fase | Risco Encontrado | Categoria
+Iteração | Risco Encontrado | Categoria
 ------ | ---------------- | -----
-Requisitos | Risco de Projeto | Crítico 2
-Requisitos | Risco Técnicos | Crítico 2
+Iteração 2 | Risco de Projeto | Crítico 2
+Iteração 3 | Risco Técnicos | Crítico 2
 
 ### 2.5	Critérios de Replanejamento
 Os critérios de replanejamento referem-se à identificação dos pontos que, caso ocorram, causarão um replanejamento do projeto. Precisam ser acompanhados a cada iteração, referindo-se assim, ao projeto como um todo e não apenas ao produto.
@@ -127,7 +127,7 @@ Os critérios de replanejamento referem-se à identificação dos pontos que, ca
 Os critérios de replanejamento do projeto devem ser acompanhados e atualizados a cada fase. E, aplicados, conforme necessidade.
 
 #### 2.5.1 Histórico de Replanejamento
-Fase | Problema | Solução Encontrada | Resultado Esperado
+Iteração | Problema | Solução Encontrada | Resultado Esperado
 ------ | -------- |------------------ | ------------------
 Interação 3 | Atrasos de mais de 2 semanas  | Alterar cronograma do projeto | Adequação aos prazos solicitados
 Interação 3 | Alteração no Processo de Engenharia de Requisito ou Desenvolvimento de Software | Alterar cronograma do projeto e entregas | Adequação aos prazos solicitados
@@ -136,6 +136,7 @@ Interação 3 | Alteração no Processo de Engenharia de Requisito ou Desenvolvi
 ## 3 PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
 ### 3.1 Metodologia
 Baseado na proposta do Gupta (2019), foi respondido um conjunto de questões distintas sobre determinados tópicos para definir a abordagem que melhor se encaixa ao projeto e time. Tópicos norteadores:
+
 1. Requisitos
 2. Equipe de Desenvolvimento
 3. Usuários
@@ -246,7 +247,14 @@ Figura 8 - Faceta da engenharia de requisitos (fonte: MARSICANO, 2023)
 
 </center>
 
-Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 1. Alvo é o mercado; 2. O propósito é exploratório; 3. Tempo é interativo.
+Figura 8 - Faceta da engenharia de requisitos (fonte: MARSICANO, 2023)
+
+</center>
+
+Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 
+1. Alvo é o mercado; 
+2. O propósito é exploratório; 
+3. Tempo é interativo.
 
 #### 3.3.2 Atividades do Processo de Engenharia de Requisitos
 
@@ -279,29 +287,35 @@ Fase focada em encontrar, extrair, obter ou provocar uma resposta, reação, inf
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-ELI-01 | ? | ?| ? |  ?
+ELI-01 | Elicitação e Descoberta | Diagrama de causa e 5 porquês | Mural | Backlog de requisitos não validado
 
 ###### 3.3.3.1.2 ANALISE E CONSENSO DE REQUISITOS
 Fase focada em analisar os requisitos brutos e conciliar os interesses dos _stakeholders_ (MARSICANO, 2023).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-AA-01 | ? | ?| ? |  ?
+AA-01 | Análise e Consenso | Análise de Viabilidade | Teams | Backlog de requisitos validados
 
 ###### 3.3.3.1.3 DECLARAÇÃO DE REQUISITOS
 Fase focada em comunicar os requisitos para os interessados em diferentes níveis de glanularidade e dividindo entre funcionais e não funcionais (MARSICANO, 2023)
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-DEC-01 | ? | ?| ? |  ?
+DEC-01 | Declaração | Temas, Epicos e User Stories | Mural | User Stories representadas
 
-###### 3.3.3.1.4 GERENCIAMENTO DE REQUISITOS (ORGANIZAÇÃO E ATUALIZAÇÃO)
+###### 3.3.3.1.4 VERIFICAÇÃO E VALIDAÇÃO DE REQUISITOS
 Fase focada em manter os requisitos do produto estruturados, organizados e atualizados (MARSICANO, 2023)
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-GEREN-01 | ? | ? | ? | ?
+GEREN-01 | Verificação e Validação | Feedback | Reunião | User Stories validadas
 
+###### 3.3.3.1.5 GERENCIAMENTO DE REQUISITOS (ORGANIZAÇÃO E ATUALIZAÇÃO)
+Fase focada em manter os requisitos do produto estruturados, organizados e atualizados (MARSICANO, 2023)
+
+Identificador | Atividade | Método | Ferramenta | Entrega
+------------- | --------- | ------ | ---------- | -------
+GEREN-01 | Organização e Atualização | MoSCoW | Mural e Excel | Definição de prioridades (MVP1 e MVP2)
 
 ##### 3.3.3.2 PROTOTIPAÇÃO E FEEDBACK
 ###### 3.3.3.2.1 REPRESENTAÇÃO DE REQUISITOS (PROTÓTIPO)
@@ -309,41 +323,42 @@ Apresentação dos requisitos em modelos e/ou visualizações do produto (MARSIC
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-PRO-01 | ? | ? | ? | ?
+PRO-01 | Construção de prototipo de Baixa Fidelidade | Prototipagem | Figma | Prototipo de baixa fidelidade
+PRO-02 | Construção de prototipo de Média Fidelidade | Prototipagem | Figma | Prototipo de média fidelidade
+PRO-03 | Construção de prototipo de Alta Fidelidade | Prototipagem | Figma | Prototipo de alta fidelidade
 
-###### 3.3.3.2.2	VALIDAÇÃO E VERIFICAÇÃO DE REQUISITOS (PROTÓTIPO)
+###### 3.3.3.2.2    VALIDAÇÃO E VERIFICAÇÃO DE REQUISITOS (PROTÓTIPO)
 Validação é confirmar ou não se os requisitos definem a solução correta conforme consensuado entre os _stakeholders_ (MARSICANO, 2023). Enquanto verificação é garantir se os requisitos foram ou não executados na maneira correta (MARSICANO, 2023). Assim como faz parte dessa fase, definir o preparado (DoR) e o pronto (DoD).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-VAP-01 | ? | ? | ?| ?
-
+VAP-01 | Coleta de Feedbacks sobre os protótipos | Feedback | Teams e Figma | Relação de feedbacks
 
 ##### 3.3.3.3 CONSTRUÇÃO
 ###### 3.3.3.3.1 CONSTRUÇÃO MÓDULOS
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-CM-01 | ? | ? | ? | ?
+CM-01 | Desenvolvimento da Aplicação | PairProgramming | VSCODE, GitHub, Navegador | Módulo Unitário
 
 ###### 3.3.3.3.1 VALIDAÇÃO MÓDULOS
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-VAM-01 | ? | ? | ? | ?
+VAM-01 | Atividade de Validação dos Módulos | Feedback | Teams e Navegador | Relação de Feedbacks
 
 ##### 3.3.3.4 CUTOVER
 ###### 3.3.3.4.1 INTEGRAÇÃO MÓDULOS
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-IT-01 | ? | ? | ? | ?
+IT-01 | Integração de Módulos | União de Módulos | GitHub, VSCODE e Navegador | Módulo Integrado
 
 ###### 3.3.3.4.2 TESTE PRODUTO
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-TP-01 | ? | ? | ? | ?
+TP-01 | Testagem do Produto | Teste Manual, Teste de Módulo, Teste de Integração, Teste de Sistema, Teste de Aceitação | VSCODE, GitHub | Relatório de Testes
 
 ### 3.4 Arquitetura do Projeto
 ?
