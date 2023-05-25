@@ -349,7 +349,7 @@ VAM-01 | Atividade de Validação dos Módulos | Feedback | Teams e Navegador | 
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
-IT-01 | Integração de Módulos | União de Módulos | GitHub, VSCODE e Navegador | Módulo Integrado
+IT-01 | Integração de Módulos | União de Módulos | GitHub, VSCODE e Navegador | MVP
 
 ###### 3.3.3.4.2 TESTE PRODUTO
 
