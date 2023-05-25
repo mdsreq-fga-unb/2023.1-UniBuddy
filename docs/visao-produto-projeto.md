@@ -247,10 +247,6 @@ Figura 8 - Faceta da engenharia de requisitos (fonte: MARSICANO, 2023)
 
 </center>
 
-Figura 8 - Faceta da engenharia de requisitos (fonte: MARSICANO, 2023)
-
-</center>
-
 Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 
 1. Alvo é o mercado; 
 2. O propósito é exploratório; 
