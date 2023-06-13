@@ -13,7 +13,7 @@ router.post("/registro", async (req, res) => {
         await User.create(novo_usuario);
         res.status(201).json(novo_usuario);
     } catch (error) {
-        res.status(400).json({ error: 'Erro ao registrar o usuário.' });
+        res.status(400).json({ error: 'Erro ao registrar usuário.' });
     }
 })
 
