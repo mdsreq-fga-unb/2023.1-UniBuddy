@@ -28,4 +28,24 @@ router.post("/registro", async (req, res) => {
     }
 })
 
+router.post("/login", async (req, res) => {
+    const usuario = await User.findOne({
+        attributes: ["id", "nomeCompleto", "email", "senha"],
+        where: {
+            email: req.body.email
+        }
+    });
+
+    if(usuario === null){
+        res.status(400).json({ error: 'Usuário não encontrado' });
+    } else {
+        if(!(await bcrypt.compare(req.body.senha, usuario.senha))){
+            res.status(400).json({ error: 'Senha incorreta' });
+        } else {
+            const token = jwt.sign({id: usuario.id}, "shhh");
+            res.status(400).json({ error: 'Login efetuado: ' + usuario.nomeCompleto});
+        }
+    }
+})
+
 module.exports = router;
