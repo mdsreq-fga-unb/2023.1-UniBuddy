@@ -23,4 +23,21 @@ router.post("/cadastrar", auth, async (req, res) => {
     }
 })
 
+router.delete("/deletar/:id", auth, async (req, res) => {
+    try {
+        const carona = await Carona.findOne({where: {id: req.params.id}});
+
+        if (!carona) {
+            return res.status(404).json({ message: 'Carona não encontrado.' });
+        } else if (carona.id_usuario != req.usuario.id) {
+            return res.status(403).json({ message: 'Você não tem permissão para excluir essa carona.' });
+        } else {
+            await carona.destroy();
+            res.status(200).json({ message: 'Carona excluída com sucesso.' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao excluir carona.', error: error.message });
+    }
+})
+
 module.exports = router;
