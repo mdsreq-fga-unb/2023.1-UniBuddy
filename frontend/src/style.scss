@@ -1,0 +1,275 @@
+$lightGreen : #00b894;
+$black : #000000;
+$white : #ffffff;
+$darkBlue : #29A8CA;
+
+
+.app {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 100%;
+
+        .auth {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: $white;
+
+            h1 {
+                color: $black;
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 50%;
+                background-color: white;
+                border-radius: 1rem;
+                padding: 2rem;
+
+                input {
+                    width: 100%;
+                    height: 3rem;
+                    margin-bottom: 1rem;
+                    border-radius: 0.5rem;
+                    border: 1px solid #ccc;
+                    padding: 0.5rem;
+                }
+
+                button {
+                    width: 100%;
+                    height: 3rem;
+                    margin-bottom: 1rem;
+                    border-radius: 0.5rem;
+                    border: 1px solid #ccc;
+                    padding: 0.5rem;
+                    background-color: #000000;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                span {
+                    color: red;
+                    font-size: 0.8rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin-top: 1rem;
+                    font-size: 0.8rem;
+                    color : red;
+                }
+            }
+        }
+
+        //navbar
+        .navbar{
+
+            background-color: #ECECEC;
+
+            .container{
+                padding: 1rem 0rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                
+                .logo{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: $black;
+                    img{
+                        width: 3rem;
+                        height:3rem;
+                        padding-left: 1rem;
+                    }
+                }
+
+                .links{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 30%;
+
+                    h6 {
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: $black;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: $black;
+                    }
+
+                    .link{
+                        text-decoration: none;
+                        color: $white;
+                        font-weight: bold;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        background-color: $black;
+                        border-radius: 2rem;
+                        padding: 0.5rem 1rem;
+                    }
+
+                    .link:hover{
+                        color: $darkBlue;
+                    }
+
+                    .logout {
+                        color: $black;
+                        padding: 0.5rem 1rem;
+                        border-radius: 0.5rem;
+                        cursor: pointer;
+                    }
+
+                }
+            }
+            
+        }
+    }
+
+    footer{
+        background-color: #ECECEC;
+        padding: 1rem 0rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .home{
+        padding: 2rem 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-size: 2rem;
+            font-weight: bold;
+            color: $black;
+            margin-bottom: 2rem;
+        }
+        .posts{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .post{
+                width: 30%;
+                margin-bottom: 2rem;
+                border-radius: 1rem;
+                background-color: $white;
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+                .postImg{
+                    width: 100%;
+                    height: 5rem;
+                    width: 5rem;
+                    border-radius: 1rem 1rem 0rem 0rem;
+                }
+                .postInfo{
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    .postNome{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 1rem;
+                        .nome{
+                            font-size: 1.2rem;
+                            font-weight: bold;
+                            color: $black;
+                        }
+                        .bairro{
+                            font-size: 1rem;
+                            font-weight: bold;
+                            color: $black;
+                        }
+                    }
+                    .desc{
+                        font-size: 1rem;
+                        color: $black;
+                        margin-bottom: 1rem;
+                    }
+                    hr{
+                        margin-bottom: 1rem;
+                    }
+                    .postVaga{
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: $black;
+                    }
+                    .postDestino{
+                        font-size: 1rem;
+                        color: $black;
+                        display: flex;
+                        justify-content: space-between;
+                        .link{
+                            text-decoration: none;
+                            color: $white;
+                            font-weight: bold;
+                            font-size: 1rem;
+                            justify-content: space-between;
+                            cursor: pointer;
+                            background-color: #000000;
+                            border-radius: 2rem;
+                            padding: 0.5rem 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+        
+        /*<div className="home">
+            <h1>Carronas Disponíveis</h1>
+            <div className="posts">
+                {Posts.map((p) => (
+                    <div className="post">
+                        <img
+                            className="postImg"
+                            src={ImagemExemplo}
+                            alt="Pedro"
+                        />
+                        <div className="postInfo">
+                            <div className="postNome">
+                                <span className="nome">Pedro</span>
+                                <span className="bairro">Asa Norte</span>
+                            </div>
+                            <p className="desc">
+                                {p.description}
+                            </p>
+                            <hr />
+                            <span className="postVaga">Vagas Disponiveis</span>
+                            <span className="postDestino">{p.title}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+        */
+
+
+       
+    
+}
