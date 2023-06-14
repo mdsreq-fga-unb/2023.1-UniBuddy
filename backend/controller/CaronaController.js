@@ -40,4 +40,14 @@ router.delete("/deletar/:id", auth, async (req, res) => {
     }
 })
 
+router.get("/vizualizar", async (req, res) => {
+    try {
+        const caronas = await Carona.findAll();
+
+        res.status(200).json({ message: caronas });
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao buscar caronas.', error: error.message });
+    }
+})
+
 module.exports = router;
