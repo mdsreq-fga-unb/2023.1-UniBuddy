@@ -14,6 +14,11 @@
 
 - Coloque a senha como sendo: 123456789
 
+- Em seguida crie a database:
+```sql
+CREATE DATABASE users;
+```
+
 ### Baixar Dependencias
 
 - npm install
