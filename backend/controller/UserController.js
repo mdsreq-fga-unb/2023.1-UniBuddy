@@ -43,7 +43,9 @@ router.post("/login", async (req, res) => {
             res.status(400).json({ error: 'Senha incorreta' });
         } else {
             const token = jwt.sign({id: usuario.id}, "shhh");
-            res.status(400).json({ error: 'Login efetuado: ' + usuario.nomeCompleto});
+            res.status(202).json({ 
+                error: 'Login efetuado: ' + usuario.nomeCompleto
+            });
         }
     }
 })
