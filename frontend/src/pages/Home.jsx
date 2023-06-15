@@ -50,10 +50,9 @@ const Home = () => {
                     <div className="post" key={p.id}>
                         <img
                             className="postImg"
-                            src={ImagemExemplo}
+                            src="https://cdn-icons-png.flaticon.com/128/2102/2102647.png"
                         />
                         <div className="postInfo" >
-                            <Link className="link" to={`/post/${p.id}`}>teste</Link>
                             <div className="postNome">
                                 <span className="nome">{p.title}</span>
                                 <span className="bairro">{p.bairro}</span>

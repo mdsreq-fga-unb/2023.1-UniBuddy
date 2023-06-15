@@ -8,6 +8,15 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import "./style.scss";
 
+//MVP1
+//Tela de Login 
+//Tela de Registro ( nome, matricula, email, senha, telefone )
+//Tela de Caronas ( todas carronas disponiveis com vagas, origem, destino, horario, data, telefone )
+//Tela da Carrona Especifica ( ver mais informações )
+//Tela de Criar Carrona ( origem, destino, horario, data, vagas, descrição )
+//Tela de Deletar carrona ( ou botão especifico )
+//
+
 const Layout = () => {
   return (
     <>

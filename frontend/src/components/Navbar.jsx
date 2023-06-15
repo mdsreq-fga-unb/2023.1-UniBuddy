@@ -15,7 +15,7 @@ const Navbar = () => {
                     <img src={Carro} alt="Logo" />
                 </div>
                 <div className="links">
-                    <Link className="link" to="/Criar">Criar Caronas</Link>  
+                    <Link className="link" to="/write">Criar Caronas</Link>  
                     <Link className="link" to="/Lista">Caronas</Link>
                     <Link className="link" to="/Perfil">
                         Perfil
