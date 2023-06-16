@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 const Login = () => {
     return (
          <div className="auth">
-            <h1>Bem vindo a UniBuddy</h1>
+            <div className="entrar">
+                <img src="https://cdn-icons-png.flaticon.com/128/3085/3085339.png" alt="" />
+                <h1>Bem vindo a UniBuddy</h1>
+            </div>
             <form>
                 <input required type="text" placeholder="Endereço de Email" />
                 <input required type="password" placeholder="Senha" />

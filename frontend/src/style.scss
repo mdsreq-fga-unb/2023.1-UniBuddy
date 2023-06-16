@@ -26,6 +26,24 @@ $darkBlue : #29A8CA;
                 margin-bottom: 2rem;
             }
 
+            .entrar{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 50%;
+                background-color: white;
+                border-radius: 1rem;
+                padding: 2rem;
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 50%;
+                    margin-bottom: 1rem;
+                }
+            }
+
             form {
                 display: flex;
                 flex-direction: column;
@@ -348,6 +366,25 @@ $darkBlue : #29A8CA;
             font-weight: bold;
             color: $black;
             margin-bottom: 2rem;
+        }
+        img{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+
+
+        }
+        .test{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 50%;
+            background-color: white;
+            border-radius: 1rem;
+            padding: 0rem; 
         }
         .posts{
             display: flex;

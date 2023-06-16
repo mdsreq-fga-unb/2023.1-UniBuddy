@@ -44,7 +44,10 @@ const Home = () => {
 
     return (
         <div className="home">
+            <div className="test">
+            <img src="https://cdn-icons-png.flaticon.com/128/5233/5233747.png" alt="" />
             <h1>Carronas Disponíveis</h1>
+            </div>
             <div className="posts">
                 {posts.map((p) => (
                     <div className="post" key={p.id}>
