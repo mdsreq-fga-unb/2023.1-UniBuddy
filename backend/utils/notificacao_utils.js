@@ -28,3 +28,17 @@ exports.getNotificacoes = async function (idDestinatario){
         throw error;
     }
 }
+
+exports.marcarComoLida = async function (idDestinatario){
+    try {
+        await Notificacao.update(
+          { status: true },
+          { where: { idDestinatario: idDestinatario, status: false } }
+        );
+    
+        console.log('Todas as notificações foram marcadas como lidas.');
+    } catch (error) {
+        console.error('Erro ao marcar notificações como lidas:', error);
+        throw error;
+    }
+}

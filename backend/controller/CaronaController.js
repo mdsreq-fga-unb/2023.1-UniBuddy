@@ -6,7 +6,7 @@ const auth = require('../middleware/auth');
 const Carona = require('../models/Carona');
 const Solicitacao = require('../models/Solicitacoes');
 
-const notifiUtils = require('../utils/notificacao_utils')
+const notifiUtils = require('../utils/notificacao_utils');
 const caronaUtils = require('../utils/carona_utils');
 
 router.post("/cadastrar", auth, async (req, res) => {
