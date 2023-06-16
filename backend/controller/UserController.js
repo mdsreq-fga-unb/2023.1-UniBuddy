@@ -46,17 +46,10 @@ router.post("/login", async (req, res) => {
             const token = jwt.sign({id: usuario.id}, "shhh");
             res.status(202).json({ 
                 error: 'Login efetuado: ' + usuario.nomeCompleto
-                ,token
+                //,token
             });
         }
     }
-})
-
-router.get("/whatsapp", async (req, res) => {
-    const telefone = req.query.telefone;
-    const url = `https://wa.me/${telefone}`;
-
-    res.redirect(url);
 })
 
 module.exports = router;
