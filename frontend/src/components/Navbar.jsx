@@ -16,8 +16,8 @@ const Navbar = () => {
                 </div>
                 <div className="links">
                     <Link className="link" to="/write">Criar Caronas</Link>  
-                    <Link className="link" to="/Lista">Caronas</Link>
-                    <Link className="link" to="/Perfil">
+                    <Link className="link" to="/">Caronas</Link>
+                    <Link className="link" to="/perfil">
                         Perfil
                     </Link>
                     <span className="logout">
