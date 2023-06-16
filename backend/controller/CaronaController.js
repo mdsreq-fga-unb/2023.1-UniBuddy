@@ -6,6 +6,7 @@ const auth = require('../middleware/auth');
 const Carona = require('../models/Carona');
 const Solicitacao = require('../models/Solicitacoes');
 
+const notifiUtils = require('../utils/notificacao_utils')
 const caronaUtils = require('../utils/carona_utils');
 
 router.post("/cadastrar", auth, async (req, res) => {
@@ -49,6 +50,14 @@ router.delete("/deletar/:id", auth, async (req, res) => {
         } else if (carona.id_usuario != req.usuario.id) {
             return res.status(403).json({ message: 'Você não tem permissão para excluir essa carona.' });
         } else {
+            const ids_passageiros = await caronaUtils.getIdPassageiro(req.params.id);
+            for (let i = 0; i < ids_passageiros.length; i++){
+                const notificacao = await notifiUtils.criaNotificacao(
+                    ids_passageiros[i],
+                    "A carona que você solicitou foi deletada pelo motorista."
+                );
+            }
+
             await carona.destroy();
             await solicitacao.destroy();
             res.status(200).json({ message: 'Carona excluída com sucesso.' });

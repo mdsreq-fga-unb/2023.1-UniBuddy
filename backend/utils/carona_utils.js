@@ -32,3 +32,25 @@ exports.getVagaCarona = async function(idCarona) {
     }
 
 }
+
+exports.getIdPassageiro = async function(idCarona) {
+    try {
+        const passageiros = await Solicitacao.findOne({
+            where: {idCarona},
+            attributes: ['idPassageiro1', 'idPassageiro2', 'idPassageiro3', 'idPassageiro4'],
+        });
+
+        const ids_passageiros = [];
+        for (const col in passageiros.dataValues) {
+            const id = passageiros[col];
+            if (id !== null) {
+                ids_passageiros.push(id);
+            }
+        }
+        console.log(ids_passageiros);
+        return ids_passageiros;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
