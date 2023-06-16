@@ -82,12 +82,13 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
     try {
         const solicitacao = await Solicitacao.findOne({where: {idCarona: req.params.idCarona}});
         const vaga = await caronaUtils.getVagaCarona(req.params.idCarona);
-        const motorista = await caronaUtils.getIdMotorista(req.params.idCarona);
-
+        
         if(!solicitacao) {
             return res.status(404).json({ message: 'Carona não encontrado.' });
         } else if (vaga === null) {
             return res.status(404).json({ message: 'Carona solicitada nâo tem vaga.' });
+        } else if (await caronaUtils.verificaDisponibilidade(req.usuario.id)) {
+            return res.status(404).json({ message: 'Você já solicitou essa carona.' });
         } else {
             const nome = await userUtils.getNomeUsuario(req.usuario.id);
             var obj = {};
@@ -96,6 +97,8 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
                 obj,
                 {where: {idCarona: req.params.idCarona}}
             );
+
+            const motorista = await caronaUtils.getIdMotorista(req.params.idCarona);
             const notificacao = await notifiUtils.criaNotificacao(
                 motorista,
                 `${nome} está interessado na sua carona`

@@ -3,6 +3,7 @@ const Carona = require('../models/Carona');
 const Solicitacao = require('../models/Solicitacoes');
 const db = require('../database/db');
 const Sequelize = require('sequelize');
+const { Op } = Sequelize;
 
 exports.getVagaCarona = async function(idCarona) {
     const query = `
@@ -23,7 +24,6 @@ exports.getVagaCarona = async function(idCarona) {
         type: Sequelize.QueryTypes.SELECT
     });
     const existeVaga = result[0].vaga;
-    console.log(existeVaga);
 
     if (existeVaga == false) {
         return null;
@@ -64,6 +64,30 @@ exports.getIdMotorista = async function(idCarona){
 
         console.log(motorista.idMotorista);
         return motorista.idMotorista;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
+
+exports.verificaDisponibilidade = async function(id_usuario) {
+    try {
+        const existe = await Solicitacao.findOne({
+            where: {
+                [Op.or]: [
+                    { idPassageiro1: id_usuario },
+                    { idPassageiro2: id_usuario },
+                    { idPassageiro3: id_usuario },
+                    { idPassageiro4: id_usuario }
+                ]
+            }
+        });
+
+        if (existe) {
+            return true;
+        } else {
+            return false;
+        }
     } catch (error) {
         console.error(error);
         throw error;
