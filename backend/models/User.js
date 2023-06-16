@@ -26,6 +26,15 @@ const User = db.define('users', {
             }
         }
     },
+    telefone: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+            isEmail: {
+                msg: "Telefone digitado eh invalido!"
+            }
+        }
+    },
     senha: {
         type: Sequelize.STRING,
         allowNull: false,

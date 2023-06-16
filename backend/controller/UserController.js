@@ -12,6 +12,7 @@ router.post("/registro", async (req, res) => {
         const novo_usuario = {
             nomeCompleto: req.body.nomeCompleto,
             email: req.body.email,
+            telefone: req.body.telefone,
             senha: await bcrypt.hash(req.body.senha, salt)
         };
 
@@ -45,6 +46,7 @@ router.post("/login", async (req, res) => {
             const token = jwt.sign({id: usuario.id}, "shhh");
             res.status(202).json({ 
                 error: 'Login efetuado: ' + usuario.nomeCompleto
+                //,token
             });
         }
     }
