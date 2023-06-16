@@ -24,7 +24,7 @@ router.post("/registro", async (req, res) => {
             res.status(400).json({ error: 'Usuário já existe' });
         }
     } catch (error) {
-        res.status(400).json({ error: 'Erro ao registrar o usuário.' });
+        res.status(400).json({ error: 'Erro ao registrar usuário.' });
     }
 })
 

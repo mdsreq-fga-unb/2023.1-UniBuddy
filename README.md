@@ -1,28 +1,11 @@
 # 2023.1-UniBuddy
 
-## Como subir o ambiente para desenvolvimento?
-
-- Dependencias
-
-    - > Node v18.x
-    - > npm v9.x
-
-
-### Banco de Dados
-
-[Tutorial para instalar o banco de dados, o necessário é até os 6min](https://www.youtube.com/watch?v=Gw8_QOicyIQ&t=523s&ab_channel=Jos%C3%A9AiltonTI)
-
-- Coloque a senha como sendo: 123456789
-
-- Em seguida crie a database:
-```sql
-CREATE DATABASE users;
-```
-
-### Baixar Dependencias
-
-- npm install
-
-### Rodar o backend
-
-- sudo backend/index.js
+1 - Entrar na branch feature/dev/Pedro
+2 - Fazer o pull da branch feature/dev/Pedro
+3 - Criar uma branch com o nome da feature que você vai desenvolver
+4 - Escrever comando no terminal : yarn 
+5 - Escrever comando no terminal : yarn start
+6 - Selecionar como voce vai rodar com o vite : eu rodei com o dev:vite
+7 - Fazer as alterações necessárias
+8 - Fazer o commit das alterações
+9 - Fazer o push da branch que você criou
