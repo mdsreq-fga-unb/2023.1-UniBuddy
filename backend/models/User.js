@@ -30,8 +30,8 @@ const User = db.define('users', {
         type: Sequelize.STRING,
         allowNull: false,
         validate: {
-            isEmail: {
-                msg: "Telefone digitado eh invalido!"
+            notEmpty: {
+                msg: "Esse campo nao pode ser vazio"
             }
         }
     },
