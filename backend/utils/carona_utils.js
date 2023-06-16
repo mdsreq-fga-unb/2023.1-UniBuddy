@@ -54,3 +54,18 @@ exports.getIdPassageiro = async function(idCarona) {
         throw error;
     }
 }
+
+exports.getIdMotorista = async function(idCarona){
+    try {
+        const motorista = await Solicitacao.findOne({
+            where: {idCarona},
+            attributes: ['idMotorista']
+        });
+
+        console.log(motorista.idMotorista);
+        return motorista.idMotorista;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
