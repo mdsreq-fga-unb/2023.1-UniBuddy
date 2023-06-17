@@ -362,7 +362,7 @@ Identificador | Atividade | Método | Ferramenta | Entrega
 TP-01 | Testagem do Produto | Teste Manual, Teste de Módulo, Teste de Integração, Teste de Sistema, Teste de Aceitação | VSCODE, GitHub | Relatório de Testes
 
 ### 3.4 Arquitetura do Projeto
-?
+*PREENCHER*
 
 
 ## 4. LIÇÕES APRENDIDAS
@@ -379,6 +379,8 @@ Por fim, nas atividades práticas, aprendemos como analisar um problema e suas c
 Na unidade 2 realizamos as Atividades de Engenharia de Requisitos (MARSICANO, 2023) que havíamos planejado, com alguns percalços no caminho que nos levaram a replanejar nosso cronograma e alterar a abordagem de desenvolvimento. Dentro das atividades de requisitos, iniciamos pela Elicitação e Descoberta, através de conversa com inteligência artificial (ChatGPT) e representantes dos usuários, e conseguimos criar uma listagem dos requisitos funcionais e não funcionais na qual conseguimos materializar os desejos e necessidades dos representantes. Seguimos com a Análise e Consenso através de negociações e análises, tendo discussões entre o time e com revisões do monitor. Com isso, prosseguimos para a Declaração e a fizemos através de Temas, Épicos e User Stories. Posteriormente fizemos a Verificação e Validação através de revisão em pares e feedbacks, além do uso do INVEST por meio da equipe GameKingdom, onde pudemos entender de uma forma mais concisa como nossos requisitos poderiam melhorar. Por fim, fizemos a Organização e Atualização através da técnica MoSCoW, onde avaliamos os critérios da técnica entre o time por meio de votação, onde tínhamos 5 pontos para valor de negócio, viabilidade e complexidade, assim conseguimos de uma maneira menos subjetiva (e mais objetiva), definir nossos MVP1 e MVP2.
 
 Portanto, com base no descrito acima, podemos dizer que aprendemos todo o processo de definição dos requisitos, de uma maneira objetiva, organizada e concisa, mesmo com diversas discordâncias e erros ao longo do processo, o que nos levou a mais aprendizados enquanto equipe. Em seguida, também aprendemos que muitas vezes pode ser necessário readaptar o cronograma e até mesmo a abordagem do processo de desenvolvimento, a depender do contexto. Ainda sim, temos que fazer alinhamentos constantes e validações com os representantes, professor e monitores para ter o melhor proveito da disciplina. Por fim, aprendemos que MVP1 e MVP2 são produtos que geram valor para o cliente, mesmo que limitados, mas que trazem a oportunidade do cliente experimentar e entender o diferencial do produto, em razão disso, torna-se uma das fases mais estratégicas de um produto, onde o usuário pode decidir comprar ou descartar a ideia.
+### Unidade 3
+*PREENCHER*
 
 ## 5. A MELHORAR
 ### Unidade 1
@@ -387,6 +389,10 @@ Portanto, com base no descrito acima, podemos dizer que aprendemos todo o proces
 - Critérios de riscos
 - Critérios de replanejamento
 - Processos e atividade de Requisitos
+### Unidade 2
+*PREENCHER*
+### Unidade 3
+*PREENCHER*
 
 ## 6. REFERÊNCIAS BIBLIOGRÁFICAS 
 
