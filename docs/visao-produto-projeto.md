@@ -14,7 +14,7 @@ Data | Versão | Descrição | Autor | Revisores
 22/05/23 | 1.3 | Inserção de detalhes na matriz de comunicação, revisão da análise de risco e critérios de replanejamento | Juan | João
 24/05/23 | 1.4 | Correção do Planejamento do projeto, da abordagem de desenvolvimneto, das entregas, e da matriz de comunicação, inclusão de item no histórico de replanejamento | Juan | João
 25/05/23 | 2.0 | Segunda versão de entrega | Juan, João, Pedro Henrique, Pedro Lucas | João
-17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos, Histórico de Replanejamento | Juan | João
+17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos, Histórico de Replanejamento, Lições aprendidas, Pontos de melhoria | Juan | ?
 
 
 ## 1.	VISÃO GERAL DO PRODUTO
@@ -380,7 +380,11 @@ Na unidade 2 realizamos as Atividades de Engenharia de Requisitos (MARSICANO, 20
 
 Portanto, com base no descrito acima, podemos dizer que aprendemos todo o processo de definição dos requisitos, de uma maneira objetiva, organizada e concisa, mesmo com diversas discordâncias e erros ao longo do processo, o que nos levou a mais aprendizados enquanto equipe. Em seguida, também aprendemos que muitas vezes pode ser necessário readaptar o cronograma e até mesmo a abordagem do processo de desenvolvimento, a depender do contexto. Ainda sim, temos que fazer alinhamentos constantes e validações com os representantes, professor e monitores para ter o melhor proveito da disciplina. Por fim, aprendemos que MVP1 e MVP2 são produtos que geram valor para o cliente, mesmo que limitados, mas que trazem a oportunidade do cliente experimentar e entender o diferencial do produto, em razão disso, torna-se uma das fases mais estratégicas de um produto, onde o usuário pode decidir comprar ou descartar a ideia.
 ### Unidade 3
-*PREENCHER*
+Na unidade 3 realizamos os conhecimentos teóricos adquiridos nas unidades anteriores para aplicar em cima de técnicas e ferramentas específicas de organização e priorização de requisitos, como Canvas PBB (_Product Backlog Building_), BDD (_Behavior Driven Development_), COORG (Classificar, Ordenar e Organizar), SAFe Backlog etc. Como resultado, tivemos o desenvolvimento de um novo backlog do zero, com fins para a disciplina, a partir do Canvas PBB, que usamos o BDD e COORG para nos guiar na construção, assim como também tivemos atualização do nosso backlog, com fins para o projeto, com o SAFe Backlog. Por fim, utilizamos a inteligência artificial generativa ChatGPT, que já havia sido usada anteriormente, para nos auxiliar nas tarefas manuais e na ideação conforme pressupunha as técnicas. 
+
+Além do supracitado, aprendemos a utilizar ferramentas de organização de projetos como o GitHub Projects, com quadro Kanban, Teams e WhatsApp para garantir que todos do grupo estivessem desenvolvendo e que pudéssemos acompanhar o progresso de cada um. Por sua vez, a comunicação se fez presente em todas essas fases, mostrando sua importância para a harmonia do grupo, assim como a resolução de conflitos e maturação dos membros, por meio de feedbacks e reuniões de alinhamento individuais (_one-one_) e coletivas.
+
+Em conclusão, maturamos nosso processo de ER, utilizando técnicas de Organização, Priorização, Atualização entre outras, para garantir um backlog cada vez mais viável e tangível. Assim, também garantimos um bom convívio e produção dos membros da equipe, para um ambiente eficiente e produtivo.
 
 ## 5. A MELHORAR
 ### Unidade 1
