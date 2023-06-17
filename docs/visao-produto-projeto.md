@@ -14,6 +14,7 @@ Data | Versão | Descrição | Autor | Revisores
 22/05/23 | 1.3 | Inserção de detalhes na matriz de comunicação, revisão da análise de risco e critérios de replanejamento | Juan | João
 24/05/23 | 1.4 | Correção do Planejamento do projeto, da abordagem de desenvolvimneto, das entregas, e da matriz de comunicação, inclusão de item no histórico de replanejamento | Juan | João
 25/05/23 | 2.0 | Segunda versão de entrega | Juan, João, Pedro Henrique, Pedro Lucas | João
+17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos | Juan | João
 
 
 ## 1.	VISÃO GERAL DO PRODUTO
@@ -113,6 +114,8 @@ Iteração | Risco Encontrado | Categoria
 ------ | ---------------- | -----
 Iteração 2 | Risco de Projeto | Crítico 2
 Iteração 3 | Risco Técnicos | Crítico 2
+Iteração 4 | Risco de Projeto | Crítico 2
+Iteração 6 | Risco Técnicos | Crítico 2
 
 ### 2.5	Critérios de Replanejamento
 Os critérios de replanejamento referem-se à identificação dos pontos que, caso ocorram, causarão um replanejamento do projeto. Precisam ser acompanhados a cada iteração, referindo-se assim, ao projeto como um todo e não apenas ao produto.
