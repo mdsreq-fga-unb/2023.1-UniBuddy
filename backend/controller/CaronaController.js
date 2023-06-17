@@ -123,6 +123,10 @@ router.post("/recusar-solicitacao", auth, async (req, res) => {
                 obj,
                 {where: {idCarona: idCarona}}
             );
+            const notificacao = await notifiUtils.criaNotificacao(
+                idPassageiro,
+                `Sua solicitação para carona foi recusada pelo motorista.`
+            );
             return res.status(404).json({ message: 'Você recusou uma solicitacao.' });
         } else {
             return res.status(404).json({ message: 'Passageiro não encontrado.' });
