@@ -41,17 +41,17 @@ router.post("/cadastrar", auth, async (req, res) => {
     }
 })
 
-router.delete("/deletar/:id", auth, async (req, res) => {
+router.delete("/deletar/:idCarona", auth, async (req, res) => {
     try {
-        const carona = await Carona.findOne({where: {id: req.params.id}});
-        const solicitacao = await Solicitacao.findOne({where: {idCarona: req.params.id}});
+        const carona = await Carona.findOne({where: {id: req.params.idCarona}});
+        const solicitacao = await Solicitacao.findOne({where: {idCarona: req.params.idCarona}});
 
         if (!carona) {
             return res.status(404).json({ message: 'Carona não encontrado.' });
         } else if (carona.id_usuario != req.usuario.id) {
             return res.status(403).json({ message: 'Você não tem permissão para excluir essa carona.' });
         } else {
-            const ids_passageiros = await caronaUtils.getIdPassageiro(req.params.id);
+            const ids_passageiros = await caronaUtils.getIdPassageiro(req.params.idCarona);
             for (let i = 0; i < ids_passageiros.length; i++){
                 const notificacao = await notifiUtils.criaNotificacao(
                     ids_passageiros[i],
@@ -107,6 +107,29 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
         res.status(200).json({ message: "Solicitação feita com sucesso", vaga });
     } catch (error) {
         res.status(500).json({ message: 'Erro ao buscar caronas.', error: error.message });
+    }
+})
+
+router.post("/recusar-solicitacao", auth, async (req, res) => {
+    try {
+        const idCarona = req.body.idCarona;
+        const idPassageiro = req.body.idPassageiro;
+        const vaga = await caronaUtils.getVagaPassageiro(idCarona, idPassageiro);
+
+        if (vaga !== null) {
+            var obj = {};
+            obj[vaga] = null;
+            await Solicitacao.update(
+                obj,
+                {where: {idCarona: idCarona}}
+            );
+            return res.status(404).json({ message: 'Você recusou uma solicitacao.' });
+        } else {
+            return res.status(404).json({ message: 'Passageiro não encontrado.' });
+        }
+
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao excluir passageiro.', error: error.message });
     }
 })
 

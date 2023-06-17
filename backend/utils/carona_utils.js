@@ -93,3 +93,25 @@ exports.verificaDisponibilidade = async function(id_usuario) {
         throw error;
     }
 }
+
+exports.getVagaPassageiro = async function(idCarona, idPassageiro) {
+    try {
+        const solicitacao = await Solicitacao.findOne({where: {idCarona : idCarona}});
+
+        if (solicitacao.idPassageiro1 === idPassageiro) {
+            return 'idPassageiro1';
+        } else if (solicitacao.idPassageiro2 === idPassageiro) {
+            return 'idPassageiro2';
+        } else if (solicitacao.idPassageiro3 === idPassageiro) {
+            return 'idPassageiro3';
+        } else if (solicitacao.idPassageiro4 === idPassageiro) {
+            return 'idPassageiro4';
+        } else {
+            return null;
+        }
+
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
