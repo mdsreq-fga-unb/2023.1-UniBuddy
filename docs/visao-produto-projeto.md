@@ -389,10 +389,14 @@ Portanto, com base no descrito acima, podemos dizer que aprendemos todo o proces
 - Critérios de riscos
 - Critérios de replanejamento
 - Processos e atividade de Requisitos
+
 ### Unidade 2
-*PREENCHER*
+- Inserir introdução no Backlog do Produto
+- Algumas _User Stories_ possuem problemas na escrita e/ou estrutura
+- Algumas _User Stories_ são Requisitos Não-Funcionais. Não devem ser USs.
+
 ### Unidade 3
-*PREENCHER*
+*Ainda não divulgado.*
 
 ## 6. REFERÊNCIAS BIBLIOGRÁFICAS 
 
