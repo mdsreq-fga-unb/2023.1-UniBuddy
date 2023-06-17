@@ -72,7 +72,7 @@ router.get("/vizualizar", async (req, res) => {
     try {
         const caronas = await Carona.findAll();
 
-        res.status(200).json({ message: caronas });
+        res.status(200).json({ caronas });
     } catch (error) {
         res.status(500).json({ message: 'Erro ao buscar caronas.', error: error.message });
     }

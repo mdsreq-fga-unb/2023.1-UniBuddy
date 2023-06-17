@@ -8,7 +8,13 @@ const notifiController = require("./controller/NotificacoesController.js");
 
 app.use(express.json());
 
-app.use("/", userController);
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "UniBuddy"
+    });
+});
+
+app.use("/usuarios", userController);
 app.use("/caronas", caronaController);
 app.use("/notificacoes", notifiController);
 
