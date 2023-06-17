@@ -57,6 +57,21 @@ REQUEST
     "senha": "senha123"
 }
 ```
+
+&nbsp;
+## Redireciona para Whatsapp
+&nbsp;
+
+GET
+
+```url
+http://localhost:3000/usuarios/whatsapp/?telefone={numero}
+```
+
+RESPONSE
+
+- Redireciona para a conversa no whatsapp
+
 &nbsp;
 # Rota Caronas
 
