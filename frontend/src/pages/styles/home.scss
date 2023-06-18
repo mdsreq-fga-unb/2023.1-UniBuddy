@@ -2,7 +2,9 @@ $lightGreen : #00b894;
 $black : #000000;
 $white : #ffffff;
 $darkBlue : #29A8CA;
+$gray: #F1F1F1;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
 .home{
     font-family: 'Open Sans', sans-serif;
     padding: 2rem 0rem;
@@ -40,10 +42,10 @@ $darkBlue : #29A8CA;
         align-items: center;
         width: 100%;
         .post{
+            background-color: $gray;
             width: 30%;
             margin-bottom: 2rem;
             border-radius: 1rem;
-            background-color: $white;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             .postImg{
                 width: 100%;
@@ -86,27 +88,20 @@ $darkBlue : #29A8CA;
                     font-weight: bold;
                     color: $black;
                 }
-                .postDestino{
+                .link{
+                    text-decoration: none;
+                    color: $white;
+                    font-weight: bold;
                     font-size: 1rem;
-                    color: $black;
-                    display: flex;
-                    justify-content: space-between;
-                    .link{
-                        text-decoration: none;
-                        color: $white;
-                        font-weight: bold;
-                        font-size: 1rem;
-                        justify-content: space-between;
-                        cursor: pointer;
-                        background-color: #000000;
-                        border-radius: 2rem;
-                        padding: 0.5rem 0.5rem;
-                        margin-right: 1rem;
-                        margin-bottom: 1rem;
+                    cursor: pointer;
+                    background-color: #000000;
+                    border-radius: 2rem;
+                    padding: 0.5rem 0.5rem;
+                    text-align: center;
+                    margin-top: 0.5rem;
                     }
-                    .link:hover{
-                        color: $darkBlue;
-                    }
+                .link:hover{
+                    color: $darkBlue;
                 }
             }
         }
