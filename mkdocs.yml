@@ -32,8 +32,19 @@ theme:
 
 nav:
   - Início: index.md
+
   - Documentação: 
     - Visão de Produto e Projeto: "visao-produto-projeto.md"
+    - Ciclos: 
+      - Planejamento dos Ciclos: "sprints/planejamento_ciclos.md"
+      - Ciclo 1: "sprints/ciclo_1.md"
+      - Ciclo 2: "sprints/ciclo_2.md"
+      - Ciclo 3: "sprints/ciclo_3.md"
+      - Ciclo 4: "sprints/ciclo_4.md"
+      - Ciclo 5: "sprints/ciclo_5.md"
+      - Ciclo 6: "sprints/ciclo_6.md"
+  
+    
   - Entregas: 
     - Unidade 1:
       - Visão Geral do Produto: "material-processo-er-un1.md"
