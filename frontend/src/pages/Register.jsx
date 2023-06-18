@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
     const [inputs, setInputs] = useState({
         nome: "",
-        matricula: "",
+        telefone: "",
         email: "",
         senha: "",
     });
@@ -39,8 +39,8 @@ const Register = () => {
             <h1>Crie o seu Perfil</h1>
             <form>
                 <input required type="text" placeholder="Nome Completo" name="nome" onChange={handleInputChange}/>
-                <input required type="number" placeholder="Matricula" name="matricula" onChange={handleInputChange}/>
                 <input required type="text" placeholder="Endereço de Email" name="email"onChange={handleInputChange}/>
+                <input required type="number" placeholder="Telefone" name="telefone" onChange={handleInputChange}/>
                 <input required type="password" placeholder="Senha" name="senha"onChange={handleInputChange}/>
                 <button className="authButton" onClick={handleSubmit}>Register</button>
                 {err && <span>{err}</span>}
