@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './styles/Single.css';
+import whats from '../img/whats_app.png';
 
 const Single = () => {
   return (
@@ -19,8 +20,10 @@ const Single = () => {
         <p>Bairro do Motorista: Asa Norte </p>
         <p>Vagas Disponíveis : 4 </p>
         <div className="button-wrapper">
+         
           <a href="https://api.whatsapp.com" target="_blank" rel="noopener noreferrer" className="button-whatsapp">
-            <span>Entrar em contato</span>
+            <img className="whatsapp" src={whats} alt="whatsapp" />
+            <span className="span">Entrar em contato</span>
           </a>
           <button className="button">Solicitar Carona</button>
         </div>
