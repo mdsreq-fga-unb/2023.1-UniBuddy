@@ -1,6 +1,7 @@
 import React from "react";
 import ImagemExemplo from "../img/imagemExemplo.png";
 import { Link } from "react-router-dom";
+import './styles/home.scss'
 
 const Home = () => {
     const posts = [
