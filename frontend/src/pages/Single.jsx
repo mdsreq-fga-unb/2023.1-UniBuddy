@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './styles/Single.css';
 
 const Single = () => {
   return (
@@ -10,11 +11,13 @@ const Single = () => {
           <div className="img-wrapper">
             <img src="https://cdn-icons-png.flaticon.com/128/7790/7790136.png" alt="" />
           </div>
-          <p className="descricao">Descrição do Motorista:</p>
+          <p className="descricao">
+            Descrição do Motorista: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam maiores, vitae nam iure nemo impedit officia quisquam nobis pariatur natus, eum porro libero aperiam tempore, quam possimus sint modi. Provident.
+          </p>
         </div>
-        <p>Nome do Motorista: </p>
-        <p>Bairro do Motorista: </p>
-        <p>Vagas Disponíveis : </p>
+        <p>Nome do Motorista: Fulano </p>
+        <p>Bairro do Motorista: Asa Norte </p>
+        <p>Vagas Disponíveis : 4 </p>
         <div className="button-wrapper">
           <a href="https://api.whatsapp.com" target="_blank" rel="noopener noreferrer" className="button-whatsapp">
             <span>Entrar em contato</span>
