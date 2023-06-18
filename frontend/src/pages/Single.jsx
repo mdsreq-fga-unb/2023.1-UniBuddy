@@ -5,7 +5,7 @@ const Single = () => {
   return (
     <div className="create">
       <div className="card">
-        <h1 className="Titulo">Carrona Selecionada</h1>
+        <h1 className="Titulo">Carona Selecionada</h1>
         <div className="container">
           <div className="img-wrapper">
             <img src="https://cdn-icons-png.flaticon.com/128/7790/7790136.png" alt="" />

@@ -1,0 +1,21 @@
+.create {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0px;
+  }
+  
+  .carro {
+	margin-bottom: -5px;
+	height: 98px;
+	width: 94px;
+  }
+  
