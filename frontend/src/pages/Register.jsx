@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import carro from '../img/carro.png';
 
 const Register = () => {
     const [inputs, setInputs] = useState({
@@ -35,16 +36,17 @@ const Register = () => {
 
 
     return (
-         <div className="auth">
+        <div className="auth">
+            <img className="carro" src={carro} alt="carro" />
             <h1>Crie o seu Perfil</h1>
             <form>
                 <input required type="text" placeholder="Nome Completo" name="nome" onChange={handleInputChange}/>
                 <input required type="text" placeholder="Endereço de Email" name="email"onChange={handleInputChange}/>
                 <input required type="number" placeholder="Telefone" name="telefone" onChange={handleInputChange}/>
                 <input required type="password" placeholder="Senha" name="senha"onChange={handleInputChange}/>
-                <button className="authButton" onClick={handleSubmit}>Register</button>
+                <button className="authButton" onClick={handleSubmit}>Registrar</button>
                 {err && <span>{err}</span>}
-                <span>Você já possui conta??? <Link to="/login">Login</Link> </span>
+                <span>Você já possui conta? <Link to="/login">Entrar</Link> </span>
             </form>
         </div>
     
