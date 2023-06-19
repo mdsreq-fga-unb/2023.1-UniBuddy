@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
 
 const User = require("../models/User");
 
@@ -50,6 +51,12 @@ router.post("/login", async (req, res) => {
             });
         }
     }
+    const token = jwt.sign({id: usuario.id}, "jwtSecret");
+    const { senha, ...usuarioSemSenha } = usuario;
+
+    res.cookie = ('token', token, {
+            httpOnly: true,
+        }).status(200).json(usuarioSemSenha);
 })
 
 router.get("/whatsapp", async (req, res) => {
