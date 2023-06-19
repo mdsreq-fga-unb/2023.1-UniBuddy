@@ -2,10 +2,7 @@ import React from "react";
 import Carro from "../img/carro.png";
 import { Link } from "react-router-dom";
 import Person from "../img/person.png";
-
-//Colocar conteudo abaixo na linha 17
-//<img src={Person} alt="Perfil" />
-
+import './styles.scss'
 
 const Navbar = () => {
     return (
@@ -17,12 +14,10 @@ const Navbar = () => {
                 <div className="links">
                     <Link className="link" to="/write">Criar Caronas</Link>  
                     <Link className="link" to="/">Caronas</Link>
-                    <Link className="link" to="/perfil">
-                        Perfil
+                    <Link className="imagen-link" to="/perfil">
+                        <img src={Person} alt="Perfil" />
                     </Link>
-                    <span className="logout">
-                        <Link className="link" to="/Login">Sair</Link>
-                    </span>
+                    <Link className="link" to="/Login">Sair</Link>
                 </div>
             </div>
        </div>

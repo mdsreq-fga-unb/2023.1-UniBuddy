@@ -1,5 +1,6 @@
 import React from "react";
 import Carro from "../img/carro.png";
+import './styles.scss'
 
 const Footer = () => {
     return  (
@@ -8,7 +9,6 @@ const Footer = () => {
             <span> UniBuddy - UnB </span>
         </footer>
     )
-
     }
 
 export default Footer;

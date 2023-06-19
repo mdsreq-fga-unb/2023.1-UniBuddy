@@ -1,0 +1,96 @@
+$lightGreen : #00b894;
+$black : #000000;
+$white : #ffffff;
+$darkBlue : #29A8CA;
+
+.navbar{
+
+    background-color: #ECECEC;
+
+    .container{
+        padding: 1rem 0rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+ 
+        .logo{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $black;
+            img{
+                width: 7rem;
+                height: 7rem;
+                padding-left: 1rem;
+            }
+        }
+
+        .links{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+            margin : 2rem;
+
+            h6 {
+                font-size: 1rem;
+                font-weight: bold;
+                color: $black;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: bold;
+                color: $black;
+            }
+
+            .link{
+                text-decoration: none;
+                color: $white;
+                font-weight: bold;
+                font-size: 1rem;
+                cursor: pointer;
+                background-color: $black;
+                border-radius: 2rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .imagen-link{
+                text-decoration: none;
+                color: $white;
+                cursor: pointer;
+                margin-top: 15px;
+                img{
+                    height: 3rem;
+                    width: 3rem;
+                }  
+            }
+
+            .link:hover{
+                color: $darkBlue;
+            }
+            
+        }
+    }
+    
+}
+
+footer{
+    background-color: #ECECEC;
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        width: 3rem;
+        height: 3rem;
+        margin-left: 1rem;
+    }
+
+    span{
+        padding-right: 1rem;
+        font-weight: bold;
+        font-size: 1rem;
+        color: $black;
+    }
+}

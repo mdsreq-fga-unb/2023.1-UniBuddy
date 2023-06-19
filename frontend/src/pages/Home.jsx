@@ -1,6 +1,7 @@
 import React from "react";
 import ImagemExemplo from "../img/imagemExemplo.png";
 import { Link } from "react-router-dom";
+import './styles/home.scss'
 
 const Home = () => {
     const posts = [
@@ -45,8 +46,8 @@ const Home = () => {
     return (
         <div className="home">
             <div className="test">
-            <img src="https://cdn-icons-png.flaticon.com/128/5233/5233747.png" alt="" />
-            <h1>Caronas Disponíveis</h1>
+                <img src="https://cdn-icons-png.flaticon.com/128/5233/5233747.png" alt="" />
+                <h1>Caronas Disponíveis</h1>
             </div>
             <div className="posts">
                 {posts.map((p) => (
@@ -65,10 +66,7 @@ const Home = () => {
                             </p>
                             <hr />
                             <span className="postVaga">Vagas Disponiveis</span>
-                            <span className="postDestino">
-                                {p.title}
-                                <Link className="link" to={`/post/${p.id}`}>Solicitar</Link>
-                            </span>
+                            <Link className="link" to={`/post/${p.id}`}>Solicitar</Link>
                         </div>
                     </div>
                 ))}
