@@ -1,3 +1,4 @@
+
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
@@ -5,6 +6,8 @@ const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 
 const User = require("../models/User");
+
+router.use(express.json());
 
 router.post("/registro", async (req, res) => {
     try {
@@ -54,9 +57,16 @@ router.post("/login", async (req, res) => {
     const token = jwt.sign({id: usuario.id}, "jwtSecret");
     const { senha, ...usuarioSemSenha } = usuario;
 
-    res.cookie = ('token', token, {
+    res.cookie('token', token, {
             httpOnly: true,
         }).status(200).json(usuarioSemSenha);
+})
+
+router.post("/logout", async (req, res) => {
+    res.clearCookie("acess_token", {
+        sameSite: "none",
+        secure: true,
+    }).status(200).json({message: "Logout efetuado"});
 })
 
 router.get("/whatsapp", async (req, res) => {

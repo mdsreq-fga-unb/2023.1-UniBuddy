@@ -5,6 +5,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import carro from '../img/carro.png';
 
+
+
 const Register = () => {
     const [inputs, setInputs] = useState({
         nome: "",
@@ -12,9 +14,18 @@ const Register = () => {
         email: "",
         senha: "",
     });
+    axios.defaults.headers.post['Content-Type'] = 'application/json';
     const [err, setError] = useState(null);
 
     const navigate = useNavigate();
+
+    const config = {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      };
+      
+      
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -25,14 +36,18 @@ const Register = () => {
         event.preventDefault();
         console.log(inputs);
         try {
-            const res = await axios.post("http://localhost:3000/usuarios/registro", inputs);
+            const res = await axios.post("http://localhost:3000/usuarios/registro", inputs, config);
             console.log(res);
             navigate("/login");
-        } catch (err) {
-            console.log(err);
+        } catch (error) {
+          console.log(error);
+          if (error.response) {
+            setError(error.response.data.error);
+          } else {
+            setError("Erro ao registrar usuário.");
+          }
         }
-        setError(err.res.data);
-    };
+      };
 
 
     return (
