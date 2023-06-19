@@ -1,12 +1,12 @@
-//Login.jsx
+
 
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext.jsx";
-
 
 
 const Login = () => {
@@ -30,14 +30,15 @@ const Login = () => {
         event.preventDefault();
         console.log(inputs);
         try {
-            await login(inputs)
-            console.log(res);
-            navigate("/");
+          const res = await login(inputs);
+          console.log(res);
+          navigate("/");
         } catch (err) {
-            console.log(err);
+          console.log(err);
+          setError(err.response.data);
         }
-        setError(err.res.data);
-    };
+      };
+      
     return (
          <div className="auth">
             <div className="entrar">

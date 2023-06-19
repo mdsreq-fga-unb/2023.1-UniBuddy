@@ -35,32 +35,29 @@ router.post("/registro", async (req, res) => {
 
 router.post("/login", async (req, res) => {
     const usuario = await User.findOne({
-        attributes: ["id", "nomeCompleto", "email", "senha"],
-        where: {
-            email: req.body.email
-        }
+      attributes: ["id", "nomeCompleto", "email", "senha"],
+      where: {
+        email: req.body.email
+      }
     });
-
-    if(usuario === null){
-        res.status(400).json({ error: 'Usuário não encontrado' });
+  
+    if (usuario === null) {
+      res.status(400).json({ error: 'Usuário não encontrado' });
     } else {
-        if(!(await bcrypt.compare(req.body.senha, usuario.senha))){
-            res.status(400).json({ error: 'Senha incorreta' });
-        } else {
-            const token = jwt.sign({id: usuario.id}, "shhh");
-            res.status(202).json({ 
-                error: 'Login efetuado: ' + usuario.nomeCompleto
-                ,token
-            });
-        }
-    }
-    const token = jwt.sign({id: usuario.id}, "jwtSecret");
-    const { senha, ...usuarioSemSenha } = usuario;
-
-    res.cookie('token', token, {
-            httpOnly: true,
+      if (!(await bcrypt.compare(req.body.senha, usuario.senha))) {
+        res.status(400).json({ error: 'Senha incorreta' });
+      } else {
+        const token = jwt.sign({ id: usuario.id }, "shhh");
+  
+        const { senha, ...usuarioSemSenha } = usuario;
+  
+        res.cookie('token', token, {
+          httpOnly: true,
         }).status(200).json(usuarioSemSenha);
-})
+      }
+    }
+  })
+  
 
 router.post("/logout", async (req, res) => {
     res.clearCookie("acess_token", {
