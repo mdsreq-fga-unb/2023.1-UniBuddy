@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ImagemExemplo from "../img/imagemExemplo.png";
 import { Link } from "react-router-dom";
-import './styles/home.scss';
 
 const Home = () => {
     const [caronas, setCaronas] = useState([]);

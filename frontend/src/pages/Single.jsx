@@ -6,8 +6,7 @@ import whats from '../img/whats_app.png';
 const Single = () => {
   const { id } = useParams();
   const [caronasComNome, setCaronasComNome] = useState(null);
-
-  
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   useEffect(() => {
     const fetchCarona = async () => {
@@ -45,6 +44,14 @@ const Single = () => {
     }
   };
 
+  const showConfirmationPopup = () => {
+    setShowConfirmation(true);
+  };
+
+  const hideConfirmationPopup = () => {
+    setShowConfirmation(false);
+  };
+
   if (!caronasComNome) {
     return <div>Loading...</div>; // Ou qualquer indicador de carregamento desejado
   }
@@ -72,7 +79,14 @@ const Single = () => {
             <img className="whatsapp" src={whats} alt="whatsapp" />
             <span className="span">Entrar em contato</span>
           </a>
-          <button className="button" onClick={handleSolicitarCarona}>Solicitar Carona</button>
+          <button className="button" onClick={showConfirmationPopup}>Solicitar Carona</button>
+          {showConfirmation && (
+            <div className="confirmation-popup">
+              <h2>Tem certeza que deseja solicitar essa carona?</h2>
+              <button onClick={handleSolicitarCarona} className="confirm">Confirmar</button>
+              <button onClick={hideConfirmationPopup}>Cancelar</button>
+            </div>
+          )}
         </div>
       </div>
     </div>
