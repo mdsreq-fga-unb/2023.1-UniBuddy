@@ -35,8 +35,7 @@ const Register = () => {
         event.preventDefault();
         console.log(inputs);
         try {
-            const res = await axios.post("http://localhost:3000/usuarios/registro", inputs, config);
-            console.log("entrou no try")
+            const res = await axios.post("http://localhost:3000/usuarios/registro", inputs);
             console.log(res);
             navigate("/login"); 
         } catch (error) {

@@ -10,3 +10,4 @@
 7 - Fazer as alterações necessárias
 8 - Fazer o commit das alterações
 9 - Fazer o push da branch que você criou
+10. teste deploy

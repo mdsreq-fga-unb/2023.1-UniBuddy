@@ -23,5 +23,8 @@ app.use("/usuarios", userController);
 app.use("/caronas", caronaController);
 app.use("/notificacoes", notifiController);
 
-app.listen(process.env.port || 3000);
-console.log("Aplicação servindo na porta 3000")
+const port = process.env.PORT || 3000;
+
+app.listen(port, "0.0.0.0", function(){
+    console.log("Aplicação servindo na porta 3000")
+});

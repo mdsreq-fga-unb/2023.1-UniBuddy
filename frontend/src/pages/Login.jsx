@@ -30,9 +30,9 @@ const Login = () => {
         event.preventDefault();
         console.log(inputs);
         try {
-          const res = await login(inputs);
-          console.log(res);
-          navigate("/");
+            const res = await axios.post("http://localhost:3000/usuarios/login", inputs);
+            console.log(res);
+            navigate("/");
         } catch (err) {
           console.log(err);
           setError("Email ou senha incorreto")
