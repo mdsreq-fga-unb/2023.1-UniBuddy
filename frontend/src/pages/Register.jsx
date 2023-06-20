@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import carro from '../img/carro.png';
+import "./../style.scss";
 
 
 
@@ -52,7 +53,7 @@ const Register = () => {
 
     return (
         <div className="auth">
-            <img className="carro" src={carro} alt="carro" />
+            <img className="carro" src={"https://cdn-icons-png.flaticon.com/128/2766/2766737.png"} alt="carro" />
             <h1>Crie o seu Perfil</h1>
             <form>
                 <input required type="text" placeholder="Nome Completo" name="nomeCompleto" onChange={handleInputChange}/>

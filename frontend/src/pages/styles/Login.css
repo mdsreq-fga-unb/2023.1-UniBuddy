@@ -1,16 +1,70 @@
-.carro {
-	margin-top: 10vh;
-	/* padding-top: 30vh; */
-	width: 30vh;
-}
-
-.bem-vindo {
+.auth {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin: -7vh auto;
-}
-
-
-/* display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", margin: "30px auto" */
+	height: 100vh;
+  }
+  
+  .entrar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .entrar img {
+	width: 100px;
+	height: 100px;
+  }
+  
+  .auth h1 {
+	font-size: 24px;
+	margin-top: 10px;
+  }
+  
+  form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  input {
+	width: 300px;
+	height: 40px;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+  }
+  
+  button.authButton {
+	width: 300px;
+	height: 40px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  button.authButton:hover {
+	background-color: #45a049;
+  }
+  
+  span {
+	font-size: 14px;
+	margin-top: 10px;
+  }
+  
+  span a {
+	color: blue;
+	text-decoration: underline;
+  }
+  
+  span a:hover {
+	color: darkblue;
+  }
+  

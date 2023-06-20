@@ -45,7 +45,7 @@ const Write = () => {
 
   return (
     <div className="create">
-      <img className="carro" src={carro} alt="carro" />
+      <img className="carro" src={"https://cdn-icons-png.flaticon.com/128/2300/2300372.png"} alt="carro" />
       <h1>Crie a sua Carona</h1>
       <form className="form" onSubmit={handleSubmit}>
         <input

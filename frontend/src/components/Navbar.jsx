@@ -28,7 +28,6 @@ const Navbar = () => {
           <Link className="link" to="/perfil">
             Perfil
           </Link>
-          <p className="link">Bem vindo{currentUser?.nomeCompleto}</p>
           {currentUser ? (
             <span className="logout" onClick={logout}>
               <Link className="link" to="/Login">
@@ -40,6 +39,7 @@ const Navbar = () => {
               Entrar
             </Link>
           )}
+          <p>Bem vindo{currentUser?.nomeCompleto}</p>
         </div>
       </div>
     </div>
