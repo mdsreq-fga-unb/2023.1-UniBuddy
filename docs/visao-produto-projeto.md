@@ -362,7 +362,7 @@ Identificador | Atividade | Método | Ferramenta | Entrega
 TP-01 | Testagem do Produto | Teste Manual, Teste de Módulo, Teste de Integração, Teste de Sistema, Teste de Aceitação | VSCODE, GitHub | Relatório de Testes
 
 ### 3.4 Arquitetura do Projeto
-*PREENCHER*
+![Arquitetura](assets/arquitetura.jpg)
 
 
 ## 4. LIÇÕES APRENDIDAS
