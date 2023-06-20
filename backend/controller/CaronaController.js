@@ -10,8 +10,6 @@ const notifiUtils = require('../utils/notificacao_utils');
 const caronaUtils = require('../utils/carona_utils');
 const userUtils = require('../utils/usuario_utils');
 
-const jwt = require('jsonwebtoken');
-
 router.post("/cadastrar", auth, async (req, res) => {
     try {
         const nova_carona = {
@@ -35,14 +33,9 @@ router.post("/cadastrar", auth, async (req, res) => {
             idPassageiro4: null
         }
 
-        console.log(nova_solicitacao);
         await Solicitacao.create(nova_solicitacao);
 
-        const token = jwt.sign({ id: req.usuario.id }, 'chave-secreta-do-token');
-
-        console.log("token: ", token);
-
-        res.status(200).json({ message: 'Carona e solicitação criadas com sucesso.', token });
+        res.status(200).json({ message: 'Carona e solicitação criadas com sucesso.'});
     } catch (error) {
         res.status(400).json({ message: 'Erro ao cadastrar carona.', error });
     }

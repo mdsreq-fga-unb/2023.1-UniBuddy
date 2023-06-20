@@ -3,7 +3,6 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const cookieParser = require("cookie-parser");
 
 const User = require("../models/User");
 
@@ -51,7 +50,7 @@ router.post("/login", async (req, res) => {
         const { senha, ...usuarioSemSenha } = usuario;
         res.cookie('token', token, {
           httpOnly: true,
-        }).status(200).json(usuarioSemSenha);
+        }).status(200).json(token);
       }
     }
   })
@@ -62,13 +61,6 @@ router.post("/logout", async (req, res) => {
         sameSite: "none",
         secure: true,
     }).status(200).json({message: "Logout efetuado"});
-})
-
-router.get("/whatsapp", async (req, res) => {
-    const telefone = req.query.telefone;
-    const url = `https://wa.me/${telefone}`;
-
-    res.redirect(url);
 })
 
 module.exports = router;
