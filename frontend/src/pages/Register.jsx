@@ -25,7 +25,7 @@ const Register = () => {
         event.preventDefault();
         console.log(inputs);
         try {
-            const res = await axios.post("http://localhost:3000/usuarios/registro", inputs);
+            const res = await axios.post("http://20231-unibuddy-production.up.railway.app/usuarios/registro", inputs);
             console.log(res);
             navigate("/login");
         } catch (err) {
