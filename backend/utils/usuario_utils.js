@@ -14,3 +14,18 @@ exports.getNomeUsuario = async function(id_usuario) {
         throw error;
     }
 }
+
+exports.getTelefone = async function(id_usuario) {
+    try {
+        const telefone = await User.findOne({
+            where: {id: id_usuario},
+            attributes: ['telefone']
+        });
+
+        console.log(telefone.telefone);
+        return telefone.telefone;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}

@@ -10,6 +10,8 @@ const notifiUtils = require('../utils/notificacao_utils');
 const caronaUtils = require('../utils/carona_utils');
 const userUtils = require('../utils/usuario_utils');
 
+const jwt = require('jsonwebtoken');
+
 router.post("/cadastrar", auth, async (req, res) => {
     try {
         const nova_carona = {
@@ -17,6 +19,7 @@ router.post("/cadastrar", auth, async (req, res) => {
             vagas: req.body.vagas,
             origem: req.body.origem,
             destino: req.body.destino,
+            descricao: req.body.descricao,
             data: req.body.data,
             horario: req.body.horario
         }
@@ -35,7 +38,11 @@ router.post("/cadastrar", auth, async (req, res) => {
         console.log(nova_solicitacao);
         await Solicitacao.create(nova_solicitacao);
 
-        res.status(200).json({ message: 'Carona e solicitação criadas com sucesso.' });
+        const token = jwt.sign({ id: req.usuario.id }, 'chave-secreta-do-token');
+
+        console.log("token: ", token);
+
+        res.status(200).json({ message: 'Carona e solicitação criadas com sucesso.', token });
     } catch (error) {
         res.status(400).json({ message: 'Erro ao cadastrar carona.', error });
     }
@@ -73,6 +80,25 @@ router.get("/vizualizar", async (req, res) => {
         const caronas = await Carona.findAll();
 
         res.status(200).json({ caronas });
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao buscar caronas.', error: error.message });
+    }
+})
+
+router.get("/vizualizar/:id", async (req, res) => {
+    try {
+        const caronasData = await Carona.findOne({where: {id: req.params.id}});
+        const id = caronasData.id_usuario;
+        const nomeMotorista = await userUtils.getNomeUsuario(id);
+        const telefoneMotorista = await userUtils.getTelefone(id);
+
+        const caronasComNome = {
+            ...caronasData.dataValues,
+            nome: nomeMotorista,
+            telefone: telefoneMotorista
+        };
+
+        res.status(200).json({ caronasComNome });
     } catch (error) {
         res.status(500).json({ message: 'Erro ao buscar caronas.', error: error.message });
     }

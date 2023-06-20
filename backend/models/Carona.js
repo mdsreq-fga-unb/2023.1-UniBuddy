@@ -25,6 +25,10 @@ const Carona = db.define('caronas', {
         type: Sequelize.STRING,
         allowNull: false
     },
+    descricao: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     data: {
         type: Sequelize.STRING,
         allowNull: false

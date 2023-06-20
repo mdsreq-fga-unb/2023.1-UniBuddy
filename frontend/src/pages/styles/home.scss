@@ -106,5 +106,9 @@ $gray: #F1F1F1;
             }
         }
     }
+    .post:hover {
+        /* Estilos ao passar o mouse */
+        transform: scale(1.1); /* Aumenta a escala da div em 10% */
+      }
 
 }

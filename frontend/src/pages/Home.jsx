@@ -1,47 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ImagemExemplo from "../img/imagemExemplo.png";
 import { Link } from "react-router-dom";
-import './styles/home.scss'
+import './styles/home.scss';
 
 const Home = () => {
-    const posts = [
-        {
-            title: "Destino : FGA",
-            bairro: "Gama",
-            img: { ImagemExemplo },
-            description: "Segunda, Quarta e sexta vou 10h volto 16h Terça e Quinta vou 8h e volto 14h Ofereço carona",
-        },
-        {
-            title: "Destino : UNB",
-            bairro: "Asa Norte",
-            img: { ImagemExemplo },
-            description: "Segunda, Quarta e sexta vou 10h volto 16h Terça e Quinta vou 8h e volto 14h Ofereço carona",
-        },
-        {
-            title: "Destino: FCE",
-            bairro: "Asa Sul",
-            img: { ImagemExemplo },
-            description: "Segunda, Quarta e sexta vou 10h volto 16h Terça e Quinta vou 8h e volto 14h Ofereço carona",
-        },
-        {
-            title: "Destino: FGA",
-            bairro: "Gama",
-            img: { ImagemExemplo },
-            description: "Segunda, Quarta e sexta vou 10h volto 16h Terça e Quinta vou 8h e volto 14h Ofereço carona",
-        },
-        {
-            title: "Destino: FCE",
-            bairro: "Asa Sul",
-            img: { ImagemExemplo },
-            description: "Segunda, Quarta e sexta vou 10h volto 16h Terça e Quinta vou 8h e volto 14h Ofereço carona",
-        },
-        {
-            title: "Destino : FGA",
-            bairro: "Gama",
-            img: { ImagemExemplo },
-            description: "Segunda, Quarta e sexta vou 10h volto 16h Terça e Quinta vou 8h e volto 14h Ofereço carona",
-        },
-    ];
+    const [caronas, setCaronas] = useState([]);
+
+    useEffect(() => {
+        // Função para buscar as caronas do back-end
+        const fetchCaronas = async () => {
+            try {
+                const response = await fetch("http://localhost:3000/caronas/vizualizar"); // Rota de visualização de caronas
+                const data = await response.json();
+                setCaronas(data.caronas);
+            } catch (error) {
+                console.log("Erro ao buscar as caronas:", error);
+            }
+        };
+
+        fetchCaronas();
+    }, []);
 
     return (
         <div className="home">
@@ -50,30 +28,29 @@ const Home = () => {
                 <h1>Caronas Disponíveis</h1>
             </div>
             <div className="posts">
-                {posts.map((p) => (
-                    <div className="post" key={p.id}>
+                {caronas.map((carona) => (
+                    <div className="post" key={carona.id}>
                         <img
                             className="postImg"
                             src="https://cdn-icons-png.flaticon.com/128/2102/2102647.png"
+                            alt="Imagem de exemplo"
                         />
-                        <div className="postInfo" >
+                        <div className="postInfo">
                             <div className="postNome">
-                                <span className="nome">{p.title}</span>
-                                <span className="bairro">{p.bairro}</span>
+                                <span className="nome">{carona.origem}</span>
+                                <span className="bairro">{carona.destino}</span>
                             </div>
-                            <p className="desc">
-                                {p.description}
-                            </p>
+                            <p className="desc">{carona.data}</p>
+                            <p className="desc">{carona.horario}</p>
                             <hr />
-                            <span className="postVaga">Vagas Disponiveis</span>
-                            <Link className="link" to={`/post/${p.id}`}>Solicitar</Link>
+                            <span className="postVaga">Vagas Disponíveis : {carona.vagas}</span>
+                            <Link className="link" to={`/post/${carona.id}`}>Solicitar</Link>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
-
     );
-    }
+};
 
 export default Home;

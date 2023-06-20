@@ -35,7 +35,7 @@ const Login = () => {
           navigate("/");
         } catch (err) {
           console.log(err);
-          setError(err.response.data);
+          setError("Email ou senha incorreto")
         }
       };
       
@@ -46,7 +46,7 @@ const Login = () => {
                 <h1>Bem vindo a UniBuddy</h1>
             </div>
             <form>
-                <input required type="text" placeholder="Endereço de Email" name="email" onChange={handleInputChange}/>
+                <input required type="email" placeholder="Endereço de Email" name="email" onChange={handleInputChange}/>
                 <input required type="password" placeholder="Senha" name="senha" onChange={handleInputChange}/>
                 <button className="authButton" onClick={handleSubmit}>Entrar</button>
                 {err && <span>{err}</span>}

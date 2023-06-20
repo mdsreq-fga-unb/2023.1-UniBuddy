@@ -9,7 +9,7 @@ import carro from '../img/carro.png';
 
 const Register = () => {
     const [inputs, setInputs] = useState({
-        nome: "",
+        nomeCompleto: "",
         telefone: "",
         email: "",
         senha: "",
@@ -24,7 +24,6 @@ const Register = () => {
           'Content-Type': 'application/json'
         }
       };
-      
       
 
     const handleInputChange = (event) => {
@@ -56,9 +55,9 @@ const Register = () => {
             <img className="carro" src={carro} alt="carro" />
             <h1>Crie o seu Perfil</h1>
             <form>
-                <input required type="text" placeholder="Nome Completo" name="nome" onChange={handleInputChange}/>
-                <input required type="text" placeholder="Endereço de Email" name="email"onChange={handleInputChange}/>
-                <input required type="number" placeholder="Telefone" name="telefone" onChange={handleInputChange}/>
+                <input required type="text" placeholder="Nome Completo" name="nomeCompleto" onChange={handleInputChange}/>
+                <input required type="email" placeholder="Endereço de Email" name="email"onChange={handleInputChange}/>
+                <input required type="tel" placeholder="Telefone" name="telefone" onChange={handleInputChange}/>
                 <input required type="password" placeholder="Senha" name="senha"onChange={handleInputChange}/>
                 <button className="authButton" onClick={handleSubmit}>Registrar</button>
                 {err && <span>{err}</span>}
