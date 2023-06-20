@@ -1,5 +1,7 @@
 site/
 node_modules/
+yarn.lock
+
+# Local Netlify folder
 .netlify/
-yarn.lock/
 dist/
