@@ -49,9 +49,11 @@ router.post("/login", async (req, res) => {
       } else {
         const token = jwt.sign({ id: usuario.id }, "shhh");
         const { senha, ...usuarioSemSenha } = usuario;
-        res.cookie('token', token, {
-          httpOnly: true,
-        }).status(200).json(usuarioSemSenha);
+        return res.json({
+          erro: false,
+          message: "Login realizado com sucesso!",
+          token
+        });
       }
     }
   })
