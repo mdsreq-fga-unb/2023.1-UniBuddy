@@ -57,31 +57,31 @@ O objetivo do UniBuddy é auxiliar, de forma organizada e prática, no encontro 
 Papel | Atribuições | Responsável | Participantes
 ----- | ----------- | ----------- | -------------
 Pessoa Desenvolvedora | Codificar o produto, realizar refatoração, testar, configurar, versionar, evoluir, integrar, documentar, ata das reuniões, estratégia de código | Leonardo | João, Juan, Pedro Henrique, Pedro Lucas
-Líder do Time | Delegar tarefas, duração da iteração, organização das atividades, one-to-one com os membros, estratégia de produto | Juan | Leonardo
+Líder do Time | Delegar tarefas, duração da Ciclo, organização das atividades, one-to-one com os membros, estratégia de produto | Juan | Leonardo
 Pessoa Engenheira de Requisitos | Descobrir, elicitar, analisar, consensuar, declarar, representar, organizar e atualizar requisitos | Pedro Lucas | João, Leonardo, Pedro Henrique, Juan
 Cliente Motorista | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | Victor Eduardo Araújo Ribeiro
 Cliente Passageiro | Fornecer insumos para requisitos, fornecer feedbacks sobre os produtos, priorizar requisitos | Pedro Henrique | Arthur Mariano de Sousa
 Monitor | Verificar requisitos, fornecer feedbacks sobre o processo de ER, auxiliar em dúvidas da equipe acerca da disciplina de requisitos, articular os interesses do professor | Juan | Victor Cabral
 
 ### 2.2	Planejamento das Fases do Projeto
-Iterações | Produto (Entrega) | Data Início | Data Fim
+Ciclos | Produto (Entrega) | Data Início | Data Fim
 ---- | ----------------- | ----------- | --------
-Iteração 1 | Requisitos descobertos, elicitados, analisados e consensuados | 02/05/23 | 08/05/23
-Iteração 2 | Requisitos validados, verificados e declarados | 09/05/23 | 15/05/23
-Iteração 3 | Requisitos organizados e atualizados, escopo MVP1 e MVP2  | 16/05/23 | 25/05/23
-Iteração 4 | Backlog definitivo MVP1 | 26/05/23 | 05/06/23
-Iteração 5 | Versão prévia MVP1 | 06/06/23 | 12/06/23
-Iteração 6 | Versão definitiva MVP1 | 13/06/23 | 19/06/23
-Iteração 7 | Correções MVP1 | 20/06/23 | 26/06/23
-Iteração 8 | Backlog definitivo MVP2 | 27/06/23 | 03/07/23
-Iteração 9 | Versão prévia MVP2 | 04/07/23 | 10/07/23
-Iteração 10 | Versão definitiva MVP2 | 11/07/23 | 18/07/23
+Ciclo 1 | Requisitos descobertos, elicitados, analisados e consensuados | 02/05/23 | 08/05/23
+Ciclo 2 | Requisitos validados, verificados e declarados | 09/05/23 | 15/05/23
+Ciclo 3 | Requisitos organizados e atualizados, escopo MVP1 e MVP2  | 16/05/23 | 25/05/23
+Ciclo 4 | Backlog definitivo MVP1 | 26/05/23 | 05/06/23
+Ciclo 5 | Versão prévia MVP1 | 06/06/23 | 12/06/23
+Ciclo 6 | Versão definitiva MVP1 | 13/06/23 | 19/06/23
+Ciclo 7 | Correções MVP1 | 20/06/23 | 26/06/23
+Ciclo 8 | Backlog definitivo MVP2 | 27/06/23 | 03/07/23
+Ciclo 9 | Versão prévia MVP2 | 04/07/23 | 10/07/23
+Ciclo 10 | Versão definitiva MVP2 | 11/07/23 | 18/07/23
 
 ### 2.3	Matriz de Comunicação
 Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados
 --------- | ----------------- | ----------- | ----------------
 Acompanhamento Diário | Equipe do Projeto | Diário | Relato por parte dos membros da equipe no WhatsApp sobre o andamento individual das partes do projeto
-Acompanhamento de Iteração | Equipe do Projeto e Monitor | Semanal | Ata da Reunião, Relação de Feedbacks sobre as entregas do produto
+Acompanhamento de Ciclo | Equipe do Projeto e Monitor | Semanal | Ata da Reunião, Relação de Feedbacks sobre as entregas do produto
 Comunicar a situação do projeto | Equipe do Projeto e Professor | Mensalmente | Artefatos solicitados, Relação de Feedbacks do Professor
 
 ### 2.4	Gerenciamento de Riscos
@@ -110,15 +110,15 @@ Figura 2 - Avaliação de impacto (fonte: autoures, 2023)
 
 #### 2.4.1 Histórico de Riscos
 
-Iteração | Risco Encontrado | Categoria
+Ciclo | Risco Encontrado | Categoria
 ------ | ---------------- | -----
-Iteração 2 | Risco de Projeto | Crítico 2
-Iteração 3 | Risco Técnicos | Crítico 2
-Iteração 4 | Risco de Projeto | Crítico 2
-Iteração 6 | Risco Técnicos | Crítico 2
+Ciclo 2 | Risco de Projeto | Crítico 2
+Ciclo 3 | Risco Técnicos | Crítico 2
+Ciclo 4 | Risco de Projeto | Crítico 2
+Ciclo 6 | Risco Técnicos | Crítico 2
 
 ### 2.5	Critérios de Replanejamento
-Os critérios de replanejamento referem-se à identificação dos pontos que, caso ocorram, causarão um replanejamento do projeto. Precisam ser acompanhados a cada iteração, referindo-se assim, ao projeto como um todo e não apenas ao produto.
+Os critérios de replanejamento referem-se à identificação dos pontos que, caso ocorram, causarão um replanejamento do projeto. Precisam ser acompanhados a cada Ciclo, referindo-se assim, ao projeto como um todo e não apenas ao produto.
 
 - Alteração nos prazos das entregas da Disciplina ou do Cliente
 - Alteração das ferramentas do projeto
@@ -131,11 +131,11 @@ Os critérios de replanejamento referem-se à identificação dos pontos que, ca
 Os critérios de replanejamento do projeto devem ser acompanhados e atualizados a cada fase. E, aplicados, conforme necessidade.
 
 #### 2.5.1 Histórico de Replanejamento
-Iteração | Problema | Solução Encontrada | Resultado Esperado
+Ciclo | Problema | Solução Encontrada | Resultado Esperado
 ------ | -------- |------------------ | ------------------
-Interação 3 | Atrasos de mais de 2 semanas  | Alterar cronograma do projeto | Adequação aos prazos solicitados
-Interação 3 | Alteração no Processo de Engenharia de Requisito ou Desenvolvimento de Software | Alterar cronograma do projeto e entregas | Adequação aos prazos solicitados
-Interação 4 | Atrasos de mais de 2 semanas | Alterar entregas das fases | Adequação aos prazos solicitados
+Ciclo 3 | Atrasos de mais de 2 semanas  | Alterar cronograma do projeto | Adequação aos prazos solicitados
+Ciclo 3 | Alteração no Processo de Engenharia de Requisito ou Desenvolvimento de Software | Alterar cronograma do projeto e entregas | Adequação aos prazos solicitados
+Ciclo 4 | Atrasos de mais de 2 semanas | Alterar entregas das fases | Adequação aos prazos solicitados
 
 
 ## 3 PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
@@ -270,7 +270,7 @@ Figura 9 - Atividades da ER (fonte: MARSICANO, 2023)
 Assim, incluímos as atividades de ER (MARSICANO, 2023) dentro dos procedimentos do processo de desenvolvimento de software RAD, pontuado no tópico 3.
 
 #### 3.3.3 ATIVIDADES RAD
-A metodologia *Rapid Application Development*, também chamado de RAD é um processo incremental na qual desenvolvemos as atividades descritas na figura 10. A metodologia envolve desenvolver módulos que apresentam as fases de análise, design, codificação e testagem. Esses módulos são desenvolvidos por equipes específicas, de forma paralela, e isso é desenvolvido a partir dos requisitos que foram elicitados e modularizados na iteração. Assim, várias técnicas e ferramentas de desenvolvimento são utilizadas para o desenvolvimento desses módulos. A ideia é que ao integrar esses módulos, o produto final é testado e entregado.
+A metodologia *Rapid Application Development*, também chamado de RAD é um processo incremental na qual desenvolvemos as atividades descritas na figura 10. A metodologia envolve desenvolver módulos que apresentam as fases de análise, design, codificação e testagem. Esses módulos são desenvolvidos por equipes específicas, de forma paralela, e isso é desenvolvido a partir dos requisitos que foram elicitados e modularizados na Ciclo. Assim, várias técnicas e ferramentas de desenvolvimento são utilizadas para o desenvolvimento desses módulos. A ideia é que ao integrar esses módulos, o produto final é testado e entregado.
 
 Nosso grupo optou por utilizar um método híbrido que envolve o uso de cascata nos requisitos iniciais que elicitamos, enquanto que nas fases posteriores utilizaremos de abordagens ágeis e o processo do RAD como um todo. Com isso, vamos separar nossos 5 membros em dois times que vão estar trabalhando paralelamente em módulos diferentes.
 
@@ -367,7 +367,7 @@ TP-01 | Testagem do Produto | Teste Manual, Teste de Módulo, Teste de Integraç
 
 ## 4. LIÇÕES APRENDIDAS
 ### Unidade 1
-Com base nos feedbacks recebidos, podemos extrair algumas lições aprendidas importantes no projeto. Primeiramente, é notável que a interação entre os membros do grupo está positiva e a comunicação está fluindo bem, o que pode ser atribuído ao fato de que o grupo está unido como um time e está passando feedbacks constantes. Além disso, o grupo está sendo proativo nas entregas e as tarefas estão bem divididas, o que demonstra organização e alinhamento, principalmente em momentos de necessidade.
+Com base nos feedbacks recebidos, podemos extrair algumas lições aprendidas importantes no projeto. Primeiramente, é notável que a Ciclo entre os membros do grupo está positiva e a comunicação está fluindo bem, o que pode ser atribuído ao fato de que o grupo está unido como um time e está passando feedbacks constantes. Além disso, o grupo está sendo proativo nas entregas e as tarefas estão bem divididas, o que demonstra organização e alinhamento, principalmente em momentos de necessidade.
 
 Por outro lado, os feedbacks construtivos indicam que o grupo precisa melhorar em alguns aspectos, como a qualidade das atividades entregues, divisão equilibrada das responsabilidades entre os membros e organização da comunicação. Em relação à qualidade das entregas, o feedback construtivo recebido trás como medida sugestiva uma revisão mais criteriosa antes da entrega. Em seguida, é necessário repensar a forma como as atividades são divididas de modo a permitir que todos os membros do grupo produzam efetivamente. Além disso, a comunicação precisa ser mais organizada para evitar a mistura de informações importantes e irrelevantes simultaneamente.
 
@@ -389,7 +389,7 @@ Em conclusão, maturamos nosso processo de ER, utilizando técnicas de Organiza�
 ## 5. A MELHORAR
 ### Unidade 1
 - Lições Aprendidas
-- Planejamento das iterações
+- Planejamento das Ciclos
 - Critérios de riscos
 - Critérios de replanejamento
 - Processos e atividade de Requisitos
