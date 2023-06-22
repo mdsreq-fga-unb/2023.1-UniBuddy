@@ -14,7 +14,8 @@ Data | Versão | Descrição | Autor | Revisores
 22/05/23 | 1.3 | Inserção de detalhes na matriz de comunicação, revisão da análise de risco e critérios de replanejamento | Juan | João
 24/05/23 | 1.4 | Correção do Planejamento do projeto, da abordagem de desenvolvimneto, das entregas, e da matriz de comunicação, inclusão de item no histórico de replanejamento | Juan | João
 25/05/23 | 2.0 | Segunda versão de entrega | Juan, João, Pedro Henrique, Pedro Lucas | João
-17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos, Histórico de Replanejamento, Lições aprendidas, Pontos de melhoria | Juan | ?
+17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos, Histórico de Replanejamento, Lições aprendidas, Pontos de melhoria | Juan | João e Pedro Henrique
+22/06/23 | 2.2 | Correção do Planejamento do projeto, Histórico de Replanejamento | Juan | João e Pedro Henrique
 
 
 ## 1.	VISÃO GERAL DO PRODUTO
@@ -71,8 +72,8 @@ Ciclo 2 | Requisitos validados, verificados e declarados | 09/05/23 | 15/05/23
 Ciclo 3 | Requisitos organizados e atualizados, escopo MVP1 e MVP2  | 16/05/23 | 25/05/23
 Ciclo 4 | Backlog definitivo MVP1 | 26/05/23 | 05/06/23
 Ciclo 5 | Versão prévia MVP1 | 06/06/23 | 12/06/23
-Ciclo 6 | Versão definitiva MVP1 | 13/06/23 | 19/06/23
-Ciclo 7 | Correções MVP1 | 20/06/23 | 26/06/23
+Ciclo 6 | Versão definitiva MVP1 | 13/06/23 | 22/06/23
+Ciclo 7 | Correções MVP1 | 23/06/23 | 26/06/23
 Ciclo 8 | Backlog definitivo MVP2 | 27/06/23 | 03/07/23
 Ciclo 9 | Versão prévia MVP2 | 04/07/23 | 10/07/23
 Ciclo 10 | Versão definitiva MVP2 | 11/07/23 | 18/07/23
@@ -136,6 +137,7 @@ Ciclo | Problema | Solução Encontrada | Resultado Esperado
 Ciclo 3 | Atrasos de mais de 2 semanas  | Alterar cronograma do projeto | Adequação aos prazos solicitados
 Ciclo 3 | Alteração no Processo de Engenharia de Requisito ou Desenvolvimento de Software | Alterar cronograma do projeto e entregas | Adequação aos prazos solicitados
 Ciclo 4 | Atrasos de mais de 2 semanas | Alterar entregas das fases | Adequação aos prazos solicitados
+Ciclo 7 | Alteração nos prazos das entregas da Disciplina| Alterar entregas das fases | Adequação aos prazos solicitados
 
 
 ## 3 PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
