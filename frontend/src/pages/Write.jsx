@@ -10,6 +10,7 @@ const Write = () => {
   const [destino, setDestino] = useState("");
   const [data, setData] = useState("");
   const [horario, setHorario] = useState("");
+  const [descricao, setDescricao] = useState("");
 
   const navigate = useNavigate();
 
@@ -20,6 +21,7 @@ const Write = () => {
     destino: "",
     data: "",
     horario: "",
+    descricao: ""
   });
 
   const handleInputChange = (event) => {
@@ -31,7 +33,7 @@ const Write = () => {
     e.preventDefault();
   
     try {
-
+        console.log(inputsCarona);
      // Adicione essa linha para exibir o token
     
         const response = await fetch("http://localhost:3000/caronas/cadastrar", {
@@ -86,6 +88,12 @@ const Write = () => {
           type="text"
           placeholder="Horario da Carona"
           name="horario"
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          placeholder="Descrição"
+          name="descricao"
           onChange={handleInputChange}
         />
         <button onClick={handleSubmit}>Criar Carona</button>
