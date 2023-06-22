@@ -4,4 +4,5 @@
 
 Data | Versão | Descrição | Autor(es) | Revisor(es)
 ---- | ------ | --------- | ----- | ---------
-17/06/23 | `0.1` | Criação da página | Juan | ?
+17/06/23 | `0.1` | Criação da página| Juan | João e Pedro Henrique
+20/06/23 | `1.0` | Adicionado Vídeo | Juan | João e Pedro Henrique

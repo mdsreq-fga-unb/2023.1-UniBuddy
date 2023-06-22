@@ -37,3 +37,4 @@ Data | Versão | Descrição | Autor(es) | Revisor(es)
 ---- | ------ | --------- | ----- | ---------
 17/06/23 | `0.1` | Criação da página | Juan Mangueira | ?
 19/06/23 | `0.2` | Adiciondo fases da ER | João Vítor | Juan
+20/06/23 | `1.0` | Adicionado Vídeo | Juan | João e Pedro Henrique
