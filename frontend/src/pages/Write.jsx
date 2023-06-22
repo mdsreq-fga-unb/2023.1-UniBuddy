@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import carro from '../img/carro.png';
 import './styles/Write.css';
-import  { useState } from "react";
 
 const Write = () => {
   const [vagas, setVagas] = useState("");
