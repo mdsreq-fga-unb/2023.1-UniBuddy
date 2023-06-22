@@ -11,6 +11,25 @@ const Single = () => {
 
   const navigate = useNavigate();
 
+  const removerCarona = async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/caronas/deletar/${id}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        // Lógica de sucesso após a remoção da carona
+      } else {
+        // Lógica de tratamento de erro em caso de falha na remoção da carona
+      }
+      navigate("/")
+    } catch (error) {
+      console.log("Erro ao remover a carona:", error);
+    }
+
+  };
+  
+
 
   useEffect(() => {
     const fetchCarona = async () => {
@@ -25,6 +44,7 @@ const Single = () => {
 
     fetchCarona();
   }, [id]);
+
 
   const handleSolicitarCarona = async () => {
     
@@ -84,6 +104,7 @@ const Single = () => {
             <img className="whatsapp" src={whats} alt="whatsapp" />
             <span className="span">Entrar em contato</span>
           </a>
+          <button className="button" onClick={removerCarona}>Excluir Carrona</button>
           <button className="button" onClick={showConfirmationPopup}>Solicitar Carona</button>
           {showConfirmation && (
             <div className="confirmation-popup">
