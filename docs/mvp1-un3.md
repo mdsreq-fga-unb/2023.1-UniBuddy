@@ -1,6 +1,8 @@
 ## Apresentação MVP1
 
 ### Site
+Back-end: <https://unibuddyunb.netlify.app/>
+Front-end: <https://20231-unibuddy-production.up.railway.app/>
 
 <iframe width="950" height="600" src="https://unibuddyunb.netlify.app/"></iframe>
 
