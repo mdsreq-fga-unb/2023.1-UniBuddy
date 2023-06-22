@@ -23,10 +23,9 @@ const Write = () => {
   
     try {
 
-      const token = localStorage.getItem("token"); // Obtenha o token armazenado
-  
+      const token = JSON.parse(localStorage.getItem("user")).token;
       console.log("Token:", token); // Adicione essa linha para exibir o token
-  
+    
       const response = await fetch("http://localhost:3000/caronas/cadastrar", {
         method: "POST",
         headers: {

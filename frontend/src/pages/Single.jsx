@@ -23,7 +23,8 @@ const Single = () => {
   }, [id]);
 
   const handleSolicitarCarona = async () => {
-    const token = "seu_token_aqui"; // Substitua pelo token real
+    const token = JSON.parse(localStorage.getItem("user")).token;
+    console.log("Token:", token)
 
     try {
       const response = await fetch(`http://localhost:3000/caronas/solicitar/${id}`, {
