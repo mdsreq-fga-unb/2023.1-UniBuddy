@@ -9,7 +9,7 @@ const Home = () => {
         // Função para buscar as caronas do back-end
         const fetchCaronas = async () => {
             try {
-                const response = await fetch("http://localhost:3000/caronas/vizualizar"); // Rota de visualização de caronas
+                const response = await fetch("https://20231-unibuddy-production.up.railway.app/caronas/vizualizar"); // Rota de visualização de caronas
                 const data = await response.json();
                 setCaronas(data.caronas);
             } catch (error) {
