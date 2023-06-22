@@ -36,7 +36,7 @@ const Write = () => {
           "Content-Type": "application/json",
           Authorization: `Bearer`, // Inclua o token de autenticação no cabeçalho da solicitação
         },
-        body: JSON.stringify(caronaData),
+        body: JSON.stringify(inputsCarona),
       });
   
       const data = await response.json();
