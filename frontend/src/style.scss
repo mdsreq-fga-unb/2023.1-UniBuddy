@@ -1,0 +1,321 @@
+$lightGreen : #00b894;
+$black : #000000;
+$white : #ffffff;
+$darkBlue : #29A8CA;
+
+
+.app {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 100%;
+
+        .auth {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: $white;
+
+            h1 {
+                color: $black;
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+
+            .entrar{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 50%;
+                background-color: white;
+                border-radius: 1rem;
+                padding: 2rem;
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 50%;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 50%;
+                background-color: white;
+                border-radius: 1rem;
+                padding: 2rem;
+
+                input {
+                    width: 100%;
+                    height: 3rem;
+                    margin-bottom: 1rem;
+                    border-radius: 0.5rem;
+                    border: 1px solid #ccc;
+                    padding: 0.5rem;
+                }
+
+                button {
+                    width: 100%;
+                    height: 3rem;
+                    margin-bottom: 1rem;
+                    border-radius: 0.5rem;
+                    border: 1px solid #ccc;
+                    padding: 0.5rem;
+                    background-color: #000000;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                span {
+                    color: red;
+                    font-size: 0.8rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin-top: 1rem;
+                    font-size: 0.8rem;
+                    color : red;
+                }
+            }
+        }
+
+        //write
+        .create{
+            padding: 2rem 0rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-size: 2rem;
+                font-weight: bold;
+                color: $black;
+                margin-bottom: 2rem;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 50%;
+                background-color: white;
+                border-radius: 1rem;
+                padding: 2rem;
+                input {
+                    width: 100%;
+                    height: 3rem;
+                    margin-bottom: 1rem;
+                    border-radius: 0.5rem;
+                    border: 1px solid #ccc;
+                    padding: 0.5rem;
+                }
+                button{
+                    width: 100%;
+                    height: 3rem;
+                    margin-bottom: 1rem;
+                    border-radius: 0.5rem;
+                    border: 1px solid #ccc;
+                    padding: 0.5rem;
+                    background-color: #000000;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .create {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          }
+          
+          .card {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+          
+          .Titulo {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          
+          .container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+          }
+          
+          .img-wrapper {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+          }
+          
+          .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+          
+          .descricao {
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          
+          .button-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+          }
+          
+          .button-whatsapp,
+          .button {
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+          }
+          
+          .button-whatsapp {
+            background-color: #292929;
+            text-decoration: none;
+          }
+          
+          .button {
+            background-color: #292929;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .button:hover {
+            background-color: #179FD2;
+          }
+          
+          
+          
+          
+          
+          ///
+          
+          .profile {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+          }
+          
+          .profile h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-family: "Arial", sans-serif;
+          }
+          
+          .profile p {
+            margin-bottom: 5px;
+            font-family: "Arial", sans-serif;
+          }
+          
+          .profile h2 {
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-family: "Arial", sans-serif;
+          }
+          
+          .caronas-criadas {
+            margin-bottom: 20px;
+          }
+          
+          .caronas-criadas .carona {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: lightgray;
+            border-radius: 5px;
+          }
+          
+          .caronas-criadas .carona .title {
+            font-weight: bold;
+            font-family: "Arial", sans-serif;
+          }
+          
+          .caronas-criadas .carona .delete-button {
+            color: red;
+            cursor: pointer;
+            font-family: "Arial", sans-serif;
+          }
+          
+          .caronas-pegas {
+            margin-bottom: 20px;
+          }
+          
+          .caronas-pegas .carona {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: lightgray;
+            border-radius: 5px;
+          }
+          
+          .caronas-pegas .carona .title {
+            font-weight: bold;
+            font-family: "Arial", sans-serif;
+          }
+          
+          .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+          }  
+    }
+ 
+        /*<div className="home">
+            <h1>Carronas Disponíveis</h1>
+            <div className="posts">
+                {Posts.map((p) => (
+                    <div className="post">
+                        <img
+                            className="postImg"
+                            src={ImagemExemplo}
+                            alt="Pedro"
+                        />
+                        <div className="postInfo">
+                            <div className="postNome">
+                                <span className="nome">Pedro</span>
+                                <span className="bairro">Asa Norte</span>
+                            </div>
+                            <p className="desc">
+                                {p.description}
+                            </p>
+                            <hr />
+                            <span className="postVaga">Vagas Disponiveis</span>
+                            <span className="postDestino">{p.title}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+        */
+
+
+       
+    
+}
