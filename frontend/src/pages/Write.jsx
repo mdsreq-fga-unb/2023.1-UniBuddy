@@ -23,14 +23,13 @@ const Write = () => {
   
     try {
 
-      const token = JSON.parse(localStorage.getItem("user")).token;
-      console.log("Token:", token); // Adicione essa linha para exibir o token
+     // Adicione essa linha para exibir o token
     
       const response = await fetch("http://localhost:3000/caronas/cadastrar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // Inclua o token de autenticação no cabeçalho da solicitação
+          Authorization: `Bearer`, // Inclua o token de autenticação no cabeçalho da solicitação
         },
         body: JSON.stringify(caronaData),
       });
@@ -68,13 +67,13 @@ const Write = () => {
           onChange={(e) => setDestino(e.target.value)}
         />
         <input
-          type="date"
+          type="text"
           placeholder="Data da Carona"
           value={data}
           onChange={(e) => setData(e.target.value)}
         />
         <input
-          type="time"
+          type="text"
           placeholder="Horario da Carona"
           value={horario}
           onChange={(e) => setHorario(e.target.value)}

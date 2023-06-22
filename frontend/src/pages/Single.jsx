@@ -23,15 +23,14 @@ const Single = () => {
   }, [id]);
 
   const handleSolicitarCarona = async () => {
-    const token = JSON.parse(localStorage.getItem("user")).token;
-    console.log("Token:", token)
+    
 
     try {
       const response = await fetch(`http://localhost:3000/caronas/solicitar/${id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
+          Authorization: `Bearer`
         },
       });
 
