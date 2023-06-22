@@ -108,28 +108,22 @@ router.post("/solicitar/:idCarona", async (req, res) => {
     try {
         const solicitacao = await Solicitacao.findOne({where: {idCarona: req.params.idCarona}});
         const vaga = await caronaUtils.getVagaCarona(req.params.idCarona);
-        
-        if(!solicitacao) {
-            return res.status(404).json({ message: 'Carona não encontrado.' });
-        } else if (vaga === null) {
-            return res.status(404).json({ message: 'Carona solicitada nâo tem vaga.' });
-        } else if (await caronaUtils.verificaDisponibilidade(2)) {
-            return res.status(404).json({ message: 'Você já solicitou essa carona.' });
-        } else {
-            const nome = await userUtils.getNomeUsuario(2);
-            var obj = {};
-            obj[vaga] = 2;
-            await Solicitacao.update(
-                obj,
-                {where: {idCarona: req.params.idCarona}}
-            );
 
-            const motorista = await caronaUtils.getIdMotorista(req.params.idCarona);
-            const notificacao = await notifiUtils.criaNotificacao(
-                motorista,
-                `${nome} está interessado na sua carona`
-            );
-        }
+        console.log(vaga);
+        
+        const nome = await userUtils.getNomeUsuario(2);
+        var obj = {};
+        obj[vaga] = 2;
+        await Solicitacao.update(
+            obj,
+            {where: {idCarona: req.params.idCarona}}
+        );
+
+        const motorista = await caronaUtils.getIdMotorista(req.params.idCarona);
+        const notificacao = await notifiUtils.criaNotificacao(
+            motorista,
+            `${nome} está interessado na sua carona`
+        );
         res.status(200).json({ message: "Solicitação feita com sucesso", vaga });
     } catch (error) {
         res.status(500).json({ message: 'Erro ao buscar caronas.', error: error.message });
