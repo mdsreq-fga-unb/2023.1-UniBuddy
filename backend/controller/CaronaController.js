@@ -12,10 +12,10 @@ const userUtils = require('../utils/usuario_utils');
 
 const jwt = require('jsonwebtoken');
 
-router.post("/cadastrar", auth, async (req, res) => {
+router.post("/cadastrar", async (req, res) => {
     try {
         const nova_carona = {
-            id_usuario: req.usuario.id,
+            id_usuario: 1,
             vagas: req.body.vagas,
             origem: req.body.origem,
             destino: req.body.destino,
@@ -38,24 +38,24 @@ router.post("/cadastrar", auth, async (req, res) => {
         console.log(nova_solicitacao);
         await Solicitacao.create(nova_solicitacao);
 
-        const token = jwt.sign({ id: req.usuario.id }, 'chave-secreta-do-token');
+        //const token = jwt.sign({ id: 1 }, 'chave-secreta-do-token');
 
-        console.log("token: ", token);
+        //console.log("token: ", token);
 
-        res.status(200).json({ message: 'Carona e solicitação criadas com sucesso.', token });
+        res.status(200).json({ message: 'Carona e solicitação criadas com sucesso.'});
     } catch (error) {
         res.status(400).json({ message: 'Erro ao cadastrar carona.', error });
     }
 })
 
-router.delete("/deletar/:idCarona", auth, async (req, res) => {
+router.delete("/deletar/:idCarona", async (req, res) => {
     try {
         const carona = await Carona.findOne({where: {id: req.params.idCarona}});
         const solicitacao = await Solicitacao.findOne({where: {idCarona: req.params.idCarona}});
 
         if (!carona) {
             return res.status(404).json({ message: 'Carona não encontrado.' });
-        } else if (carona.id_usuario != req.usuario.id) {
+        } else if (carona.id_usuario != 1) {
             return res.status(403).json({ message: 'Você não tem permissão para excluir essa carona.' });
         } else {
             const ids_passageiros = await caronaUtils.getIdPassageiro(req.params.idCarona);
@@ -104,7 +104,7 @@ router.get("/vizualizar/:id", async (req, res) => {
     }
 })
 
-router.post("/solicitar/:idCarona", auth, async (req, res) => {
+router.post("/solicitar/:idCarona", async (req, res) => {
     try {
         const solicitacao = await Solicitacao.findOne({where: {idCarona: req.params.idCarona}});
         const vaga = await caronaUtils.getVagaCarona(req.params.idCarona);
@@ -113,12 +113,12 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
             return res.status(404).json({ message: 'Carona não encontrado.' });
         } else if (vaga === null) {
             return res.status(404).json({ message: 'Carona solicitada nâo tem vaga.' });
-        } else if (await caronaUtils.verificaDisponibilidade(req.usuario.id)) {
+        } else if (await caronaUtils.verificaDisponibilidade(2)) {
             return res.status(404).json({ message: 'Você já solicitou essa carona.' });
         } else {
-            const nome = await userUtils.getNomeUsuario(req.usuario.id);
+            const nome = await userUtils.getNomeUsuario(2);
             var obj = {};
-            obj[vaga] = req.usuario.id;
+            obj[vaga] = 2;
             await Solicitacao.update(
                 obj,
                 {where: {idCarona: req.params.idCarona}}
@@ -136,7 +136,7 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
     }
 })
 
-router.post("/recusar-solicitacao", auth, async (req, res) => {
+router.post("/recusar-solicitacao", async (req, res) => {
     try {
         const idCarona = req.body.idCarona;
         const idPassageiro = req.body.idPassageiro;
