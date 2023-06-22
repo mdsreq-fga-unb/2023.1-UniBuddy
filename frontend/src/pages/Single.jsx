@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import './styles/Single.css';
 import whats from '../img/whats_app.png';
+import { useNavigate } from "react-router-dom";
 
 const Single = () => {
   const { id } = useParams();
   const [caronasComNome, setCaronasComNome] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const fetchCarona = async () => {
@@ -39,6 +43,7 @@ const Single = () => {
       } else {
         // Lógica de tratamento de erro em caso de falha na solicitação da carona
       }
+      navigate("/")
     } catch (error) {
       console.log("Erro ao solicitar a carona:", error);
     }

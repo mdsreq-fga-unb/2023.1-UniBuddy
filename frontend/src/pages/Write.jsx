@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import carro from '../img/carro.png';
 import './styles/Write.css';
+import { useNavigate } from "react-router-dom";
 
 const Write = () => {
   const [vagas, setVagas] = useState("");
@@ -9,6 +10,9 @@ const Write = () => {
   const [destino, setDestino] = useState("");
   const [data, setData] = useState("");
   const [horario, setHorario] = useState("");
+
+  const navigate = useNavigate();
+
 
   const [inputsCarona, setInputsCarona] = useState({
     vagas: "",
@@ -41,6 +45,7 @@ const Write = () => {
   
       const data = await response.json();
       console.log(data);
+      navigate("/")
     } catch (error) {
       console.log("Erro ao cadastrar carona:", error);
     }
