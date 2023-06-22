@@ -79,13 +79,13 @@ const Write = () => {
           onChange={handleInputChange}
         />
         <input
-          type="text"
+          type="date"
           placeholder="Data da Carona"
           name="data"
           onChange={handleInputChange}
         />
         <input
-          type="text"
+          type="time"
           placeholder="Horario da Carona"
           name="horario"
           onChange={handleInputChange}
