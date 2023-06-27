@@ -16,7 +16,7 @@ Data | Versão | Descrição | Autor | Revisores
 25/05/23 | 2.0 | Segunda versão de entrega | Juan, João, Pedro Henrique, Pedro Lucas | João
 17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos, Histórico de Replanejamento, Lições aprendidas, Pontos de melhoria | Juan | João e Pedro Henrique
 22/06/23 | 2.2 | Correção do Planejamento do projeto, Histórico de Replanejamento | Juan | João e Pedro Henrique
-27/06/23 | 2.2 | Correção do Planejamento do projeto | Juan | João e Pedro Henrique
+27/06/23 | 2.2 | Correção do Planejamento do projeto e Histórico de Riscos | Juan | João e Pedro Henrique
 
 
 ## 1.	VISÃO GERAL DO PRODUTO
@@ -111,12 +111,12 @@ Figura 2 - Avaliação de impacto (fonte: autoures, 2023)
 
 #### 2.4.1 Histórico de Riscos
 
-Ciclo | Risco Encontrado | Categoria
------- | ---------------- | -----
-Ciclo 2 | Risco de Projeto | Crítico 2
-Ciclo 3 | Risco Técnicos | Crítico 2
-Ciclo 4 | Risco de Projeto | Crítico 2
-Ciclo 6 | Risco Técnicos | Crítico 2
+Ciclo | Risco Encontrado | Categoria | Ação tomada
+------ | ---------------- | ----- | ----
+Ciclo 2 | Risco de Projeto | Crítico 2 | Planejamento de troca de Procesos de Desenvolvimento e ER.
+Ciclo 3 | Risco Técnicos | Crítico 2 | Conversa e feedbacks com a equipe, Alinhamento com o Cliente
+Ciclo 4 | Risco de Projeto | Crítico 2 | Planejamento de novo cronograma, Alinhamento com o Cliente
+Ciclo 6 | Risco Técnicos | Crítico 2 | Conversa e feedbacks com a equipe, Alinhamento com o Cliente
 
 ### 2.5	Critérios de Replanejamento
 Os critérios de replanejamento referem-se à identificação dos pontos que, caso ocorram, causarão um replanejamento do projeto. Precisam ser acompanhados a cada Ciclo, referindo-se assim, ao projeto como um todo e não apenas ao produto.
