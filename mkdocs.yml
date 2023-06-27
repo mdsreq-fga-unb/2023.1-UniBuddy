@@ -47,18 +47,18 @@ nav:
     
   - Entregas: 
     - Unidade 1:
-      - Visão Geral do Produto: "material-processo-er-un1.md"
-      - Material do Seminario - Processo Unificado: "material-seminario-processo.md"
+      - Visão Geral do Produto: "unidade_1/material-processo-er-un1.md"
+      - Material do Seminario - Processo Unificado: "unidade_1/material-seminario-processo.md"
     - Unidade 2:
-      - Atualização da Visão Geral: "material-processo-er-un2.md"
-      - Backlog do Produto: "backlog-mvps-un2.md"
+      - Atualização da Visão Geral: "unidade_2/material-processo-er-un2.md"
+      - Backlog do Produto: "unidade_2/backlog-mvps-un2.md"
     - Unidade 3:
-      - Atualização da Visão Geral: "material-processo-er-un3.md"
-      - Atualização do Backlog do Produto: "backlog-mvps-un3.md"
-      - MVP1: "mvp1-un3.md"
-      - Feedback do Cliente: "feedback-cliente-un3.md"
-      - Backlog Estrutura SAFe: "backlog-safe-un3.md"
-      - Canvas PBB: "canvas-pbb-un3.md"
+      - Atualização da Visão Geral: "unidade_3/material-processo-er-un3.md"
+      - Atualização do Backlog do Produto: "unidade_3/backlog-mvps-un3.md"
+      - MVP1: "unidade_3/mvp1-un3.md"
+      - Feedback do Cliente: "unidade_3/feedback-cliente-un3.md"
+      - Backlog Estrutura SAFe: "unidade_3/backlog-safe-un3.md"
+      - Canvas PBB: "unidade_3/canvas-pbb-un3.md"
 
 markdown_extensions:
   - tables
