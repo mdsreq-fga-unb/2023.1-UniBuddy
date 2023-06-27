@@ -16,6 +16,7 @@ Data | Versão | Descrição | Autor | Revisores
 25/05/23 | 2.0 | Segunda versão de entrega | Juan, João, Pedro Henrique, Pedro Lucas | João
 17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos, Histórico de Replanejamento, Lições aprendidas, Pontos de melhoria | Juan | João e Pedro Henrique
 22/06/23 | 2.2 | Correção do Planejamento do projeto, Histórico de Replanejamento | Juan | João e Pedro Henrique
+27/06/23 | 2.2 | Correção do Planejamento do projeto | Juan | João e Pedro Henrique
 
 
 ## 1.	VISÃO GERAL DO PRODUTO
@@ -70,12 +71,12 @@ Ciclo 1 | Requisitos descobertos, elicitados, analisados e consensuados | 02/05/
 Ciclo 2 | Requisitos validados, verificados e declarados | 09/05/23 | 15/05/23
 Ciclo 3 | Requisitos organizados e atualizados, escopo MVP1 e MVP2  | 16/05/23 | 25/05/23
 Ciclo 4 | Backlog definitivo MVP1 | 26/05/23 | 05/06/23
-Ciclo 5 | Versão prévia MVP1 | 06/06/23 | 12/06/23
-Ciclo 6 | Versão definitiva MVP1 | 13/06/23 | 22/06/23
-Ciclo 7 | Correções MVP1 | 23/06/23 | 26/06/23
+Ciclo 5 | US01 e US05 | 06/06/23 | 12/06/23
+Ciclo 6 | US11 e US12 | 13/06/23 | 22/06/23
+Ciclo 7 | US8 e US09 | 23/06/23 | 26/06/23
 Ciclo 8 | Backlog definitivo MVP2 | 27/06/23 | 03/07/23
-Ciclo 9 | Versão prévia MVP2 | 04/07/23 | 10/07/23
-Ciclo 10 | Versão definitiva MVP2 | 11/07/23 | 18/07/23
+Ciclo 9 | US ?? | 04/07/23 | 10/07/23
+Ciclo 10 | US ??| 11/07/23 | 18/07/23
 
 ### 2.3	Matriz de Comunicação
 Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados
