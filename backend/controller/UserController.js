@@ -66,11 +66,4 @@ router.post("/logout", async (req, res) => {
     }).status(200).json({message: "Logout efetuado"});
 })
 
-router.get("/whatsapp", async (req, res) => {
-    const telefone = req.query.telefone;
-    const url = `https://wa.me/${telefone}`;
-
-    res.redirect(url);
-})
-
 module.exports = router;
