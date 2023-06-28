@@ -1,12 +1,64 @@
-# 2023.1-UniBuddy
+# Unibuddy
 
-1 - Entrar na branch feature/dev/Pedro
-2 - Fazer o pull da branch feature/dev/Pedro
-3 - Criar uma branch com o nome da feature que você vai desenvolver
-* - Entra na front no terminal ( da "cd front")
-4 - Escrever comando no terminal : yarn 
-5 - Escrever comando no terminal : yarn run
-6 - Selecionar como voce vai rodar com o vite : eu rodei com o dev:vite
-7 - Fazer as alterações necessárias
-8 - Fazer o commit das alterações
-9 - Fazer o push da branch que você criou
+## Como rodar a aplicação para desenvolvimento?
+&nbsp;
+
+### Backend
+#### Dependências
+
+- Rode o comando abaixo na raiz do projeto
+
+```shell
+npm install
+```
+
+#### Rodar
+
+- Entre na pasta backend
+
+```shell
+cd backend
+```
+
+- Rode o backend da aplicação
+
+```shell
+node index.js
+```
+
+### Frontend
+#### Dependências
+
+- Entre na pasta frontend
+
+```shell
+cd frontend
+```
+
+- Instale as dependências
+
+```shell
+npm install
+```
+
+#### Rodar
+
+- Entre na pasta frontend
+
+```shell
+cd frontend
+```
+
+- Execute o yarn
+
+```shell
+yarn
+```
+
+- Rode o frontend da aplicação
+
+```shell
+yarn run
+```
+
+- Escreva a opção "dev"
