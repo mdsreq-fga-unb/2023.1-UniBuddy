@@ -13,7 +13,7 @@ const Single = () => {
 
   const removerCarona = async () => {
     try {
-      const response = await fetch(`https://20231-unibuddy-production.up.railway.app/caronas/deletar/${id}`, {
+      const response = await fetch(`http://localhost:3000/caronas/deletar/${id}`, {
         method: "DELETE",
       });
 
@@ -34,7 +34,7 @@ const Single = () => {
   useEffect(() => {
     const fetchCarona = async () => {
       try {
-        const response = await fetch(`https://20231-unibuddy-production.up.railway.app/caronas/vizualizar/${id}`);
+        const response = await fetch(`http://localhost:3000/caronas/vizualizar/${id}`);
         const data = await response.json();
         setCaronasComNome(data.caronasComNome);
       } catch (error) {
@@ -50,7 +50,7 @@ const Single = () => {
     
 
     try {
-      const response = await fetch(`https://20231-unibuddy-production.up.railway.app/caronas/solicitar/${id}`, {
+      const response = await fetch(`http://localhost:3000/caronas/solicitar/${id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
