@@ -60,7 +60,7 @@ router.post("/login", async (req, res) => {
   
 
 router.post("/logout", async (req, res) => {
-    res.clearCookie("acess_token", {
+    res.clearCookie("access_token", {
         sameSite: "none",
         secure: true,
     }).status(200).json({message: "Logout efetuado"});
