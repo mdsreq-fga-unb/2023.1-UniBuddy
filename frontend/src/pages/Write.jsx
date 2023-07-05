@@ -36,7 +36,7 @@ const Write = () => {
         console.log(inputsCarona);
      // Adicione essa linha para exibir o token
     
-        const response = await fetch("https://20231-unibuddy-production.up.railway.app/caronas/cadastrar", {
+        const response = await fetch("http://localhost:3000/caronas/cadastrar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
