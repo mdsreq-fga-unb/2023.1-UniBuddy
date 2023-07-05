@@ -1,20 +1,27 @@
 import Carro from "../img/carro.png";
 import { Link } from "react-router-dom";
 import Person from "../img/person.png";
-import React, { useContext } from "react"; // Importe o hook useContext
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext.jsx";
+import HoverMenu from "./HoverMenu.jsx";
 
 const Navbar = () => {
-  const { currentUser, logout } = useContext(AuthContext); // Use useContext dentro da função de componente
+  const { currentUser, logout } = useContext(AuthContext);
+  const [isHovered, setIsHovered] = useState(false); // Estado para controlar o hover
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
 
   return (
     <div className="navbar">
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
-          <img src={Carro} alt="Logo" />
+            <img src={Carro} alt="Logo" />
           </Link>
         </div>
+        <p className="welcome">Bem vindo{currentUser?.nomeCompleto}</p>
         <div className="titulo">
           <p>UniBuddy</p>
         </div>
@@ -24,9 +31,6 @@ const Navbar = () => {
           </Link>
           <Link className="link" to="/">
             Caronas
-          </Link>
-          <Link className="link" to="/perfil">
-            Perfil
           </Link>
           {currentUser ? (
             <span className="logout" onClick={logout}>
@@ -39,7 +43,10 @@ const Navbar = () => {
               Entrar
             </Link>
           )}
-          <p>Bem vindo{currentUser?.nomeCompleto}</p>
+           <div className="profile-link" onMouseEnter={handleHover} onMouseLeave={handleHover}>
+            <p>Perfil</p>
+            {isHovered && <HoverMenu />} {/* Renderize o submenu quando o mouse estiver sobre o botão */}
+          </div>
         </div>
       </div>
     </div>
