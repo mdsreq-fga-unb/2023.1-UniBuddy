@@ -66,4 +66,26 @@ router.post("/logout", async (req, res) => {
     }).status(200).json({message: "Logout efetuado"});
 })
 
+router.get("/perfil", auth, async (req, res) => {
+  try {
+    const userId = req.user.id;
+
+    const usuario = await User.findOne({
+      attributes: ["nomeCompleto", "email", "telefone"],
+      where: { id: userId },
+    });
+
+    if (!usuario) {
+      return res.status(404).json({ message: "Usuário não encontrado" });
+    }
+
+    res.status(200).json({ usuario });
+  } catch (error) {
+    res.status(500).json({ message: "Erro ao buscar perfil do usuário", error });
+  }
+});
+
+
+
+
 module.exports = router;
