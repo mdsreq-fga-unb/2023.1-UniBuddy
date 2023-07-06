@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import "./style.scss";
 import Perfil from "./pages/Perfil";
+import Solicitacoes from "./pages/Solicitacoes";
 
 //MVP1
 //Tela de Login 
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:"/perfil",
         element: <Perfil />
+      },
+      {
+        path:"/solicitacoes",
+        element: <Solicitacoes/>
       }
     ],
   },
@@ -71,6 +76,10 @@ const router = createBrowserRouter([
   { 
     path: "/perfil",
     element: <Perfil/>,
+  },
+  {
+    path: "/solicitacoes",
+    element: <Solicitacoes/>,
   }
 
 ]);
