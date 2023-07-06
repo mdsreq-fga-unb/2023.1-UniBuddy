@@ -26,9 +26,12 @@ const Solicitacoes = () => {
       <h1 className="solicitacao-h1">Caronas solicitadas</h1>
       <div  className="solicitacao-div">
           <p>Nome:  solicitou carona com você</p>
-          <p>Origem:  - Destino:</p>
-          <span className="edit-button-solicitacao">Aceitar</span>
-          <span className="delete-button-solicitacao">Recusar</span>
+          <p>Origem: Asa Norte</p>
+          <p> Destino: FGA </p>
+          <div className="button-container">
+            <span className="edit-button-solicitacao">Aceitar</span>
+            <span className="delete-button-solicitacao">Rejeitar</span>
+          </div>
       </div>
 
 
