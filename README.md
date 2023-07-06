@@ -23,7 +23,7 @@ cd backend
 - Rode o backend da aplicação
 
 ```shell
-node index.js
+npm start
 ```
 
 ### Frontend
@@ -38,7 +38,7 @@ cd frontend
 - Instale as dependências
 
 ```shell
-npm install
+yarn install
 ```
 
 #### Rodar
@@ -49,7 +49,7 @@ npm install
 cd frontend
 ```
 
-- Execute o yarn
+- Execute o  caso não o tenha instalado
 
 ```shell
 yarn
@@ -58,7 +58,5 @@ yarn
 - Rode o frontend da aplicação
 
 ```shell
-yarn run
+yarn run dev
 ```
-
-- Escreva a opção "dev"
