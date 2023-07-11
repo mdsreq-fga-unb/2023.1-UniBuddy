@@ -1,4 +1,4 @@
-
+const auth = require('../middleware/auth');
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
@@ -68,7 +68,7 @@ router.post("/logout", async (req, res) => {
 
 router.get("/perfil", auth, async (req, res) => {
   try {
-    const userId = req.user.id;
+    const userId = req.usuario.id;
 
     const usuario = await User.findOne({
       attributes: ["nomeCompleto", "email", "telefone"],
