@@ -17,6 +17,7 @@ Data | Versão | Descrição | Autor | Revisores
 17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos, Histórico de Replanejamento, Lições aprendidas, Pontos de melhoria | Juan | João e Pedro Henrique
 22/06/23 | 2.2 | Correção do Planejamento do projeto, Histórico de Replanejamento | Juan | João e Pedro Henrique
 27/06/23 | 2.2 | Correção do Planejamento do projeto e Histórico de Riscos | Juan | João e Pedro Henrique
+11/07/23 | 3.1 | Atualização Planejamento | Juan | Pedro Henrique
 
 
 ## 1.	VISÃO GERAL DO PRODUTO
@@ -75,8 +76,8 @@ Ciclo 5 | US01 e US05 | 06/06/23 | 12/06/23
 Ciclo 6 | US11 e US12 | 13/06/23 | 22/06/23
 Ciclo 7 | US8 e US09 | 23/06/23 | 26/06/23
 Ciclo 8 | Backlog definitivo MVP2 | 27/06/23 | 03/07/23
-Ciclo 9 | US ?? | 04/07/23 | 10/07/23
-Ciclo 10 | US ??| 11/07/23 | 18/07/23
+Ciclo 9 | US15, US10, US04, US03 | 04/07/23 | 10/07/23
+Ciclo 10 | US06, US02, US07, US14| 11/07/23 | 18/07/23
 
 ### 2.3	Matriz de Comunicação
 Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados
@@ -402,7 +403,9 @@ Em conclusão, maturamos nosso processo de ER, utilizando técnicas de Organiza�
 - Algumas _User Stories_ são Requisitos Não-Funcionais. Não devem ser USs.
 
 ### Unidade 3
-*Ainda não divulgado.*
+- BDD muito genérico
+- Site não está funcionando, ou seja, MVP1 não foi considerado entregue.
+
 
 ## 6. REFERÊNCIAS BIBLIOGRÁFICAS 
 
