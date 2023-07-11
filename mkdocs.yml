@@ -67,6 +67,7 @@ nav:
       - Feedback do Cliente: "unidade_4/feedback-cliente-un4.md"
       - Backlog Estrutura SAFe: "unidade_4/backlog-safe-un4.md"
       - Canvas PBB: "unidade_4/canvas-pbb-un4.md"
+      - USM: "unidade_4/usm-un4.md"
 
 markdown_extensions:
   - tables
