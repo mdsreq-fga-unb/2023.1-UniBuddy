@@ -6,7 +6,8 @@ import { AuthContext } from "../context/authContext.jsx";
 import HoverMenu from "./HoverMenu.jsx";
 
 const Navbar = () => {
-  const { currentUser, logout } = useContext(AuthContext);
+  const { currentUser, login, logout } = useContext(AuthContext);
+
   const [isHovered, setIsHovered] = useState(false); // Estado para controlar o hover
 
   const handleHover = () => {
@@ -21,7 +22,7 @@ const Navbar = () => {
             <img src={Carro} alt="Logo" />
           </Link>
         </div>
-        <p className="welcome">Bem vindo{currentUser?.nomeCompleto}</p>
+        <p className="welcome">Bem vindo {currentUser?.nomeCompleto}</p>
         <div className="titulo">
           <p>UniBuddy</p>
         </div>
@@ -43,7 +44,7 @@ const Navbar = () => {
               Entrar
             </Link>
           )}
-           <div className="profile-link" onMouseEnter={handleHover} onMouseLeave={handleHover}>
+          <div className="profile-link" onMouseEnter={handleHover} onMouseLeave={handleHover}>
             <p>Perfil</p>
             {isHovered && <HoverMenu />} {/* Renderize o submenu quando o mouse estiver sobre o botão */}
           </div>

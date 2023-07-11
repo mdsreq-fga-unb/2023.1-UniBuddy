@@ -7,7 +7,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext.jsx";
-import './styles/Login.css'
+
 
 const Login = () => {
     const [inputs, setInputs] = useState({
@@ -30,9 +30,9 @@ const Login = () => {
         event.preventDefault();
         console.log(inputs);
         try {
-          const res = await login(inputs);
-          console.log(res);
-          navigate("/");
+            const res = await axios.post("http://20231-unibuddy-production.up.railway.app/usuarios/login", inputs);
+            console.log(res);
+            navigate("/");
         } catch (err) {
           console.log(err);
           setError("Email ou senha incorreto")
@@ -42,7 +42,7 @@ const Login = () => {
     return (
          <div className="auth">
             <div className="entrar">
-                <img src="https://cdn-icons-png.flaticon.com/128/3146/3146464.png" alt="" />
+                <img src="https://cdn-icons-png.flaticon.com/128/3085/3085339.png" alt="" />
                 <h1>Bem vindo a UniBuddy</h1>
             </div>
             <form>
