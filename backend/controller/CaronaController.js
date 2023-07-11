@@ -130,6 +130,20 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
     }
 })
 
+router.get("/caronas/:idUsuario", auth, async (req, res) => {
+    try {
+      const idUsuario = req.params.idUsuario;
+  
+      const caronas = await Carona.findAll({
+        where: { id_usuario: idUsuario },
+      });
+  
+      res.status(200).json({ caronas });
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao buscar caronas do usuário", error });
+    }
+  });
+
 router.post("/recusar-solicitacao", auth, async (req, res) => {
     try {
         const idCarona = req.body.idCarona;

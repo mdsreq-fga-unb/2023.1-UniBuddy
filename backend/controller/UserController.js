@@ -1,4 +1,4 @@
-
+const auth = require('../middleware/auth');
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
@@ -60,10 +60,32 @@ router.post("/login", async (req, res) => {
   
 
 router.post("/logout", async (req, res) => {
-    res.clearCookie("acess_token", {
+    res.clearCookie("access_token", {
         sameSite: "none",
         secure: true,
     }).status(200).json({message: "Logout efetuado"});
 })
+
+router.get("/perfil", auth, async (req, res) => {
+  try {
+    const userId = req.usuario.id;
+
+    const usuario = await User.findOne({
+      attributes: ["nomeCompleto", "email", "telefone"],
+      where: { id: userId },
+    });
+
+    if (!usuario) {
+      return res.status(404).json({ message: "Usuário não encontrado" });
+    }
+
+    res.status(200).json({ usuario });
+  } catch (error) {
+    res.status(500).json({ message: "Erro ao buscar perfil do usuário", error });
+  }
+});
+
+
+
 
 module.exports = router;
