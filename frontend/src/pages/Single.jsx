@@ -18,7 +18,7 @@ const Single = () => {
       });
 
       if (response.ok) {
-        // Lógica de sucesso após a remoção da carona
+        // Lógica de sucesso após remover a carona
       } else {
         // Lógica de tratamento de erro em caso de falha na remoção da carona
       }
