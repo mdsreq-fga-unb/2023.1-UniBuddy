@@ -35,7 +35,6 @@ const Perfil = () => {
 
   return (
     <div className="profile">
-      <img src="https://cdn-icons-png.flaticon.com/128/3135/3135768.png" alt="" />
       <h1>Meu perfil</h1>
       {usuario && (
         <>
@@ -46,7 +45,7 @@ const Perfil = () => {
         </>
       )}
 
-      <h2>Minhas caronas</h2>
+      <h2>Minhas caronas criadas</h2>
       <div className="caronas-criadas">
         {caronas.map((carona) => (
           <div className="carona" key={carona.id}>
@@ -60,6 +59,15 @@ const Perfil = () => {
           </div>
         ))}
       </div>
+      <div className="button-container-geral">
+        <Link className="linkEdit" to="/write">
+          Editar Perfil
+        </Link>
+        <Link className="linkDelete" to="/write">
+          Deletar Perfil
+        </Link>
+      </div>
+
     </div>
   );
 };

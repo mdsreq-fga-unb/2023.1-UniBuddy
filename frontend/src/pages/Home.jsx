@@ -30,16 +30,13 @@ const Home = () => {
       <div className="posts">
         {caronas.map((carona) => (
           <div className="post" key={carona.id}>
-            <img
-              className="postImg"
-              src="https://cdn-icons-png.flaticon.com/128/2102/2102647.png"
-              alt="Imagem de exemplo"
-            />
+          
             <div className="postInfo">
               <div className="postNome">
                 <span className="nome">{carona.origem}</span>
                 <span className="bairro">{carona.destino}</span>
               </div>
+              <p className="desc">{carona.descricao}</p>
               <p className="desc">{carona.data}</p>
               <p className="desc">{carona.horario}</p>
               <hr />

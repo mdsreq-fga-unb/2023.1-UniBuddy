@@ -4,7 +4,7 @@ $white : #ffffff;
 $darkBlue : #29A8CA;
 
 .navbar {
-  background-color: #ececec;
+  background-color: #9AEBA3;
 
   .container {
     padding: 1rem 0rem;
@@ -15,7 +15,6 @@ $darkBlue : #29A8CA;
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #000;
 
       img {
         width: 7rem;
@@ -39,7 +38,7 @@ $darkBlue : #29A8CA;
       cursor: pointer;
       display: flex;
       align-items: center;
-
+      color : #ffffff;
       p {
         margin: 0;
         padding-right: 10px;
@@ -98,11 +97,11 @@ $darkBlue : #29A8CA;
         font-weight: bold;
         font-size: 1rem;
         cursor: pointer;
-        background-color: #000;
+        background-color: #012030;
         border-radius: 0.5rem;
         padding: 0.5rem 1rem;
         transition: background-color 0.3s ease;
-
+        margin : 0rem 0.5rem;
         &:hover {
           background-color: #002b5b;
         }
@@ -260,7 +259,7 @@ $gray: #F1F1F1;
         align-items: center;
         width: 100%;
         .post{
-            background-color: $gray;
+            background-color: #DAFDBA;
             width: 30%;
             margin-bottom: 2rem;
             border-radius: 1rem;
@@ -335,16 +334,18 @@ footer{
     background-color: #ECECEC;
     padding: 1rem 0rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 
     img{
+        padding : 0rem 1rem;
         width: 3rem;
         height: 3rem;
         margin-left: 1rem;
     }
 
     span{
+        font-size: 1rem;
         padding-right: 1rem;
         font-weight: bold;
         font-size: 1rem;
