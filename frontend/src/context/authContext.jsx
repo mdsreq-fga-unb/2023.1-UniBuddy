@@ -13,6 +13,7 @@ export const AuthContextProvider = ({ children }) => {
       setToken(token);
       localStorage.setItem('token', token);
       console.log(axios.defaults.headers.common['Authorization'])
+      console.log("teste>>" , token)
     } catch (error) {
       console.log('Erro ao efetuar o login:', error);
     }

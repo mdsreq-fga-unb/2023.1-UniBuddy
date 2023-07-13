@@ -26,6 +26,7 @@ const Login = () => {
     event.preventDefault();
     try {
       await login(inputs);
+      console.log("teste input>>" , inputs)
       navigate('/'); // Redireciona para a página de perfil após o login
     } catch (err) {
       console.log(err);
