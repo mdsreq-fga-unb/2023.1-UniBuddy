@@ -85,20 +85,18 @@ const Single = () => {
     <div className="create">
       <div className="card">
         <h1 className="Titulo">Carona Selecionada</h1>
-        <div className="container">
-          <div className="img-wrapper">
-            <img src="https://cdn-icons-png.flaticon.com/128/2102/2102647.png" alt="" />
-          </div>
-          <p className="descricao">
-            {caronasComNome.descricao}
-          </p>
-        </div>
         <p>Nome do Motorista: {caronasComNome.nome}</p>
         <p>Origem da Carona: {caronasComNome.origem}</p>
         <p>Destino da Carona: {caronasComNome.destino}</p>
         <p>Vagas Disponíveis: {caronasComNome.vagas}</p>
         <p>Data da Carona: {caronasComNome.data}</p>
         <p>Horário da Carona: {caronasComNome.horario}</p>
+        <div className="container">
+          <p className="descricao">
+            Descrição do motorista : 
+            {caronasComNome.descricao}
+          </p>
+        </div>
         <div className="button-wrapper">
           <a href={`https://wa.me/${caronasComNome.telefone}?text=Ola,%20eu%20vim%20atraves%20do%20UniBuddy%20e%20quero%20uma%20carona`} target="_blank" rel="noopener noreferrer" className="button-whatsapp">
             <img className="whatsapp" src={whats} alt="whatsapp" />

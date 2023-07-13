@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import axios from "axios";
+import React, { useEffect, useState, useContext } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
+import { AuthContext } from '../context/authContext.jsx';
 
 const Perfil = () => {
+  const { token } = useContext(AuthContext); // Obtém o token do contexto de autenticação
   const { id } = useParams();
 
   const [usuario, setUsuario] = useState(null);
@@ -11,27 +13,31 @@ const Perfil = () => {
   useEffect(() => {
     const fetchUsuario = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/perfil/${id}`); // Substitua a URL pela rota correta do seu backend
+        const response = await axios.get(`http://localhost:3000/usuarios/perfil/${id}`, {
+          headers: {
+            Authorization: `Bearer ${token}` // Envia o token no header da requisição
+          }
+        });
         const data = response.data;
         setUsuario(data.usuario);
       } catch (error) {
-        console.log("Erro ao buscar dados do usuário:", error);
+        console.log('Erro ao buscar dados do usuário:', error);
       }
     };
 
     const fetchCaronas = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/caronas/${id}`); // Substitua a URL pela rota correta do seu backend
+        const response = await axios.get(`http://localhost:3000/caronas/${id}`);
         const data = response.data;
         setCaronas(data.caronas);
       } catch (error) {
-        console.log("Erro ao buscar caronas do usuário:", error);
+        console.log('Erro ao buscar caronas do usuário:', error);
       }
     };
 
     fetchUsuario();
     fetchCaronas();
-  }, []);
+  }, [id, token]);
 
   return (
     <div className="profile">
@@ -39,9 +45,8 @@ const Perfil = () => {
       {usuario && (
         <>
           <p>Nome: {usuario.nomeCompleto}</p>
-          <p>Matrícula: {usuario.matricula}</p>
-          <p>Endereço: {usuario.endereco}</p>
           <p>Email: {usuario.email}</p>
+          <p>Telefone: {usuario.telefone}</p>
         </>
       )}
 
@@ -67,7 +72,6 @@ const Perfil = () => {
           Deletar Perfil
         </Link>
       </div>
-
     </div>
   );
 };
