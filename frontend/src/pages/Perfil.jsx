@@ -4,25 +4,26 @@ import axios from 'axios';
 import { AuthContext } from '../context/authContext.jsx';
 
 const Perfil = () => {
-  const token = localStorage.getItem("token");
   const { id } = useParams();
+  const token = localStorage.getItem("token");
 
   const [usuario, setUsuario] = useState(null);
 
-  //http://localhost:3000/usuarios/perfil
+
+  const config = {
+    headers: { token: `${token}`}
+  };
 
   useEffect(() => {
+    console.log('token>>', token)
     const fetchUsuario = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/usuarios/perfil`, {
-          headers: {
-            Authorization:  `${token}`,
-            },
-            });
+        const response = await axios.get("http://localhost:3000/usuarios/perfil", config);
         const data = await response.data;
         setUsuario(data.usuario);
+        console.log("data>>", data)
       } catch (error) {
-        console.log('Erro ao buscar dados do usuário:', error);
+        console.log("Erro ao buscar o usuário:", error);
       }
     };
 

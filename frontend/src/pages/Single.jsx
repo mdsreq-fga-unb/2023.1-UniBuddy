@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Single = () => {
   const { id } = useParams();
+  const token = localStorage.getItem("token");
   const [caronasComNome, setCaronasComNome] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
@@ -13,13 +14,19 @@ const Single = () => {
 
   const removerCarona = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/caronas/deletar/${id}`, {
+      const response = await fetch(`http://localhost:3000/caronas/remover/${id}`, {
         method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
       });
 
       if (response.ok) {
-        // Lógica de sucesso após remover a carona
+        console.log("Carona removida com sucesso")
+        navigate("/") 
       } else {
+        console.log("Erro ao remover a carona")
         // Lógica de tratamento de erro em caso de falha na remoção da carona
       }
       navigate("/")
@@ -34,7 +41,8 @@ const Single = () => {
   useEffect(() => {
     const fetchCarona = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/caronas/vizualizar/${id}`);
+        const response = await fetch(`http://localhost:3000/caronas/vizualizar/${id}`)
+        
         const data = await response.json();
         setCaronasComNome(data.caronasComNome);
       } catch (error) {
@@ -54,13 +62,16 @@ const Single = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer`
-        },
-      });
+          Authorization: `Bearer ${token}`
+          },
+        });
+      
 
       if (response.ok) {
+        console.log("Carona solicitada com sucesso")
         // Lógica de sucesso após solicitar a carona
       } else {
+        console.log("Erro ao solicitar a carona")
         // Lógica de tratamento de erro em caso de falha na solicitação da carona
       }
       navigate("/")
