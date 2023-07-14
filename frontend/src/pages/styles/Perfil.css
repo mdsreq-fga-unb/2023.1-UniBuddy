@@ -13,11 +13,11 @@
 }
 
 .carona-card {
-  width: 250px;
+  width: calc(300px - 20px); /* Largura de 50% do container com margem de 20px entre os cards */
   height: 250px;
   background-color: #97c89d;
   border-radius: 10px;
-  padding: 40xpx;
+  padding: 20px;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -35,17 +35,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding : 1rem 1rem 0 1rem;
-
 }
 
 .origem-destino {
   font-weight: bold;
   font-size: 1.2rem;
-
 }
 
 .button-container {
+  display: flex;
   justify-content: flex-end;
   align-items: center;
 }
@@ -58,17 +56,15 @@
   font-weight: bold;
   cursor: pointer;
   transition: filter 0.2s;
-
 }
 
-
 .edit-button {
-  background-color: #2c7bb6;
+  background-color: #ff8c00; /* Laranja */
   color: #fff;
 }
 
 .delete-button {
-  background-color: #c00000;
+  background-color: #c00000; /* Vermelho */
   color: #fff;
 }
 
