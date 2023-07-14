@@ -47,32 +47,30 @@ const Single = () => {
     fetchCarona();
   }, [id]);
 
+  const [solicitacao, setSolicitacao] = useState({
+    vaga: "",
+    message : ""
+  });
 
-  const handleSolicitarCarona = async () => {
-    
 
+  const handleSolicitarCarona = async (e) => {
+    e.preventDefault();
+    const config = {
+      headers: { token: `${token}`}
+    };
     try {
-      const response = await fetch(`http://localhost:3000/caronas/solicitar/${id}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-          },
-        });
-      
-
-      if (response.ok) {
-        console.log("Carona solicitada com sucesso")
-        // Lógica de sucesso após solicitar a carona
-      } else {
-        console.log("Erro ao solicitar a carona")
-        // Lógica de tratamento de erro em caso de falha na solicitação da carona
-      }
-      navigate("/")
+      const response = await axios.post(
+        `http://localhost:3000/caronas/solicitar/${id}`,
+        solicitacao, config
+      );
+      console.log(response.data);
+      navigate("/");
     } catch (error) {
-      console.log("Erro ao solicitar a carona:", error);
+      console.log("Erro ao cadastrar a carona:", error);
     }
   };
+
+
 
   const showConfirmationPopup = () => {
     setShowConfirmation(true);
