@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 
 const User = require("../models/User");
+const Carona = require('../models/Carona');
 
 router.use(express.json());
 
@@ -85,7 +86,23 @@ router.get("/perfil", auth, async (req, res) => {
   }
 });
 
+router.get("/caronas", auth, async (req, res) => {
+  try {
+    const caronas = await Carona.findAll({
+        where: {id_usuario: req.usuario.id},
+        order: [["createdAt", "DESC"]]
+    });
 
+    if(caronas.length === 0){
+      res.status(200).json({message: "Usuário ainda não possui caronas criadas."});
+    } else {
+      res.status(200).json(caronas);
+    }
+
+  } catch (error) {
+    res.status(500).json({ message: "Erro ao buscar caronas do usuário", error });
+  }
+});
 
 
 module.exports = router;
