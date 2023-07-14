@@ -4,7 +4,7 @@ import Person from "../img/person.png";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext.jsx";
 import HoverMenu from "./HoverMenu.jsx";
-import LogoUnibuddy from "../img/logoUnibuddy.png";
+import LogoUnibuddy from "../img/logoUniBuddy.png";
 
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
