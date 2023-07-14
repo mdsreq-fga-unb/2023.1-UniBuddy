@@ -48,6 +48,37 @@ router.post("/cadastrar", auth, async (req, res) => {
     }
 })
 
+router.put("/editar/:idCarona", auth, async (req, res) => {
+    try {
+      const caronaId = req.params.idCarona;
+      const { vagas, origem, destino, descricao, data, horario } = req.body;
+  
+      const carona = await Carona.findByPk(caronaId);
+  
+      if (!carona) {
+        return res.status(404).json({ message: "Carona não encontrada." });
+      }
+
+      if (carona.id_usuario !== req.usuario.id) {
+        return res.status(403).json({ message: "Acesso não autorizado." });
+      }
+  
+      carona.vagas = vagas;
+      carona.origem = origem;
+      carona.destino = destino;
+      carona.descricao = descricao;
+      carona.data = data;
+      carona.horario = horario;
+  
+      await carona.save();
+  
+      res.status(200).json({ message: "Carona atualizada com sucesso.", carona });
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao atualizar carona.", error });
+    }
+  });
+  
+
 router.delete("/deletar/:idCarona", auth, async (req, res) => {
     try {
         const carona = await Carona.findOne({where: {id: req.params.idCarona}});
