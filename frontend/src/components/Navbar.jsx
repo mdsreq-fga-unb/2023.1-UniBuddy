@@ -24,6 +24,7 @@ const Navbar = () => {
         </div>
         <div className="titulo">
           <p>UniBuddy</p>
+          <p>{currentUser}</p>
         </div>
         <div className="links">
           <Link className="link" to="/write">
