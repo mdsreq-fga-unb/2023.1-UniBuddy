@@ -133,10 +133,45 @@ router.get("/perfil", auth, async (req, res) => {
   }
 });
 
+router.get("/perfil/:id", async (req, res) => {
+  try {
+    const usuario = await User.findOne({
+      attributes: ["nomeCompleto", "email", "telefone"],
+      where: { id: req.params.id },
+    });
+
+    if (!usuario) {
+      return res.status(404).json({ message: "Usuário não encontrado" });
+    }
+
+    res.status(200).json({ usuario });
+  } catch (error) {
+    res.status(500).json({ message: "Erro ao buscar perfil do usuário", error });
+  }
+})
+
 router.get("/caronas", auth, async (req, res) => {
   try {
     const caronas = await Carona.findAll({
         where: {id_usuario: req.usuario.id},
+        order: [["createdAt", "DESC"]]
+    });
+
+    if(caronas.length === 0){
+      res.status(200).json({message: "Usuário ainda não possui caronas criadas."});
+    } else {
+      res.status(200).json(caronas);
+    }
+
+  } catch (error) {
+    res.status(500).json({ message: "Erro ao buscar caronas do usuário", error });
+  }
+});
+
+router.get("/caronas/:id", async (req, res) => {
+  try {
+    const caronas = await Carona.findAll({
+        where: {id_usuario: req.params.id},
         order: [["createdAt", "DESC"]]
     });
 
