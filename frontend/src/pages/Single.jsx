@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import './styles/Single.css';
 import whats from '../img/whats_app.png';
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Single = () => {
   const { id } = useParams();
@@ -12,29 +13,22 @@ const Single = () => {
 
   const navigate = useNavigate();
 
-  const removerCarona = async () => {
-    try {
-      const response = await fetch(`http://localhost:3000/caronas/remover/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-        },
-      });
-
-      if (response.ok) {
-        console.log("Carona removida com sucesso")
-        navigate("/") 
-      } else {
-        console.log("Erro ao remover a carona")
-        // Lógica de tratamento de erro em caso de falha na remoção da carona
-      }
-      navigate("/")
-    } catch (error) {
-      console.log("Erro ao remover a carona:", error);
-    }
-
+  const config = {
+    headers: { token: `${token}`}
   };
+
+
+  const removerCarona = async () => {
+    try { 
+      const response = await axios.delete(`http://localhost:3000/caronas/deletar/${id}`, config );
+      console.log(response.data);
+      navigate("/");
+    } catch (error) {
+      console.log("Erro ao deletar a carona:", error);
+    }
+  };
+
+
   
 
 
