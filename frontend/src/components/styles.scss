@@ -3,100 +3,182 @@ $black : #000000;
 $white : #ffffff;
 $darkBlue : #29A8CA;
 
-.navbar{
+.navbar {
+  background-color: #9AEBA3;
 
-    background-color: #ECECEC;
+  .container {
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .container{
-        padding: 1rem 0rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
 
- 
-        .logo{
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: $black;
-            img{
-                width: 7rem;
-                height: 7rem;
-                padding-left: 1rem;
-            }
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-        .titulo {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #000;
-            padding-left: 1rem;
-            font-family: 'Arial', sans-serif;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-          }
-          
-          
-
-        .links{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 30%;
-            margin : 2rem;
-            
-
-            h6 {
-                font-size: 1rem;
-                font-weight: bold;
-                color: $black;
-            }
-
-            p {
-                font-size: 1rem;
-                font-weight: bold;
-                color: $black;
-            }
-
-            .link {
-                text-decoration: none;
-                color: white;
-                font-weight: bold;
-                font-size: 1rem;
-                cursor: pointer;
-                background-color: black;
-                border-radius: 0.5rem;
-                justify-content: center;
-                display: flex;
-                align-items: center;
-                padding: 0.5rem 0.1rem;
-                transition: background-color 0.3s ease;
-              }
-              
-              .link:hover {
-                background-color: #002b5b;
-              }
-
-            .imagen-link{
-                text-decoration: none;
-                color: $white;
-                cursor: pointer;
-                margin-top: 15px;
-                img{
-                    height: 3rem;
-                    width: 3rem;
-                }  
-            }
-            .logout:hover{ 
-                background-color: red;
-            }
-
-           
-            
-        }
+      img {
+        width: 7rem;
+        height: 7rem;
+        padding-left: 1rem;
+      }
     }
-    
+
+    .titulo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #000;
+      padding-left: 1rem;
+      font-family: "Arial", sans-serif;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-link {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color : #ffffff;
+      p {
+        margin: 0;
+        padding-right: 10px;
+        color: #000;
+        font-weight: bold;
+      }
+    }
+
+    .hover-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .hover-menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hover-menu li {
+      margin-bottom: 5px;
+    }
+
+    .hover-menu a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .profile-link:hover .hover-menu {
+      display: block;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      margin: 2rem;
+
+      h6,
+      p {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #000;
+        margin-right: 10px;
+      }
+
+      .link,
+      .logout .link {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #012030;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s ease;
+        margin : 0rem 0.5rem;
+        &:hover {
+          background-color: #002b5b;
+        }
+      }
+
+      .imagen-link {
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 15px;
+
+        img {
+          height: 3rem;
+          width: 3rem;
+        }
+      }
+
+      .logout:hover {
+        background-color: red;
+      }
+    }
+
+    .welcome {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000;
+      margin-right: 10px;
+    }
+  }
 }
+
+
+
+.profile-solicitacao{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+}
+
+.solicitacao-h1 {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.solicitacao-div {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+padding: 20px;
+background-color: #f2f2f2;
+border-radius: 5px;
+}
+
+.solicitacao-div p {
+margin-bottom: 10px;
+}
+
+.edit-button-solicitacao,
+.delete-button-solicitacao {
+cursor: pointer;
+background-color: #000;
+color: #fff;
+font-weight: bold;
+padding: 5px 10px;
+border-radius: 5px;
+margin-top: 10px;
+}
+
+.edit-button-solicitacao:hover,
+.delete-button-solicitacao:hover {
+background-color: #002b5b;
+}
+
+
 
 .confirmation-popup {
     position: fixed;
@@ -177,7 +259,7 @@ $gray: #F1F1F1;
         align-items: center;
         width: 100%;
         .post{
-            background-color: $gray;
+            background-color: #DAFDBA;
             width: 30%;
             margin-bottom: 2rem;
             border-radius: 1rem;
@@ -252,16 +334,18 @@ footer{
     background-color: #ECECEC;
     padding: 1rem 0rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 
     img{
+        padding : 0rem 1rem;
         width: 3rem;
         height: 3rem;
         margin-left: 1rem;
     }
 
     span{
+        font-size: 1rem;
         padding-right: 1rem;
         font-weight: bold;
         font-size: 1rem;

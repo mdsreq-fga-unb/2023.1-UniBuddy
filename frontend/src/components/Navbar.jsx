@@ -1,22 +1,30 @@
 import Carro from "../img/carro.png";
 import { Link } from "react-router-dom";
 import Person from "../img/person.png";
-import React, { useContext } from "react"; // Importe o hook useContext
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext.jsx";
+import HoverMenu from "./HoverMenu.jsx";
+import LogoUnibuddy from "../img/logoUnibuddy.png";
 
 const Navbar = () => {
-  const { currentUser, logout } = useContext(AuthContext); // Use useContext dentro da função de componente
+  const { currentUser, logout } = useContext(AuthContext);
+  const [isHovered, setIsHovered] = useState(false); // Estado para controlar o hover
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
 
   return (
     <div className="navbar">
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
-          <img src={Carro} alt="Logo" />
+            <img src={LogoUnibuddy} alt="Logo" />
           </Link>
         </div>
         <div className="titulo">
           <p>UniBuddy</p>
+          <p>{currentUser}</p>
         </div>
         <div className="links">
           <Link className="link" to="/write">
@@ -25,21 +33,10 @@ const Navbar = () => {
           <Link className="link" to="/">
             Caronas
           </Link>
-          <Link className="link" to="/perfil">
-            Perfil
-          </Link>
-          {currentUser ? (
-            <span className="logout" onClick={logout}>
-              <Link className="link" to="/Login">
-                Sair
-              </Link>
-            </span>
-          ) : (
-            <Link className="link" to="/Login">
-              Entrar
-            </Link>
-          )}
-          <p>Bem vindo{currentUser?.nomeCompleto}</p>
+          <div className="profile-link" onMouseEnter={handleHover} onMouseLeave={handleHover}>
+            <Link className="link">Perfil</Link>
+            {isHovered && <HoverMenu />} {/* Renderize o submenu quando o mouse estiver sobre o botão */}
+          </div>
         </div>
       </div>
     </div>

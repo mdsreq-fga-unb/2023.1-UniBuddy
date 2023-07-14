@@ -1,30 +1,36 @@
-import { createContext } from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import axios from "axios";
-
-
+import { createContext, useEffect, useState } from 'react';
+import axios from 'axios';
 
 export const AuthContext = createContext();
 
-export const AuthContextProvider = ({children}) => {
-    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("user") || null));
-    
-    const login = async(inputs) => {
-        const res = await axios.post("https://20231-unibuddy-production.up.railway.app/usuarios/login", inputs);
-        setCurrentUser(res.data);
+export const AuthContextProvider = ({ children }) => {
+  const [token, setToken] = useState(localStorage.getItem('token') || null);
+
+  const login = async (inputs) => {
+    try {
+      const response = await axios.post('http://localhost:3000/usuarios/login', inputs);
+      const token = response.data.token;
+      setToken(token);
+      localStorage.setItem('token', token);
+      console.log(axios.defaults.headers.common['Authorization'])
+      console.log("teste>>" , token)
+    } catch (error) {
+      console.log('Erro ao efetuar o login:', error);
     }
+  };
 
-    const logout = async(inputs) => {
-        const res = await axios.post("https://20231-unibuddy-production.up.railway.app/usuarios/logout", inputs);
-        setCurrentUser(null);
-    }
+  const logout = () => {
+    setToken(null);
+    localStorage.removeItem('token');
+  };
 
-    useEffect(() => {
-        localStorage.setItem("user", JSON.stringify(currentUser));
-    }, [currentUser]);
+  useEffect(() => {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  }, [token]);
 
-    return (
-        <AuthContext.Provider value={{currentUser, login, logout}}>{children}</AuthContext.Provider>
-    );
-}
+  return (
+    <AuthContext.Provider value={{ token, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};

@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Route, Outlet} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Route, Outlet } from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Write from "./pages/Write";
@@ -8,84 +8,63 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import "./style.scss";
 import Perfil from "./pages/Perfil";
-
-//MVP1
-//Tela de Login 
-//Tela de Registro ( nome, matricula, email, senha, telefone )
-//Tela de Caronas ( todas carronas disponiveis com vagas, origem, destino, horario, data, telefone )
-//Tela da Carrona Especifica ( ver mais informações )
-//Tela de Criar Carrona ( origem, destino, horario, data, vagas, descrição )
-//Tela de Deletar carrona ( ou botão especifico )
-//
+import Solicitacoes from "./pages/Solicitacoes";
 
 const Layout = () => {
   return (
     <>
-    <Navbar/>
-    <Outlet/>
-    <Footer/>
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   );
 };
 
-
 const router = createBrowserRouter([
   {
+    path: "/login",
+    element: <Login />,
+  },
+  {
     path: "/",
-    element: <Layout/>,
+    element: <Layout />,
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
       },
       {
-        path:"/post/:id",
-        element: <Single/>,
+        path: "/post/:id",
+        element: <Single />,
       },
       {
-        path:"/write",
-        element: <Write/>,
+        path: "/write",
+        element: <Write />,
       },
       {
-        path:"/perfil",
-        element: <Perfil />
-      }
+        path: "/perfil",
+        element: <Perfil />,
+      },
+      {
+        path: "/solicitacoes",
+        element: <Solicitacoes />,
+      },
     ],
   },
   {
     path: "/register",
-    element: <Register/>,
+    element: <Register />,
   },
-  {
-    path: "/login",
-    element: <Login/>,
-  },
-  {
-    path: "/write",
-    element: <Write/>,
-  },
-  {
-    path: "/single",
-    element: <Single/>,
-  },
-  { 
-    path: "/perfil",
-    element: <Perfil/>,
-  }
-
 ]);
 
 function App() {
   return (
     <div className="app">
       <div className="container">
-      <RouterProvider router={router} />
-
+        <RouterProvider router={router} />
       </div>
     </div>
   );
 }
-
-
 
 export default App;

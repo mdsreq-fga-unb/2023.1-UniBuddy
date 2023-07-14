@@ -1,0 +1,85 @@
+.profile-caronas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.caronas-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.carona-card {
+  width: 250px;
+  height: 250px;
+  background-color: #97c89d;
+  border-radius: 10px;
+  padding: 40xpx;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: filter 0.2s;
+}
+
+.carona-card:hover {
+  filter: brightness(90%);
+}
+
+.carona-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding : 1rem 1rem 0 1rem;
+
+}
+
+.origem-destino {
+  font-weight: bold;
+  font-size: 1.2rem;
+
+}
+
+.button-container {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.edit-button,
+.delete-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 0.2s;
+
+}
+
+
+.edit-button {
+  background-color: #2c7bb6;
+  color: #fff;
+}
+
+.delete-button {
+  background-color: #c00000;
+  color: #fff;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  filter: brightness(90%);
+}
+
+.criar-carona {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}

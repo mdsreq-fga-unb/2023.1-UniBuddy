@@ -1,45 +1,88 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState, useContext } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
+import { AuthContext } from '../context/authContext.jsx';
+import './styles/Perfil.css';
 
 const Perfil = () => {
+  const token = localStorage.getItem("token");
+
+  const [usuario, setUsuario] = useState(null);
+  const [caronas, setCaronas] = useState([]);
+
+  const config = {
+    headers: { token: `${token}`}
+  };
+
+  useEffect(() => {
+    console.log('token>>', token)
+    const fetchUsuario = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/usuarios/perfil", config);
+        const data = await response.data;
+        setUsuario(data.usuario);
+        console.log("data>>", data)
+      } catch (error) {
+        console.log("Erro ao buscar o usuário:", error);
+      }
+    };
+
+    const fetchCarona = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3000/usuarios/caronas`, config);
+        const data = await response.data;
+        setCaronas(data);
+        console.log("data2>>", data)
+      } catch (error) {
+        console.log("Erro ao buscar a carona:", error);
+      }
+    };
+
+    fetchUsuario();
+    fetchCarona();
+  }, [token]);
+
   return (
-    <div className="profile">
-        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135768.png" alt="" />
-      <h1>Meu perfil</h1>
-      <p>Meus dados abaixo</p>
-      <p>Nome: </p>
-      <p>Matrícula: </p>
-      <p>Endereço: </p>
-      <p>Email: </p>
-
-      <h2>Minhas caronas criadas</h2>
-      <p>Minhas caronas abaixo</p>
-      <div className="caronas-criadas">
-        <div className="carona">
-          <p className="title">Título da Carona</p>
-          <p>Detalhes da Carona</p>
-          <span className="delete-button">Excluir</span>
-        </div>
-        <div className="carona">
-          <p className="title">Título da Carona</p>
-          <p>Detalhes da Carona</p>
-          <span className="delete-button">Excluir</span>
+    <>
+      <div className="profile-screen">
+        <h1 className="h1_perfil">Meu perfil</h1>
+        {usuario && (
+          <>
+            <p><strong>Nome:</strong> {usuario.nomeCompleto}</p>
+            <p><strong>Email:</strong> {usuario.email}</p>
+            <p><strong>Telefone:</strong> {usuario.telefone}</p>
+          </>
+        )}
+      </div>
+      <div className="profile-caronas">
+        <h1>Minhas caronas criadas</h1>
+        <div className="caronas-container">
+          {caronas && caronas.length > 0 ? (
+            caronas.map((carona) => (
+              <div key={carona.id_usuario} className="carona-card">
+                <div className="carona-info">
+                  <p className="origem-destino">Origem: {carona.origem}</p>
+                  <p className="origem-destino">Destino: {carona.destino}</p>
+                  <p>Horário: {carona.horario}</p>
+                  <p>Vagas: {carona.vagas}</p>
+                  <p>Descrição: {carona.descricao}</p>
+                </div>
+                <div className="button-container">
+                  <Link to={`/caronas/${carona.id}`} className="edit-button">Editar</Link>
+                  <Link to={`/caronas/${carona.id}`} className="delete-button">Excluir</Link>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>Não há caronas disponíveis.</p>
+          )}
         </div>
       </div>
-
-      <h2>Minhas caronas pegas</h2>
-      <p>Minhas caronas pegas abaixo</p>
-      <div className="caronas-pegas">
-        <div className="carona">
-          <p className="title">Título da Carona</p>
-          <p>Detalhes da Carona</p>
-        </div>
-        <div className="carona">
-          <p className="title">Título da Carona</p>
-          <p>Detalhes da Carona</p>
-        </div>
+      <div className='button-container'>
+        <Link to="/caronas/criar" className="criar-carona">Editar Perfil</Link>
+        <Link to="/caronas/criar" className="criar-carona">Remover Perfil</Link>
       </div>
-    </div>
+    </>
   );
 };
 

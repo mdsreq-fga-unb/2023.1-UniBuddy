@@ -123,13 +123,14 @@ $darkBlue : #29A8CA;
                     padding: 0.5rem;
                 }
                 button{
+                    margin-top: 2rem;
                     width: 100%;
-                    height: 3rem;
+                    height: 6rem;
                     margin-bottom: 1rem;
                     border-radius: 0.5rem;
                     border: 1px solid #ccc;
                     padding: 0.5rem;
-                    background-color: #000000;
+                    background-color: #012030;
                     color: white;
                     font-weight: bold;
                     cursor: pointer;
@@ -145,10 +146,11 @@ $darkBlue : #29A8CA;
           }
           
           .card {
-            background-color: #f2f2f2;
+            background-color: #DAFDBA;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
           }
           
           .Titulo {
@@ -213,70 +215,60 @@ $darkBlue : #29A8CA;
           
           
           
+
+          .profile-screen {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          
+          .h1_perfil {
+            font-size: 24px;
+            margin-top: 10px;
+          }
+          
+          .profile-caronas {
+            margin-top: 20px;
+          }
+          
+          .carona-div {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+          }
+          
+          .carona-div p {
+            margin: 5px 0;
+          }
+          
+          .button-container {
+            display: flex;
+            justify-content: flex-end;
+          }
+          
+          .edit-button,
+          .delete-button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #ccc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+          }
+          
+          .edit-button:hover,
+          .delete-button:hover {
+            background-color: #999;
+          }
+          
           
           ///
           
           .profile {
-            max-width: 600px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
-            text-align: center;
-          }
-          
-          .profile h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            font-family: "Arial", sans-serif;
-          }
-          
-          .profile p {
-            margin-bottom: 5px;
-            font-family: "Arial", sans-serif;
-          }
-          
-          .profile h2 {
-            font-size: 24px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-family: "Arial", sans-serif;
-          }
-          
-          .caronas-criadas {
-            margin-bottom: 20px;
-          }
-          
-          .caronas-criadas .carona {
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: lightgray;
-            border-radius: 5px;
-          }
-          
-          .caronas-criadas .carona .title {
-            font-weight: bold;
-            font-family: "Arial", sans-serif;
-          }
-          
-          .caronas-criadas .carona .delete-button {
-            color: red;
-            cursor: pointer;
-            font-family: "Arial", sans-serif;
-          }
-          
-          .caronas-pegas {
-            margin-bottom: 20px;
-          }
-          
-          .caronas-pegas .carona {
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: lightgray;
-            border-radius: 5px;
-          }
-          
-          .caronas-pegas .carona .title {
-            font-weight: bold;
-            font-family: "Arial", sans-serif;
           }
           
           .profile img {
@@ -284,7 +276,142 @@ $darkBlue : #29A8CA;
             height: 100px;
             border-radius: 50%;
             margin-bottom: 10px;
-          }  
+          }
+          
+          .profile h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+          
+          .profile p {
+            margin-bottom: 5px;
+          }
+          
+          .caronas-criadas {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;   
+          }
+
+          .button-container-geral {
+            display: flex;
+            align-items: center;
+            margin: 2rem;
+            .linkEdit,
+             .linkDelete {
+              text-decoration: none;
+              color: #fff;
+              font-weight: bold;
+              font-size: 1rem;
+              cursor: pointer;
+              background-color: #012030;
+              border-radius: 0.5rem;
+              padding: 1rem 3rem;
+              transition: background-color 0.3s ease;
+              margin : 2rem 2rem;
+              &:hover {
+                background-color: #002b5b;
+              }
+            }
+            .linkDelete{
+              background-color: #ff0000;
+              &:hover {
+                background-color: #ff7875;
+              }
+            }
+            
+          }
+          
+          .carona {
+            
+            width: 200px;
+            height: 200px;
+            background-color: #f2f2f2;
+            color: #000;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+          }
+          
+          .carona .title {
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+          
+          .button-container {
+            display: flex;
+          }
+          
+          .edit-button,
+          .delete-button {
+            flex: 1;
+            margin-right: 5px;
+            background-color: #3e3d3d;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            border: none;
+          }
+          
+          .edit-button {
+            margin-left: 5px;
+          }
+          
+          .edit-button:hover,
+          .delete-button:hover {
+            background-color: #999;
+          }
+          
+
+        // Solicitacoes
+        .profile-solicitacao {
+          display: flex;
+        }  
+        
+        .solicitacao-div {
+          display: flex;
+          flex-direction: column;
+          row-gap: 1.5rem;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+  
+          width: 30%;
+          height: 80%;
+
+          padding: 1rem;
+          margin-top: 2%;
+          margin-bottom: 2%;
+
+          border: 1px solid rgba(221, 223, 228, 1);
+          border-radius: 1.625rem;
+          background: #DAFDBA;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        
+        .button-container {
+          display: flex;
+          margin-top: 10px;
+        }
+
+        .edit-button-solicitacao {
+          margin-right: 10px;
+        }
+          
+        }
+
+
+
+
+          
     }
  
         /*<div className="home">

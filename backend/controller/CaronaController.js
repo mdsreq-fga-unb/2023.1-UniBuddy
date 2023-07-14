@@ -12,10 +12,10 @@ const userUtils = require('../utils/usuario_utils');
 
 const jwt = require('jsonwebtoken');
 
-router.post("/cadastrar", async (req, res) => {
+router.post("/cadastrar", auth, async (req, res) => {
     try {
         const nova_carona = {
-            id_usuario: 1,
+            id_usuario: req.usuario.id,
             vagas: req.body.vagas,
             origem: req.body.origem,
             destino: req.body.destino,
@@ -48,14 +48,45 @@ router.post("/cadastrar", async (req, res) => {
     }
 })
 
-router.delete("/deletar/:idCarona", async (req, res) => {
+router.put("/editar/:idCarona", auth, async (req, res) => {
+    try {
+      const caronaId = req.params.idCarona;
+      const { vagas, origem, destino, descricao, data, horario } = req.body;
+  
+      const carona = await Carona.findByPk(caronaId);
+  
+      if (!carona) {
+        return res.status(404).json({ message: "Carona não encontrada." });
+      }
+
+      if (carona.id_usuario !== req.usuario.id) {
+        return res.status(403).json({ message: "Acesso não autorizado." });
+      }
+  
+      carona.vagas = vagas;
+      carona.origem = origem;
+      carona.destino = destino;
+      carona.descricao = descricao;
+      carona.data = data;
+      carona.horario = horario;
+  
+      await carona.save();
+  
+      res.status(200).json({ message: "Carona atualizada com sucesso.", carona });
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao atualizar carona.", error });
+    }
+  });
+  
+
+router.delete("/deletar/:idCarona", auth, async (req, res) => {
     try {
         const carona = await Carona.findOne({where: {id: req.params.idCarona}});
         const solicitacao = await Solicitacao.findOne({where: {idCarona: req.params.idCarona}});
 
         if (!carona) {
             return res.status(404).json({ message: 'Carona não encontrado.' });
-        } else if (carona.id_usuario != 1) {
+        } else if (carona.id_usuario != req.usuario.id) {
             return res.status(403).json({ message: 'Você não tem permissão para excluir essa carona.' });
         } else {
             const ids_passageiros = await caronaUtils.getIdPassageiro(req.params.idCarona);
@@ -104,16 +135,16 @@ router.get("/vizualizar/:id", async (req, res) => {
     }
 })
 
-router.post("/solicitar/:idCarona", async (req, res) => {
+router.post("/solicitar/:idCarona", auth, async (req, res) => {
     try {
         const solicitacao = await Solicitacao.findOne({where: {idCarona: req.params.idCarona}});
         const vaga = await caronaUtils.getVagaCarona(req.params.idCarona);
 
         console.log(vaga);
         
-        const nome = await userUtils.getNomeUsuario(2);
+        const nome = await userUtils.getNomeUsuario(req.usuario.id);
         var obj = {};
-        obj[vaga] = 2;
+        obj[vaga] = req.usuario.id;
         await Solicitacao.update(
             obj,
             {where: {idCarona: req.params.idCarona}}
@@ -130,7 +161,21 @@ router.post("/solicitar/:idCarona", async (req, res) => {
     }
 })
 
-router.post("/recusar-solicitacao", async (req, res) => {
+router.get("/caronas/:idUsuario", auth, async (req, res) => {
+    try {
+      const idUsuario = req.params.idUsuario;
+  
+      const caronas = await Carona.findAll({
+        where: { id_usuario: idUsuario },
+      });
+  
+      res.status(200).json({ caronas });
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao buscar caronas do usuário", error });
+    }
+  });
+
+router.post("/recusar-solicitacao", auth, async (req, res) => {
     try {
         const idCarona = req.body.idCarona;
         const idPassageiro = req.body.idPassageiro;

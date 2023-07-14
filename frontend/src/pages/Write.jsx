@@ -1,61 +1,53 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import carro from '../img/carro.png';
-import './styles/Write.css';
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Write = () => {
-  const [vagas, setVagas] = useState("");
-  const [origem, setOrigem] = useState("");
-  const [destino, setDestino] = useState("");
-  const [data, setData] = useState("");
-  const [horario, setHorario] = useState("");
-  const [descricao, setDescricao] = useState("");
+const CadastrarCarona = () => {
+  const token = localStorage.getItem("token");
 
   const navigate = useNavigate();
 
 
-  const [inputsCarona, setInputsCarona] = useState({
+  const [carona, setCarona] = useState({
     vagas: "",
     origem: "",
     destino: "",
     data: "",
     horario: "",
-    descricao: ""
+    descricao: "",
   });
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setInputsCarona({ ...inputsCarona, [name]: value });
+
+  const handleInputChange = (e) => {
+    setCarona({ ...carona, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    const config = {
+      headers: { token: `${token}`}
+    };
     try {
-        console.log(inputsCarona);
-     // Adicione essa linha para exibir o token
-    
-        const response = await fetch("https://20231-unibuddy-production.up.railway.app/caronas/cadastrar", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer`, // Inclua o token de autenticação no cabeçalho da solicitação
-        },
-        body: JSON.stringify(inputsCarona),
-      });
-  
-      const data = await response.json();
-      console.log(data);
-      navigate("/")
+      const response = await axios.post(
+        "http://localhost:3000/caronas/cadastrar",
+        carona, config
+      );
+
+      console.log(response.data);
+      navigate("/");
     } catch (error) {
-      console.log("Erro ao cadastrar carona:", error);
+      console.log("Erro ao cadastrar a carona:", error);
+      // Lógica de tratamento de erro em caso de falha no cadastro da carona
     }
   };
 
   return (
     <div className="create">
-      <img className="carro" src={"https://cdn-icons-png.flaticon.com/128/2300/2300372.png"} alt="carro" />
+      <img
+        className="carro"
+        src="https://cdn-icons-png.flaticon.com/128/2300/2300372.png"
+        alt="carro"
+      />
       <h1>Crie a sua Carona</h1>
       <form className="form">
         <input
@@ -102,4 +94,4 @@ const Write = () => {
   );
 };
 
-export default Write;
+export default CadastrarCarona;
