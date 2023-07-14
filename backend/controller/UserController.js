@@ -34,6 +34,53 @@ router.post("/registro", async (req, res) => {
     }
 })
 
+router.put("/editar", auth, async (req, res) => {
+  try {
+    const userId = req.usuario.id;
+    const { nomeCompleto, email, telefone, senha } = req.body;
+
+    const user = await User.findByPk(userId);
+
+    if (user.id != userId) {
+      return res.status(404).json({ message: "Você não tem permissão." });
+    }
+
+    user.nomeCompleto = nomeCompleto;
+    user.email = email;
+    user.telefone = telefone;
+    if (senha) {
+      const salt = await bcrypt.genSalt(10);
+      const hashedSenha = await bcrypt.hash(senha, salt);
+      user.senha = hashedSenha;
+    }
+
+    await user.save();
+
+    res.status(200).json({ message: "Usuário atualizado com sucesso.", user });
+  } catch (error) {
+    res.status(500).json({ message: "Erro ao atualizar usuário.", error });
+  }
+});
+
+
+router.delete("/deletar", auth, async (req, res) => {
+  try {
+    const userId = req.usuario.id;
+
+    const user = await User.findByPk(userId);
+
+    if (user.id != userId) {
+      return res.status(404).json({ message: "Você não tem permissão." });
+    } else {
+      await user.destroy();
+      res.status(200).json({ message: "Usuário deletado com sucesso." });
+    }
+
+  } catch (error) {
+    res.status(500).json({ message: "Erro ao deletar usuário.", error });
+  }
+});
+
 router.post("/login", async (req, res) => {
     const usuario = await User.findOne({
       attributes: ["id", "nomeCompleto", "email", "senha"],
