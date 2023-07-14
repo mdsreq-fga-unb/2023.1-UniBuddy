@@ -3,44 +3,39 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 const Solicitacoes = () => {
-  const [solicitacoes, setSolicitacoes] = useState([]); // Estado para armazenar as solicitações
 
+  const token = localStorage.getItem("token");
+
+  const [notificacoes, setNotificacoes] = useState([]); // Estado para armazenar as notificações
+    
   useEffect(() => {
+    const config = {
+      headers: { token: token }
+    };
     const fetchSolicitacoes = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/caronas/caronas/${id}`); // Substitua a URL pela rota correta do seu backend
+        const response = await axios.get(`http://localhost:3000/notificacoes/buscar`, config);
         const data = response.data;
-        setSolicitacoes(data.caronas);
+        console.log("data>>", data)
+        setNotificacoes(data.notificacoes);
       } catch (error) {
-        console.log("Erro ao buscar as caronas solicitadas:", error);
+        console.log("Erro ao buscar as notificacoes solicitadas:", error);
       }
     };
 
     fetchSolicitacoes();
-  }, []);
+  }, [token]);
 
   return (
     <div className="profile-solicitacao">
-
-      
-      <h1 className="solicitacao-h1">Caronas solicitadas</h1>
-      <div  className="solicitacao-div">
-          <p>Nome:  solicitou carona com você</p>
-          <p>Origem: Asa Norte</p>
-          <p> Destino: FGA </p>
+      <h1 className="solicitacao-h1">Notificações</h1>
+      {notificacoes.map((notificacoes) => (
+        <div key={notificacoes.id} className="solicitacao-div">
+          <p>{notificacoes.conteudo}</p>
           <div className="button-container">
             <span className="edit-button-solicitacao">Aceitar</span>
             <span className="delete-button-solicitacao">Rejeitar</span>
           </div>
-      </div>
-
-
-      {solicitacoes.map((solicitacao) => (
-        <div key={solicitacao.id} className="solicitacao-div">
-          <p>Nome: {solicitacao.nome} solicitou carona com você</p>
-          <p>Origem: {solicitacao.origem} - Destino: {solicitacao.destino}</p>
-          <span className="edit-button-solicitacao">Aceitar</span>
-          <span className="delete-button-solicitacao">Recusar</span>
         </div>
       ))}
     </div>
