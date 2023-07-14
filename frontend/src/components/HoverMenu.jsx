@@ -9,7 +9,7 @@ const HoverMenu = () => {
           <Link to="/perfil">Minhas caronas</Link>
         </li>
         <li>
-          <Link to="/solicitacoes">Solicitações de carona</Link>
+          <Link to="/solicitacoes">Notificações</Link>
         </li>
       </ul>
     </div>

@@ -24,13 +24,19 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      await login(inputs);
-      console.log("teste input>>" , inputs)
-      navigate('/'); // Redireciona para a página de perfil após o login
+      const response = await axios.post('http://localhost:3000/usuarios/login', inputs);
+      const { token } = response.data;
+      if (token) {
+        await login(inputs);
+        navigate('/'); // Redireciona para a página de perfil após o login
+      } else {
+        setError('Email ou senha incorretos');
+      }
     } catch (err) {
       console.log(err);
-      setError('Email ou senha incorretos');
+      setError('Erro ao efetuar o login');
     }
   };
 
