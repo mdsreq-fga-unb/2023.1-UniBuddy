@@ -1,65 +1,45 @@
-import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import axios from "axios";
+import React, { useEffect, useState, useContext } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
+import { AuthContext } from '../context/authContext.jsx';
 
 const Perfil = () => {
   const { id } = useParams();
+  const token = localStorage.getItem("token");
 
   const [usuario, setUsuario] = useState(null);
-  const [caronas, setCaronas] = useState([]);
+
+
+  const config = {
+    headers: { token: `${token}`}
+  };
 
   useEffect(() => {
+    console.log('token>>', token)
     const fetchUsuario = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/perfil/${id}`); // Substitua a URL pela rota correta do seu backend
-        const data = response.data;
+        const response = await axios.get("http://localhost:3000/usuarios/perfil", config);
+        const data = await response.data;
         setUsuario(data.usuario);
+        console.log("data>>", data)
       } catch (error) {
-        console.log("Erro ao buscar dados do usuário:", error);
-      }
-    };
-
-    const fetchCaronas = async () => {
-      try {
-        const response = await axios.get(`http://localhost:3000/caronas/${id}`); // Substitua a URL pela rota correta do seu backend
-        const data = response.data;
-        setCaronas(data.caronas);
-      } catch (error) {
-        console.log("Erro ao buscar caronas do usuário:", error);
+        console.log("Erro ao buscar o usuário:", error);
       }
     };
 
     fetchUsuario();
-    fetchCaronas();
-  }, []);
+  }, [id, token]);
 
   return (
     <div className="profile">
-      <img src="https://cdn-icons-png.flaticon.com/128/3135/3135768.png" alt="" />
       <h1>Meu perfil</h1>
       {usuario && (
         <>
           <p>Nome: {usuario.nomeCompleto}</p>
-          <p>Matrícula: {usuario.matricula}</p>
-          <p>Endereço: {usuario.endereco}</p>
           <p>Email: {usuario.email}</p>
+          <p>Telefone: {usuario.telefone}</p>
         </>
       )}
-
-      <h2>Minhas caronas</h2>
-      <div className="caronas-criadas">
-        {caronas.map((carona) => (
-          <div className="carona" key={carona.id}>
-            <p className="title">Destino: {carona.destino}</p>
-            <p>Detalhes da Carona: {carona.descricao}</p>
-            <p>Vagas: {carona.vagas}</p>
-            <div className="button-container">
-              <span className="edit-button">Editar</span>
-              <span className="delete-button">Excluir</span>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

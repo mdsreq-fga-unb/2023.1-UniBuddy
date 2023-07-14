@@ -15,8 +15,8 @@ const CadastrarCarona = () => {
     data: "",
     horario: "",
     descricao: "",
-    token: token
   });
+
 
   const handleInputChange = (e) => {
     setCarona({ ...carona, [e.target.name]: e.target.value });
@@ -24,11 +24,13 @@ const CadastrarCarona = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const config = {
+      headers: { token: `${token}`}
+    };
     try {
       const response = await axios.post(
         "http://localhost:3000/caronas/cadastrar",
-        carona
+        carona, config
       );
 
       console.log(response.data);

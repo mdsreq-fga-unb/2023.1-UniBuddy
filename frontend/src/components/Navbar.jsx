@@ -4,6 +4,7 @@ import Person from "../img/person.png";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext.jsx";
 import HoverMenu from "./HoverMenu.jsx";
+import LogoUnibuddy from "../img/logoUnibuddy.png";
 
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
@@ -18,12 +19,12 @@ const Navbar = () => {
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
-            <img src={Carro} alt="Logo" />
+            <img src={LogoUnibuddy} alt="Logo" />
           </Link>
         </div>
-        <p className="welcome">Bem vindo{currentUser?.nomeCompleto}</p>
         <div className="titulo">
           <p>UniBuddy</p>
+          <p>{currentUser}</p>
         </div>
         <div className="links">
           <Link className="link" to="/write">
@@ -32,19 +33,8 @@ const Navbar = () => {
           <Link className="link" to="/">
             Caronas
           </Link>
-          {currentUser ? (
-            <span className="logout" onClick={logout}>
-              <Link className="link" to="/Login">
-                Sair
-              </Link>
-            </span>
-          ) : (
-            <Link className="link" to="/Login">
-              Entrar
-            </Link>
-          )}
-           <div className="profile-link" onMouseEnter={handleHover} onMouseLeave={handleHover}>
-            <p>Perfil</p>
+          <div className="profile-link" onMouseEnter={handleHover} onMouseLeave={handleHover}>
+            <Link className="link">Perfil</Link>
             {isHovered && <HoverMenu />} {/* Renderize o submenu quando o mouse estiver sobre o botão */}
           </div>
         </div>
