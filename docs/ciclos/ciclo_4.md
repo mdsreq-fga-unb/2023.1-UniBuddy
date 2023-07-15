@@ -32,3 +32,9 @@ Resumo: O grupo recebeu os feedbacks do monitor sobre a declaração das histór
 * Verificação e Validação do Protótipo do MVP1
 * Mudança de horário da reunião semanal
 * Início do planejamento para desenvolvimento do MVP1
+
+## Histórico de Versão
+
+Data | Versão | Descrição | Autor | Revisores
+---- | ------ | --------- | ----- | ---------
+18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan

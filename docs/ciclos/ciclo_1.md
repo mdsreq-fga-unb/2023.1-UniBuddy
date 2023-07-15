@@ -21,3 +21,9 @@
 * Elicitação e Descoberta dos Requisitos
 * Definição de integrante para Comunicação com Cliente 
 * Organização do repositório e GitPages de acordo com os feedbacks da Unidade 1
+
+## Histórico de Versão
+
+Data | Versão | Descrição | Autor | Revisores
+---- | ------ | --------- | ----- | ---------
+18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan

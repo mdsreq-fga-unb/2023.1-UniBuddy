@@ -1,4 +1,4 @@
-# Registro das Sprints
+# Registro dos Ciclos
 
 ## 1. Introdução
 

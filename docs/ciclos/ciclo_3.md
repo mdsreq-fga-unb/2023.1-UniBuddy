@@ -33,3 +33,9 @@ Resumo: O grupo recebeu os feedbacks do monitor sobre o escopo do projeto e do b
 * Organização do Mural e Planilha do Backlog
 * Realizar modificações na visão e produto do projeto de acordo com as entregas da Unidade 2
 * Realizar entregas da Unidade 2
+
+## Histórico de Versão
+
+Data | Versão | Descrição | Autor | Revisores
+---- | ------ | --------- | ----- | ---------
+18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan
