@@ -76,6 +76,9 @@ const Perfil = () => {
       const data = response.data;
       console.log("data deletar> ", data);
       setIsEditing(false);
+      // Limpa o token do localStorage e redireciona para a tela de login
+      localStorage.removeItem("token");
+      window.location.href = "/login";
     } catch (error) {
       console.log("Erro ao deletar o usuário:", error);
     }
@@ -175,7 +178,8 @@ const Perfil = () => {
               caronas.map((carona) => (
                 <div key={carona.id_usuario} className="carona-card">
                   <div className="carona-info">
-                    <p className="origem-destino">Origem: {carona.origem}</p>
+                    <p className="origem-destino-origem">{carona.origem} - {carona.destino}</p>
+                    <p className="origem-destino">Origem: {carona.origem} </p>
                     <p className="origem-destino">Destino: {carona.destino}</p>
                     <p>Horário: {carona.horario}</p>
                     <p>Vagas: {carona.vagas}</p>

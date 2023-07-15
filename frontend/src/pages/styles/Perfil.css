@@ -1,20 +1,20 @@
 .profile-caronas {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   margin-top: 20px;
 }
 
 .caronas-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .carona-card {
-  width: calc(300px - 20px); /* Largura de 50% do container com margem de 20px entre os cards */
-  height: 250px;
+  width: calc(350px - 20px); /* Largura de 50% do container com margem de 20px entre os cards */
+  height: auto;
   background-color: #97c89d;
   border-radius: 10px;
   padding: 20px;
@@ -27,25 +27,35 @@
 }
 
 .carona-card:hover {
-  filter: brightness(90%);
+  filter: brightness(70%);
+  
 }
 
 .carona-info {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
+  font-size: 1rem;
 }
 
 .origem-destino {
+  font-size: 1rem;
+}
+
+.origem-destino-origem {
+  color: #012030;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  text-align: center;  
+  text-decoration: underline;
+
 }
 
 .button-container {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .edit-button,
@@ -56,6 +66,9 @@
   font-weight: bold;
   cursor: pointer;
   transition: filter 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .edit-button {
@@ -66,11 +79,20 @@
 .delete-button {
   background-color: #c00000; /* Vermelho */
   color: #fff;
+  width: 100px;
 }
 
 .edit-button:hover,
 .delete-button:hover {
-  filter: brightness(90%);
+  filter: brightness(80%);
+}
+
+.edit-button:hover {
+  background-color: #8ff04f;
+}
+
+.delete-button:hover {
+  background-color: #ff0000;
 }
 
 .criar-carona {
@@ -80,8 +102,8 @@
   margin-top: 20px;
 }
 
-
-.editar-perfil-button, .delete-profile-button {
+.editar-perfil-button,
+.delete-profile-button {
   background-color: #012030;
   color: #fff;
   border: none;
@@ -94,7 +116,7 @@
 
 .editar-perfil-button:hover {
   filter: brightness(90%);
-  background-color: #97c89d;
+  background-color: #3acc4b;
 }
 
 .delete-profile-button:hover {
@@ -151,8 +173,6 @@
   cursor: pointer;
   margin-left: 10px;
 }
-
-
 
 .cancel-button:hover {
   filter: brightness(90%);
