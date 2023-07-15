@@ -22,6 +22,8 @@ export const AuthContextProvider = ({ children }) => {
   const logout = () => {
     setToken(null);
     localStorage.removeItem('token');
+    console.log(axios.defaults.headers.common['Authorization'])
+    console.log("O usuário foi deslogado", token)
   };
 
   useEffect(() => {

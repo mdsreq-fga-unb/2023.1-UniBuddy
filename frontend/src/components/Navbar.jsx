@@ -4,14 +4,18 @@ import Person from "../img/person.png";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext.jsx";
 import HoverMenu from "./HoverMenu.jsx";
-import LogoUnibuddy from "../img/logoUnibuddy.png";
+import LogoUnibuddy from "../img/logoUniBuddy.png";
 
 const Navbar = () => {
-  const { currentUser, logout } = useContext(AuthContext);
+  const { currentUser, token, logout } = useContext(AuthContext);
   const [isHovered, setIsHovered] = useState(false); // Estado para controlar o hover
 
   const handleHover = () => {
     setIsHovered(!isHovered);
+  };
+
+  const handleLogout = () => {
+    logout(); // Chame a função logout para fazer o logout do usuário
   };
 
   return (
@@ -19,7 +23,7 @@ const Navbar = () => {
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
-            <img src={LogoUnibuddy} alt="Logo" />
+            <img src={Carro} alt="Logo" />
           </Link>
         </div>
         <div className="titulo">
@@ -37,6 +41,16 @@ const Navbar = () => {
             <Link className="link">Perfil</Link>
             {isHovered && <HoverMenu />} {/* Renderize o submenu quando o mouse estiver sobre o botão */}
           </div>
+          
+          {token ? (
+            <Link className="link" to="/" onClick={handleLogout}>
+              Sair
+            </Link>
+          ) : (
+            <Link className="link" to="/login">
+              Entrar
+            </Link>
+          )}
         </div>
       </div>
     </div>
