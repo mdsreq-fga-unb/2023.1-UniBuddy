@@ -17,7 +17,6 @@ const Single = () => {
     headers: { token: `${token}`}
   };
 
-
   const removerCarona = async () => {
     try { 
       const response = await axios.delete(`http://localhost:3000/caronas/deletar/${id}`, config );
@@ -28,15 +27,10 @@ const Single = () => {
     }
   };
 
-
-  
-
-
   useEffect(() => {
     const fetchCarona = async () => {
       try {
         const response = await fetch(`http://localhost:3000/caronas/vizualizar/${id}`)
-        
         const data = await response.json();
         setCaronasComNome(data.caronasComNome);
       } catch (error) {
@@ -49,9 +43,8 @@ const Single = () => {
 
   const [solicitacao, setSolicitacao] = useState({
     vaga: "",
-    message : ""
+    message: ""
   });
-
 
   const handleSolicitarCarona = async (e) => {
     e.preventDefault();
@@ -60,7 +53,7 @@ const Single = () => {
     };
     try {
       const response = await axios.post(
-        `http://localhost:3000/caronas/solicitar/${id}`,
+        `http://localhost:3000/caronas/solicitar/${id_usuario}`,
         solicitacao, config
       );
       console.log(response.data);
@@ -69,8 +62,6 @@ const Single = () => {
       console.log("Erro ao cadastrar a carona:", error);
     }
   };
-
-
 
   const showConfirmationPopup = () => {
     setShowConfirmation(true);
@@ -88,6 +79,7 @@ const Single = () => {
     <div className="create">
       <div className="card">
         <h1 className="Titulo">Carona Selecionada</h1>
+        <Link to={`/perfil/${caronasComNome.id_}`} className="profile-button">Perfil do Motorista</Link>
         <p>Nome do Motorista: {caronasComNome.nome}</p>
         <p>Origem da Carona: {caronasComNome.origem}</p>
         <p>Destino da Carona: {caronasComNome.destino}</p>
@@ -105,7 +97,7 @@ const Single = () => {
             <img className="whatsapp" src={whats} alt="whatsapp" />
             <span className="span">Entrar em contato</span>
           </a>
-          <button className="button" onClick={removerCarona}>Excluir Carrona</button>
+          <button className="button" onClick={removerCarona}>Excluir Carona</button>
           <button className="button" onClick={showConfirmationPopup}>Solicitar Carona</button>
           {showConfirmation && (
             <div className="confirmation-popup">
