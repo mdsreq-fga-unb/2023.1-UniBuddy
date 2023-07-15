@@ -72,6 +72,8 @@ nav:
       - Backlog Estrutura SAFe: "unidade_4/backlog-safe-un4.md"
       - Canvas PBB: "unidade_4/canvas-pbb-un4.md"
       - USM: "unidade_4/usm-un4.md"
+      - Diagrama de Casos de Uso: "unidade_4/diagrama_casos_uso.md"
+      - Especificações de Casos de Uso: "unidade_4/especificacoes_casos_uso.md"
 
 markdown_extensions:
   - tables
