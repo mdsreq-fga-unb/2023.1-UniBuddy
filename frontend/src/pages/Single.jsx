@@ -19,7 +19,7 @@ const Single = () => {
 
   const removerCarona = async () => {
     try { 
-      const response = await axios.delete(`http://localhost:3000/caronas/deletar/${id}`, config );
+      const response = await axios.delete(`https://nice-puce-lovebird-cape.cyclic.app/caronas/deletar/${id}`, config );
       console.log(response.data);
       navigate("/");
     } catch (error) {
@@ -30,7 +30,7 @@ const Single = () => {
   useEffect(() => {
     const fetchCarona = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/caronas/vizualizar/${id}`)
+        const response = await fetch(`https://nice-puce-lovebird-cape.cyclic.app/caronas/vizualizar/${id}`)
         const data = await response.json();
         setCaronasComNome(data.caronasComNome);
       } catch (error) {
@@ -54,7 +54,7 @@ const Single = () => {
     };
     try {
       const response = await axios.post(
-        `http://localhost:3000/caronas/solicitar/${id_usuario}`,
+        `https://nice-puce-lovebird-cape.cyclic.app/caronas/solicitar/${id_usuario}`,
         solicitacao, config
       );
       console.log(response.data);
