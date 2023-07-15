@@ -1,0 +1,85 @@
+.profile-solicitacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .solicitacao-h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #012030; /* Cor do título */
+    text-align: center; /* Centralizar o texto */
+    text-decoration: underline; /* Adicionar sublinhado */
+    text-transform: capitalize; /* Capitalizar a primeira letra de cada palavra */
+  }
+  
+  .solicitacao-div {
+    width: 100%;
+    height: auto;
+    background-color: #97c89d;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: filter 0.2s;
+  }
+
+  .solicitacao-div:hover {
+    filter: brightness(70%);
+  }
+
+  .p_solicitacao {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .edit-button-solicitacao,
+  .delete-button-solicitacao {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .edit-button-solicitacao {
+    background-color: #8ce039; /* Laranja */
+    color: #fff;
+  }
+  
+  .delete-button-solicitacao {
+    background-color: #c00000; /* Vermelho */
+    color: #fff;
+    width: 100px;
+  }
+  
+  .edit-button-solicitacao:hover,
+  .delete-button-solicitacao:hover {
+    filter: brightness(80%);
+  }
+  
+  .edit-button-solicitacao:hover {
+    background-color: #8ff04f;
+  }
+  
+  .delete-button-solicitacao:hover {
+    background-color: #ff0000;
+  }
+  

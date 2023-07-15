@@ -54,7 +54,7 @@ const Single = () => {
     };
     try {
       const response = await axios.post(
-        `http://localhost:3000/caronas/solicitar/${id_usuario}`,
+        `http://localhost:3000/caronas/solicitar/${id}`,
         solicitacao, config
       );
       console.log(response.data);
