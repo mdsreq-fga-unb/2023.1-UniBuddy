@@ -17,12 +17,12 @@ export const AuthContextProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("user") || null));
     
     const login = async(inputs) => {
-        const res = await axios.post("http://localhost:3000/usuarios/login", inputs);
+        const res = await axios.post("https://nice-puce-lovebird-cape.cyclic.app/usuarios/login", inputs);
         setCurrentUser(res.data);
     }
 
     const logout = async(inputs) => {
-        const res = await axios.post("http://localhost:3000/usuarios/logout", inputs);
+        const res = await axios.post("https://nice-puce-lovebird-cape.cyclic.app/usuarios/logout", inputs);
         setCurrentUser(null);
     }
 
