@@ -2,6 +2,7 @@ $lightGreen : #00b894;
 $black : #000000;
 $white : #ffffff;
 $darkBlue : #29A8CA;
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
 .navbar {
   background-color: #9AEBA3;
@@ -17,8 +18,8 @@ $darkBlue : #29A8CA;
       font-weight: bold;
 
       img {
-        width: 7rem;
-        height: 7rem;
+        width: 11rem;
+        height: 8.5rem;
         padding-left: 1rem;
       }
     }
@@ -26,9 +27,10 @@ $darkBlue : #29A8CA;
     .titulo {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #000;
+      color: #012030;
+      font-style: normal;
       padding-left: 1rem;
-      font-family: "Arial", sans-serif;
+      font-family: 'Manrope', sans-serif;
       letter-spacing: 2px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
