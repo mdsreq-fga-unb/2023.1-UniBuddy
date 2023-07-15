@@ -1,11 +1,15 @@
 const Notificacao = require("../models/Notificacoes");
 
-exports.criaNotificacao = async function (idDestinatario, conteudo) {
+exports.criaNotificacao = async function (idDestinatario, conteudo, idCorrespondente) {
     try {
+        if(!idCorrespondente) {
+            idCorrespondente = null;
+        }
+
         const novaNotificacao = await Notificacao.create({
             idDestinatario: idDestinatario,
             conteudo: conteudo,
-            status: false
+            idCorrespondente: idCorrespondente
         });
 
         return novaNotificacao;
@@ -39,6 +43,18 @@ exports.marcarComoLida = async function (idDestinatario){
         console.log('Todas as notificações foram marcadas como lidas.');
     } catch (error) {
         console.error('Erro ao marcar notificações como lidas:', error);
+        throw error;
+    }
+}
+
+exports.apagaNotificacao = async function (idDestinatario, idCorrespondente) {
+    try {
+        await Notificacao.destroy(
+            {where: {idCorrespondente: idCorrespondente, idDestinatario: idDestinatario}}
+        );
+        console.log('Notificação apagada.')
+    } catch (error) {
+        console.error('Erro ao apagar notificação', error);
         throw error;
     }
 }
