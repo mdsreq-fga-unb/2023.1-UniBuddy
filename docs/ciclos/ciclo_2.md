@@ -30,3 +30,9 @@ Resumo: O grupo precisa de um alinhamento maior entre os integrantes e com o mon
 * Verificação de Requisitos com a equipe GameKingdom
 * Criação das User Stories a partir dos requisitos
 * Comunicação com Cliente para validação dos requisitos
+
+## Histórico de Versão
+
+Data | Versão | Descrição | Autor | Revisores
+---- | ------ | --------- | ----- | ---------
+18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan

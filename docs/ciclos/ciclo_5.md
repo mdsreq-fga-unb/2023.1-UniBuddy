@@ -12,7 +12,7 @@
 - Victor Cabral
 
 ## Retrospectiva
-Resumo: Correções necessárias para a prototipação do MVP1, baseado nos feedbacks do cliente.
+Resumo: É preciso de correções necessárias para a prototipação do MVP1, baseado nos feedbacks do cliente.
 
 ## Review
 
@@ -33,3 +33,9 @@ Resumo: Correções necessárias para a prototipação do MVP1, baseado nos feed
 * Definição de desenvolvedores para cada User Story e Issues criadas para o MVP1
 * Validação com o cliente sobre o protótipo
 * Iniciar desenvolvimento da aplicação baseada na definição dos desenvolvedores
+
+## Histórico de Versão
+
+Data | Versão | Descrição | Autor | Revisores
+---- | ------ | --------- | ----- | ---------
+18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan
