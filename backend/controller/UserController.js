@@ -5,8 +5,13 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 
+const notifiUtils = require('../utils/notificacao_utils');
+const caronaUtils = require('../utils/carona_utils');
+
 const User = require("../models/User");
 const Carona = require('../models/Carona');
+const Solicitacao = require('../models/Solicitacoes');
+const Notificacoes = require('../models/Notificacoes');
 
 router.use(express.json());
 
@@ -66,20 +71,36 @@ router.put("/editar", auth, async (req, res) => {
 router.delete("/deletar", auth, async (req, res) => {
   try {
     const userId = req.usuario.id;
+    const usuario = await User.findByPk(userId);
+    const idCaronas = await Carona.findAll({ where: { id_usuario: userId }, attributes: ["id"] });
+    const notificacoes = await Notificacoes.findAll({ where: { idDestinatario: userId } });
 
-    const user = await User.findByPk(userId);
-
-    if (user.id != userId) {
-      return res.status(404).json({ message: "Você não tem permissão." });
-    } else {
-      await user.destroy();
-      res.status(200).json({ message: "Usuário deletado com sucesso." });
+    for (let carona of idCaronas) {
+      const id = carona.id;
+      const passageiros = await caronaUtils.getIdPassageiro(id);
+      const caronaObj = await Carona.findByPk(id);
+      const solicitacao = await Solicitacao.findOne({ where: { idCarona: id } });
+      for (let passageiro of passageiros) {
+        const notificacao = await notifiUtils.criaNotificacao(
+          passageiro,
+          "A carona que você solicitou foi deletada pelo motorista."
+        );
+      }
+      await caronaObj.destroy();
+      await solicitacao.destroy();
     }
 
+    for (let notificacao of notificacoes) {
+      await notificacao.destroy();
+    }
+
+    await usuario.destroy();
+    res.status(200).json({ message: "Usuário deletado." });
   } catch (error) {
     res.status(500).json({ message: "Erro ao deletar usuário.", error });
   }
 });
+
 
 router.post("/login", async (req, res) => {
     const usuario = await User.findOne({
