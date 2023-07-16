@@ -3,457 +3,470 @@ $black : #000000;
 $white : #ffffff;
 $darkBlue : #29A8CA;
 
-
 .app {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    .container {
-        width: 100%;
+  .container {
+    width: 100%;
 
-        .auth {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100vw;
-            background-color: $white;
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: $white;
 
-            h1 {
-                color: $black;
-                font-size: 3rem;
-                margin-bottom: 2rem;
-            }
+      h1 {
+        color: $black;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
 
-            .entrar{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                width: 50%;
-                height: 50%;
-                background-color: white;
-                border-radius: 1rem;
-                padding: 2rem;
-                img{
-                    width: 5rem;
-                    height: 5rem;
-                    border-radius: 50%;
-                    margin-bottom: 1rem;
-                }
-            }
+      .entrar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 50%;
+        background-color: $white;
+        border-radius: 1rem;
+        padding: 2rem;
 
-            form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 50%;
-                height: 50%;
-                background-color: white;
-                border-radius: 1rem;
-                padding: 2rem;
-
-                input {
-                    width: 100%;
-                    height: 3rem;
-                    margin-bottom: 1rem;
-                    border-radius: 0.5rem;
-                    border: 1px solid #ccc;
-                    padding: 0.5rem;
-                }
-
-                button {
-                    width: 100%;
-                    height: 3rem;
-                    margin-bottom: 1rem;
-                    border-radius: 0.5rem;
-                    border: 1px solid #ccc;
-                    padding: 0.5rem;
-                    background-color: #000000;
-                    color: white;
-                    font-weight: bold;
-                    cursor: pointer;
-                }
-
-                span {
-                    color: red;
-                    font-size: 0.8rem;
-                    margin-bottom: 1rem;
-                }
-
-                p {
-                    margin-top: 1rem;
-                    font-size: 0.8rem;
-                    color : red;
-                }
-            }
-        }
-
-        //write
-        .create{
-            padding: 2rem 0rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            h1{
-                font-size: 2rem;
-                font-weight: bold;
-                color: $black;
-                margin-bottom: 2rem;
-            }
-            form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 50%;
-                height: 50%;
-                background-color: white;
-                border-radius: 1rem;
-                padding: 2rem;
-                input {
-                    width: 100%;
-                    height: 3rem;
-                    margin-bottom: 1rem;
-                    border-radius: 0.5rem;
-                    border: 1px solid #ccc;
-                    padding: 0.5rem;
-                }
-                button{
-                    margin-top: 2rem;
-                    width: 100%;
-                    height: 6rem;
-                    margin-bottom: 1rem;
-                    border-radius: 0.5rem;
-                    border: 1px solid #ccc;
-                    padding: 0.5rem;
-                    background-color: #012030;
-                    color: white;
-                    font-weight: bold;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .create {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-        }
-        
-        .card {
-          background-color: #DAFDBA;
-          padding: 20px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          font-weight: bold;
-        }
-        
-        .Titulo {
-          text-align: center;
-          margin-bottom: 20px;
-        }
-        
-        .container {
-          display: flex;
-          align-items: center;
-          margin-bottom: 20px;
-        }
-        
-        .img-wrapper {
-          width: 80px;
-          height: 80px;
-          margin-right: 10px;
-        }
-        
-        .img-wrapper img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+        img {
+          width: 5rem;
+          height: 5rem;
           border-radius: 50%;
+          margin-bottom: 1rem;
         }
-        
-        .descricao {
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 50%;
+        background-color: $white;
+        border-radius: 1rem;
+        padding: 2rem;
+
+        input {
+          width: 100%;
+          height: 3rem;
+          margin-bottom: 1rem;
+          border-radius: 0.5rem;
+          border: 1px solid #ccc;
+          padding: 0.5rem;
+        }
+
+        button {
+          width: 100%;
+          height: 3rem;
+          margin-bottom: 1rem;
+          border-radius: 0.5rem;
+          border: 1px solid #ccc;
+          padding: 0.5rem;
+          background-color: #000000;
+          color: $white;
           font-weight: bold;
-          margin-bottom: 10px;
-        }
-        
-        .button-wrapper {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 20px;
-        }
-        
-        .button-whatsapp,
-        .button {
-          padding: 10px 20px;
-          border-radius: 4px;
-          font-weight: bold;
-          text-align: center;
-          color: #fff;
-        }
-        
-        .button-whatsapp {
-          background-color: #292929;
-          text-decoration: none;
-        }
-        
-        .button {
-          background-color: #292929;
-          border: none;
           cursor: pointer;
         }
-        
-        .button:hover {
-          background-color: #179FD2;
-        }
-        
-        .profile-button {
-          text-decoration: none;
-          color: #292929;
-          font-size: 12px;
-          margin-bottom: 10px;
-          text-align: right;
-        }
-        
-          
-          
-          
 
-          .profile-screen {
-            text-align: center;
-            margin-bottom: 20px;
-          }
-          
-          .h1_perfil {
-            font-size: 24px;
-            margin-top: 10px;
-          }
-          
-          .profile-caronas {
-            margin-top: 20px;
-          }
-          
-          .carona-div {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-          }
-          
-          .carona-div p {
-            margin: 5px 0;
-          }
-          
-          .button-container {
-            display: flex;
-            justify-content: flex-end;
-          }
-          
-          .edit-button,
-          .delete-button {
-            margin-left: 10px;
-            padding: 5px 10px;
-            background-color: #ccc;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 3px;
-          }
-          
-          .edit-button:hover,
-          .delete-button:hover {
-            background-color: #999;
-          }
-          
-          
-          ///
-          
-          .profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-          }
-          
-          .profile img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-          }
-          
-          .profile h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-          }
-          
-          .profile p {
-            margin-bottom: 5px;
-          }
-          
-          .caronas-criadas {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;   
-          }
-
-          .button-container-geral {
-            display: flex;
-            align-items: center;
-            margin: 2rem;
-            .linkEdit,
-             .linkDelete {
-              text-decoration: none;
-              color: #fff;
-              font-weight: bold;
-              font-size: 1rem;
-              cursor: pointer;
-              background-color: #012030;
-              border-radius: 0.5rem;
-              padding: 1rem 3rem;
-              transition: background-color 0.3s ease;
-              margin : 2rem 2rem;
-              &:hover {
-                background-color: #002b5b;
-              }
-            }
-            .linkDelete{
-              background-color: #ff0000;
-              &:hover {
-                background-color: #ff7875;
-              }
-            }
-            
-          }
-          
-          .carona {
-            
-            width: 200px;
-            height: 200px;
-            background-color: #f2f2f2;
-            color: #000;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-          }
-          
-          .carona .title {
-            font-weight: bold;
-            margin-bottom: 5px;
-          }
-          
-          .button-container {
-            display: flex;
-          }
-          
-          .edit-button,
-          .delete-button {
-            flex: 1;
-            margin-right: 5px;
-            background-color: #3e3d3d;
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 14px;
-            border: none;
-          }
-          
-          .edit-button {
-            margin-left: 5px;
-          }
-          
-          .edit-button:hover,
-          .delete-button:hover {
-            background-color: #999;
-          }
-          
-
-        // Solicitacoes
-        .profile-solicitacao {
-          display: flex;
-        }  
-        
-        .solicitacao-div {
-          display: flex;
-          flex-direction: column;
-          row-gap: 1.5rem;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-
-  
-          width: 30%;
-          height: 80%;
-
-          padding: 1rem;
-          margin-top: 2%;
-          margin-bottom: 2%;
-
-          border: 1px solid rgba(221, 223, 228, 1);
-          border-radius: 1.625rem;
-          background: #DAFDBA;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        
-        .button-container {
-          display: flex;
-          margin-top: 10px;
+        span {
+          color: red;
+          font-size: 0.8rem;
+          margin-bottom: 1rem;
         }
 
-        .edit-button-solicitacao {
-          background-color: #012030;
-          margin-right: 10px;
+        p {
+          margin-top: 1rem;
+          font-size: 0.8rem;
+          color: red;
         }
-        .delete-button-solicitacao {
-          background-color: #012030;
-        }
-        }
-
-
-
-
-          
+      }
     }
- 
-        /*<div className="home">
-            <h1>Carronas Disponíveis</h1>
-            <div className="posts">
-                {Posts.map((p) => (
-                    <div className="post">
-                        <img
-                            className="postImg"
-                            src={ImagemExemplo}
-                            alt="Pedro"
-                        />
-                        <div className="postInfo">
-                            <div className="postNome">
-                                <span className="nome">Pedro</span>
-                                <span className="bairro">Asa Norte</span>
-                            </div>
-                            <p className="desc">
-                                {p.description}
-                            </p>
-                            <hr />
-                            <span className="postVaga">Vagas Disponiveis</span>
-                            <span className="postDestino">{p.title}</span>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-        */
 
+    //write
+    .create {
+      padding: 2rem 0rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-       
+      h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $black;
+        margin-bottom: 2rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 50%;
+        background-color: $white;
+        border-radius: 1rem;
+        padding: 2rem;
+
+        input {
+          width: 100%;
+          height: 3rem;
+          margin-bottom: 1rem;
+          border-radius: 0.5rem;
+          border: 1px solid #ccc;
+          padding: 0.5rem;
+        }
+
+        button {
+          margin-top: 2rem;
+          width: 100%;
+          height: 6rem;
+          margin-bottom: 1rem;
+          border-radius: 0.5rem;
+          border: 1px solid #ccc;
+          padding: 0.5rem;
+          background-color: #012030;
+          color: $white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .create {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #dafdba;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+    }
+
+    .Titulo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .img-wrapper {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
     
+
+    .img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .descricao {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .button-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .button-whatsapp,
+    .button {
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-align: center;
+      color: $white;
+    }
+
+    .button-whatsapp {
+      background-color: #292929;
+      text-decoration: none;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      width: 400px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .modal h2 {
+      text-align: center;
+      font-weight: bold;
+      background-color: #716e6e;
+      }
+      
+      .modal p {
+      margin-bottom: 10px;
+      background-color: #999;
+      font-weight: bold;
+
+      }
+
+
+     
+      
+      .modal button {
+      margin-top: 20px;
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      }
+
+    .button {
+      background-color: #292929;
+      border: none;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #179fd2;
+    }
+
+    .profile-button-single {
+      margin-left: 10px;
+      padding: 5px 10px;
+      background-color: #ccc;
+      color: $white;
+      text-decoration: none;
+      border-radius: 3px;
+}
+
+    .profile-button-single:hover {
+      background-color: #999;
+    }
+
+    .profile-screen {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .h1_perfil {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .profile-caronas {
+      margin-top: 20px;
+    }
+
+    .carona-div {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .carona-div p {
+      margin: 5px 0;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .edit-button,
+    .delete-button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      background-color: #ccc;
+      color: $white;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+
+    .edit-button:hover,
+    .delete-button:hover {
+      background-color: #999;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .profile h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .profile p {
+      margin-bottom: 5px;
+    }
+
+    .caronas-criadas {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .button-container-geral {
+      display: flex;
+      align-items: center;
+      margin: 2rem;
+
+      .linkEdit,
+      .linkDelete {
+        text-decoration: none;
+        color: $white;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #012030;
+        border-radius: 0.5rem;
+        padding: 1rem 3rem;
+        transition: background-color 0.3s ease;
+        margin: 2rem 2rem;
+
+        &:hover {
+          background-color: #002b5b;
+        }
+      }
+
+      .linkDelete {
+        background-color: #ff0000;
+
+        &:hover {
+          background-color: #ff7875;
+        }
+      }
+    }
+
+    .carona {
+      width: 200px;
+      height: 200px;
+      background-color: #f2f2f2;
+      color: #000;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .button-container {
+        display: flex;
+      }
+
+      .edit-button,
+      .delete-button {
+        flex: 1;
+        margin-right: 5px;
+        background-color: #3e3d3d;
+        color: $white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+        border: none;
+      }
+
+      .edit-button {
+        margin-left: 5px;
+      }
+
+      .edit-button:hover,
+      .delete-button:hover {
+        background-color: #999;
+      }
+    }
+
+    // Solicitacoes
+    .profile-solicitacao {
+      display: flex;
+    }
+
+    .solicitacao-div {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      width: 30%;
+      height: 80%;
+
+      padding: 1rem;
+      margin-top: 2%;
+      margin-bottom: 2%;
+
+      border: 1px solid rgba(221, 223, 228, 1);
+      border-radius: 1.625rem;
+      background: #dafdba;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+      .button-container {
+        display: flex;
+        margin-top: 10px;
+      }
+
+      .edit-button-solicitacao {
+        background-color: #012030;
+        margin-right: 10px;
+      }
+
+      .delete-button-solicitacao {
+        background-color: #012030;
+      }
+    }
+  }
 }

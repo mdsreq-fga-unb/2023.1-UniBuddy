@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import './styles/Single.css';
 import whats from '../img/whats_app.png';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import './styles/Single.css';
 
 const Single = () => {
   const { id } = useParams();
   const token = localStorage.getItem("token");
   const [caronasComNome, setCaronasComNome] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [motoristaSelecionado, setMotoristaSelecionado] = useState(null);
+
 
   const navigate = useNavigate();
 
@@ -17,13 +19,13 @@ const Single = () => {
     headers: { token: `${token}`}
   };
 
-  const removerCarona = async () => {
-    try { 
-      const response = await axios.delete(`http://localhost:3000/caronas/deletar/${id}`, config );
-      console.log(response.data);
-      navigate("/");
+  const buscarMotorista = async (idUsuario) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/usuarios/perfil/${idUsuario}`, config);
+      const { usuario } = response.data;
+      setMotoristaSelecionado(usuario);
     } catch (error) {
-      console.log("Erro ao deletar a carona:", error);
+      console.log("Erro ao buscar perfil do motorista:", error);
     }
   };
 
@@ -33,6 +35,7 @@ const Single = () => {
         const response = await fetch(`http://localhost:3000/caronas/vizualizar/${id}`)
         const data = await response.json();
         setCaronasComNome(data.caronasComNome);
+        console.log("CARONA ESPECIFICADA", data.caronasComNome)
       } catch (error) {
         console.log("Erro ao buscar a carona:", error);
       }
@@ -46,7 +49,6 @@ const Single = () => {
     message: ""
   });
 
-  
   const handleSolicitarCarona = async (e) => {
     e.preventDefault();
     const config = {
@@ -80,7 +82,7 @@ const Single = () => {
     <div className="create">
       <div className="card">
         <h1 className="Titulo">Carona Selecionada</h1>
-        <Link to={`/perfil/${caronasComNome.id_}`} className="profile-button">Perfil do Motorista</Link>
+        <button className="profile-button-single" onClick={() => buscarMotorista(caronasComNome.id_usuario)}>Perfil do Motorista</button>
         <p>Nome do Motorista: {caronasComNome.nome}</p>
         <p>Origem da Carona: {caronasComNome.origem}</p>
         <p>Destino da Carona: {caronasComNome.destino}</p>
@@ -98,7 +100,6 @@ const Single = () => {
             <img className="whatsapp" src={whats} alt="whatsapp" />
             <span className="span">Entrar em contato</span>
           </a>
-          <button className="button" onClick={removerCarona}>Excluir Carona</button>
           <button className="button" onClick={showConfirmationPopup}>Solicitar Carona</button>
           {showConfirmation && (
             <div className="confirmation-popup">
@@ -109,6 +110,16 @@ const Single = () => {
           )}
         </div>
       </div>
+      {motoristaSelecionado && (
+        <div className="modal">
+          <h2>Perfil do Motorista desta Carona</h2>
+          <p>Nome: {motoristaSelecionado.nomeCompleto}</p>
+          <p>Email: {motoristaSelecionado.email}</p>
+          <p>Telefone: {motoristaSelecionado.telefone}</p>
+          <button onClick={() => setMotoristaSelecionado(null)}>Fechar</button>
+          {/* Outras informações do perfil do motorista */}
+        </div>
+      )}
     </div>
   );
 };
