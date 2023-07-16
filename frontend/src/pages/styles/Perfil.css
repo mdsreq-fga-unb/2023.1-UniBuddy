@@ -79,6 +79,7 @@
 .delete-button {
   background-color: #c00000; /* Vermelho */
   color: #fff;
+  width: 100px;
 }
 
 .edit-button:hover,

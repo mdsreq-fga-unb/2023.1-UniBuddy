@@ -153,11 +153,28 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
         const motorista = await caronaUtils.getIdMotorista(req.params.idCarona);
         const notificacao = await notifiUtils.criaNotificacao(
             motorista,
-            `${nome} está interessado na sua carona`
+            `${nome} está interessado na sua carona`,
+            req.usuario.id
         );
         res.status(200).json({ message: "Solicitação feita com sucesso", vaga });
     } catch (error) {
         res.status(500).json({ message: 'Erro ao buscar caronas.', error: error.message });
+    }
+})
+
+router.post("/aceitar-solicitacao", auth, async (req, res) => {
+    try {
+        const idPassageiro = req.body.idPassageiro;
+        const notificacao = await notifiUtils.criaNotificacao(
+            idPassageiro,
+            "Sua solicitação para carona foi aceita pelo motorista."
+        );
+
+        await notifiUtils.apagaNotificacao(req.usuario.id, idPassageiro);
+
+        return res.status(404).json({ message: 'Você aceitou uma solicitacao.' });
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao aceitar passageiro.', error: error.message });
     }
 })
 
@@ -174,17 +191,20 @@ router.post("/recusar-solicitacao", auth, async (req, res) => {
                 obj,
                 {where: {idCarona: idCarona}}
             );
-            const notificacao = await notifiUtils.criaNotificacao(
+
+            await notifiUtils.apagaNotificacao(req.usuario.id, idPassageiro);
+            await notifiUtils.criaNotificacao(
                 idPassageiro,
                 `Sua solicitação para carona foi recusada pelo motorista.`
             );
+            
             return res.status(404).json({ message: 'Você recusou uma solicitacao.' });
         } else {
             return res.status(404).json({ message: 'Passageiro não encontrado.' });
         }
 
     } catch (error) {
-        res.status(500).json({ message: 'Erro ao excluir passageiro.', error: error.message });
+        res.status(500).json({ message: 'Erro ao recusar passageiro.', error: error.message });
     }
 })
 
