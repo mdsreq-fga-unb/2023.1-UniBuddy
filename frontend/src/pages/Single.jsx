@@ -96,6 +96,8 @@ const Single = () => {
             {caronasComNome.descricao}
           </p>
         </div>
+        <p>Carro: {caronasComNome.carro}</p>
+        <p>Cor do Carro: {caronasComNome.cor}</p>
         <div className="button-wrapper">
           <a href={`https://wa.me/${caronasComNome.telefone}?text=Ola,%20eu%20vim%20atraves%20do%20UniBuddy%20e%20quero%20uma%20carona`} target="_blank" rel="noopener noreferrer" className="button-whatsapp">
             <img className="whatsapp" src={whats} alt="whatsapp" />

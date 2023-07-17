@@ -14,6 +14,8 @@ const CadastrarCarona = () => {
     data: "",
     horario: "",
     descricao: "",
+    carro: "",
+    cor: "",
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -172,6 +174,21 @@ const CadastrarCarona = () => {
           value={carona.descricao}
           onChange={handleInputChange}
         />
+        <input 
+          type="text"
+          placeholder="Modelo do Carro"
+          name="carro"
+          value={carona.carro}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          placeholder="Cor do Carro"
+          name="cor"
+          value={carona.cor}
+          onChange={handleInputChange}
+        />
+
         <button type="submit">Criar Carona</button>
       </form>
       
