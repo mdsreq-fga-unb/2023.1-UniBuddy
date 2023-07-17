@@ -78,7 +78,6 @@ const Single = () => {
   if (!caronasComNome) {
     return <div>Loading...</div>; // Ou qualquer indicador de carregamento desejado
   }
-
   return (
     <div className="create">
       <div className="card">
