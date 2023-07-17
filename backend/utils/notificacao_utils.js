@@ -1,15 +1,20 @@
 const Notificacao = require("../models/Notificacoes");
 
-exports.criaNotificacao = async function (idDestinatario, conteudo, idCorrespondente) {
+exports.criaNotificacao = async function (idDestinatario, conteudo, idCorrespondente, idCarona) {
     try {
         if(!idCorrespondente) {
             idCorrespondente = null;
         }
 
+        if(!idCarona) {
+            idCarona = null;
+        }
+
         const novaNotificacao = await Notificacao.create({
             idDestinatario: idDestinatario,
             conteudo: conteudo,
-            idCorrespondente: idCorrespondente
+            idCorrespondente: idCorrespondente,
+            idCarona: idCarona
         });
 
         return novaNotificacao;
@@ -47,10 +52,10 @@ exports.marcarComoLida = async function (idDestinatario){
     }
 }
 
-exports.apagaNotificacao = async function (idDestinatario, idCorrespondente) {
+exports.apagaNotificacao = async function (idDestinatario, idCorrespondente, idCarona) {
     try {
         await Notificacao.destroy(
-            {where: {idCorrespondente: idCorrespondente, idDestinatario: idDestinatario}}
+            {where: {idCorrespondente: idCorrespondente, idDestinatario: idDestinatario, idCarona: idCarona}}
         );
         console.log('Notificação apagada.')
     } catch (error) {

@@ -161,7 +161,8 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
             const notificacao = await notifiUtils.criaNotificacao(
                 motorista,
                 `${nome} está interessado na sua carona`,
-                req.usuario.id
+                req.usuario.id,
+                req.params.idCarona
             );
             res.status(200).json({ message: "Solicitação feita com sucesso", vaga });
         } else {
@@ -175,12 +176,13 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
 router.post("/aceitar-solicitacao", auth, async (req, res) => {
     try {
         const idPassageiro = req.body.idPassageiro;
+        const idCarona = req.body.idCarona;
         const notificacao = await notifiUtils.criaNotificacao(
             idPassageiro,
             "Sua solicitação para carona foi aceita pelo motorista."
         );
 
-        await notifiUtils.apagaNotificacao(req.usuario.id, idPassageiro);
+        await notifiUtils.apagaNotificacao(req.usuario.id, idPassageiro, idCarona);
 
         return res.status(404).json({ message: 'Você aceitou uma solicitacao.' });
     } catch (error) {
@@ -202,7 +204,7 @@ router.post("/recusar-solicitacao", auth, async (req, res) => {
                 {where: {idCarona: idCarona}}
             );
 
-            await notifiUtils.apagaNotificacao(req.usuario.id, idPassageiro);
+            await notifiUtils.apagaNotificacao(req.usuario.id, idPassageiro, idCarona);
             await notifiUtils.criaNotificacao(
                 idPassageiro,
                 `Sua solicitação para carona foi recusada pelo motorista.`

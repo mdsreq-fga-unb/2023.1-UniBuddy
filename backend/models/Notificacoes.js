@@ -19,6 +19,10 @@ const Notificacoes = db.define('notificacoes', {
     idCorrespondente: {
         type: Sequelize.INTEGER,
         allowNull: true
+    },
+    idCarona: {
+        type: Sequelize.INTEGER,
+        allowNull: true
     }
 });
 
