@@ -21,7 +21,10 @@ router.post("/cadastrar", auth, async (req, res) => {
             destino: req.body.destino,
             descricao: req.body.descricao,
             data: req.body.data,
-            horario: req.body.horario
+            horario: req.body.horario,
+            carro: req.body.carro,
+            cor: req.body.cor,
+            placa: req.body.placa
         }
 
         const carona = await Carona.create(nova_carona);
@@ -51,7 +54,7 @@ router.post("/cadastrar", auth, async (req, res) => {
 router.put("/editar/:idCarona", auth, async (req, res) => {
     try {
       const caronaId = req.params.idCarona;
-      const { vagas, origem, destino, descricao, data, horario } = req.body;
+      const { vagas, origem, destino, descricao, data, horario, carro, cor, placa } = req.body;
   
       const carona = await Carona.findByPk(caronaId);
   
@@ -69,6 +72,9 @@ router.put("/editar/:idCarona", auth, async (req, res) => {
       carona.descricao = descricao;
       carona.data = data;
       carona.horario = horario;
+      carona.carro = carro;
+      carona.cor = cor;
+      carona.placa = placa;
   
       await carona.save();
   
