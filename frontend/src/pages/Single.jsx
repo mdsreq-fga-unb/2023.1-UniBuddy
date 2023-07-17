@@ -21,7 +21,7 @@ const Single = () => {
 
   const buscarMotorista = async (idUsuario) => {
     try {
-      const response = await axios.get(`https://nice-puce-lovebird-cape.cyclic.app/usuarios/perfil/${idUsuario}`, config);
+      const response = await axios.get(`http://localhost:3000/usuarios/perfil/${idUsuario}`, config);
       const { usuario } = response.data;
       setMotoristaSelecionado(usuario);
     } catch (error) {
@@ -32,7 +32,7 @@ const Single = () => {
   useEffect(() => {
     const fetchCarona = async () => {
       try {
-        const response = await fetch(`https://nice-puce-lovebird-cape.cyclic.app/caronas/vizualizar/${id}`)
+        const response = await fetch(`http://localhost:3000/caronas/vizualizar/${id}`)
         const data = await response.json();
         setCaronasComNome(data.caronasComNome);
         console.log("CARONA ESPECIFICADA", data.caronasComNome)
@@ -57,7 +57,7 @@ const Single = () => {
     try {
       const response = await axios.post(
 
-        `https://nice-puce-lovebird-cape.cyclic.app/caronas/solicitar/${id}`,
+        `http://localhost:3000/caronas/solicitar/${id}`,
         solicitacao, config
       );
       console.log(response.data);

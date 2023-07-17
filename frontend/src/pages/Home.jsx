@@ -9,7 +9,7 @@ const Home = () => {
     const fetchCaronas = async () => {
       try {
         const response = await fetch(
-          "https://nice-puce-lovebird-cape.cyclic.app/caronas/vizualizar"
+          "http://localhost:3000/caronas/vizualizar"
         );
         const data = await response.json();
         setCaronas(data.caronas ?? []);

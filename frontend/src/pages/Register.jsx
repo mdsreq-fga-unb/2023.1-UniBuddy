@@ -36,7 +36,7 @@ const Register = () => {
         event.preventDefault();
         console.log(inputs);
         try {
-            const res = await axios.post("https://nice-puce-lovebird-cape.cyclic.app/usuarios/registro", inputs, config);
+            const res = await axios.post("http://localhost:3000/usuarios/registro", inputs, config);
             console.log("entrou no try")
             console.log(res);
             navigate("/login"); 
