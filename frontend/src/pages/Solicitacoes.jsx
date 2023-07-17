@@ -14,7 +14,7 @@ const Solicitacoes = () => {
 
     const fetchSolicitacoes = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/notificacoes/buscar`, config);
+        const response = await axios.get(`https://nice-puce-lovebird-cape.cyclic.app/notificacoes/buscar`, config);
         const data = response.data;
         console.log("data>>", data)
         setNotificacoes(data.notificacoes);
