@@ -1,25 +1,5 @@
 # VISÃO DO PRODUTO E PROJETO
 
-## Historico de revisão
-
-Data | Versão | Descrição | Autor | Revisores
----- | ------ | --------- | ----- | ---------
-24/04/23 | 0.1 | Criação do documento | Juan | Pedro Henrique
-25/04/23 | 0.2 | Evolução do documento | Juan | Pedro Henrique
-26/04/23 | 0.3 | Correções do documento | Juan | Pedro Henrique
-26/04/23 | 0.4 | Correções do documento | Juan | João
-26/04/23 | 1.0 | Primeira versão de entrega | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
-27/04/23 | 1.1 | Inclusão lições aprendidas | Juan | Pedro Lucas
-19/05/23 | 1.2 | Correção do Planejamento do projeto, das fases e da matriz de comunicação | Juan | João
-22/05/23 | 1.3 | Inserção de detalhes na matriz de comunicação, revisão da análise de risco e critérios de replanejamento | Juan | João
-24/05/23 | 1.4 | Correção do Planejamento do projeto, da abordagem de desenvolvimneto, das entregas, e da matriz de comunicação, inclusão de item no histórico de replanejamento | Juan | João
-25/05/23 | 2.0 | Segunda versão de entrega | Juan, João, Pedro Henrique, Pedro Lucas | João
-17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos, Histórico de Replanejamento, Lições aprendidas, Pontos de melhoria | Juan | João e Pedro Henrique
-22/06/23 | 2.2 | Correção do Planejamento do projeto, Histórico de Replanejamento | Juan | João e Pedro Henrique
-27/06/23 | 2.2 | Correção do Planejamento do projeto e Histórico de Riscos | Juan | João e Pedro Henrique
-11/07/23 | 3.1 | Atualização Planejamento | Juan | Pedro Henrique
-
-
 ## 1.	VISÃO GERAL DO PRODUTO
 ### 1.1 Problema
 
@@ -407,7 +387,7 @@ Em conclusão, maturamos nosso processo de ER, utilizando técnicas de Organiza�
 - Site não está funcionando, ou seja, MVP1 não foi considerado entregue.
 
 
-## 6. REFERÊNCIAS BIBLIOGRÁFICAS 
+## 6. Referência Bibliográficas
 
 > 1. MARSICANO, George. Slides: Escolhas da Engenharia de Software. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518488/mod_folder/content/0/Unidade%201%20-%20Aula%20-%20Escolhas%20da%20ESW.pdf>
 > 2. Raja Gupta. Fundamentals of Software Engineering. Engineering Handbook. 2019
@@ -415,3 +395,22 @@ Em conclusão, maturamos nosso processo de ER, utilizando técnicas de Organiza�
 > 4. Handbook IREB CPRE Foundation Level, Version 1.1.0, september 2022.
 > 5. MARSICANO, George. Slides: Introdução a Engenharia de Requisitos. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518489/mod_folder/content/0/Unidade%201%20-%20Aula%20-%20Introducao%20a%20ER.pdf> 
 > 6. Software Engineering | Rapid application development model, 2023. Disponível em <https://www.geeksforgeeks.org/software-engineering-rapid-application-development-model-rad/> Acesso em 24 de maio de 2023.
+
+## Historico de Versão
+
+Data | Versão | Descrição | Autor | Revisores
+---- | ------ | --------- | ----- | ---------
+24/04/23 | 0.1 | Criação do documento | Juan | Pedro Henrique
+25/04/23 | 0.2 | Evolução do documento | Juan | Pedro Henrique
+26/04/23 | 0.3 | Correções do documento | Juan | Pedro Henrique
+26/04/23 | 0.4 | Correções do documento | Juan | João
+26/04/23 | 1.0 | Primeira versão de entrega | Juan | João, Juan, Leonardo, Pedro Henrique, Pedro Lucas
+27/04/23 | 1.1 | Inclusão lições aprendidas | Juan | Pedro Lucas
+19/05/23 | 1.2 | Correção do Planejamento do projeto, das fases e da matriz de comunicação | Juan | João
+22/05/23 | 1.3 | Inserção de detalhes na matriz de comunicação, revisão da análise de risco e critérios de replanejamento | Juan | João
+24/05/23 | 1.4 | Correção do Planejamento do projeto, da abordagem de desenvolvimneto, das entregas, e da matriz de comunicação, inclusão de item no histórico de replanejamento | Juan | João
+25/05/23 | 2.0 | Segunda versão de entrega | Juan, João, Pedro Henrique, Pedro Lucas | João
+17/06/23 | 2.1 | Correção do Planejamento do projeto, Histórico de Riscos, Histórico de Replanejamento, Lições aprendidas, Pontos de melhoria | Juan | João e Pedro Henrique
+22/06/23 | 2.2 | Correção do Planejamento do projeto, Histórico de Replanejamento | Juan | João e Pedro Henrique
+27/06/23 | 2.2 | Correção do Planejamento do projeto e Histórico de Riscos | Juan | João e Pedro Henrique
+11/07/23 | 3.1 | Atualização Planejamento | Juan | Pedro Henrique
