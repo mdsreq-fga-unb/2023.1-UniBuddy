@@ -147,22 +147,26 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
         const vaga = await caronaUtils.getVagaCarona(req.params.idCarona);
 
         console.log(vaga);
-        
-        const nome = await userUtils.getNomeUsuario(req.usuario.id);
-        var obj = {};
-        obj[vaga] = req.usuario.id;
-        await Solicitacao.update(
-            obj,
-            {where: {idCarona: req.params.idCarona}}
-        );
 
-        const motorista = await caronaUtils.getIdMotorista(req.params.idCarona);
-        const notificacao = await notifiUtils.criaNotificacao(
-            motorista,
-            `${nome} está interessado na sua carona`,
-            req.usuario.id
-        );
-        res.status(200).json({ message: "Solicitação feita com sucesso", vaga });
+        if (vaga !== null) {
+            const nome = await userUtils.getNomeUsuario(req.usuario.id);
+            var obj = {};
+            obj[vaga] = req.usuario.id;
+            await Solicitacao.update(
+                obj,
+                {where: {idCarona: req.params.idCarona}}
+            );
+
+            const motorista = await caronaUtils.getIdMotorista(req.params.idCarona);
+            const notificacao = await notifiUtils.criaNotificacao(
+                motorista,
+                `${nome} está interessado na sua carona`,
+                req.usuario.id
+            );
+            res.status(200).json({ message: "Solicitação feita com sucesso", vaga });
+        } else {
+            res.status(500).json({ message: "A carona não tem mais vagas"});
+        }
     } catch (error) {
         res.status(500).json({ message: 'Erro ao buscar caronas.', error: error.message });
     }
