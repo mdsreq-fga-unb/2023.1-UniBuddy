@@ -22,6 +22,8 @@ Durante essa fase nos verificamos se os requisitos estão corretamente descritos
 
 Na fase de Organização e Atualização através da técnica MoSCoW, onde avaliamos os critérios da técnica entre o time por meio de votação, onde tínhamos 5 pontos para valor de negócio, viabilidade e complexidade, assim conseguimos de uma maneira menos subjetiva (e mais objetiva), definir nossos MVP1 e MVP2.
 
+Durante a unidade 4, foi reavaliado o escopo do MVP2 considerando o entendimento da equipe sobre o produto e suas tecnologia, principalmente, a complexidade técnica das _User Stories_, assim percebemos que a *_US16 - Eu, como usuário, quero poder adicionar foto no perfil para que os usuários me reconheçam_* possuía uma complexidade acima do estabelecido. Ao reajustar o seu valor, consequentemente a matriz MoSCoW programada desceu a prioridade, visto sua pontuação total de 8 de 15, classificado como poderia, e a retirou do MVP2. Validamos com o cliente e o mesmo já havia avaliado anteriormete como baixo valor de negócio, assim retiramos definitivamente do escopo.
+
 ### Material
 
 <iframe src='https://app.mural.co/embed/1b1a8780-fe0a-47ed-914b-eb237d9edb1a' width='100%' height='480px' style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef' sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'></iframe>
@@ -39,3 +41,4 @@ Na fase de Organização e Atualização através da técnica MoSCoW, onde avali
 Data | Versão | Descrição | Autor(es) | Revisor(es)
 ---- | ------ | --------- | ----- | ---------
 11/07/23 | `0.1` | Criação da página | Juan Mangueira | Pedro Henrique
+11/07/23 | `0.2` | Atualização da página | Juan Mangueira | Pedro Henrique
