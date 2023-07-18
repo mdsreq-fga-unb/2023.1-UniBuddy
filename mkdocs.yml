@@ -1,0 +1,88 @@
+site_name: UniBuddy
+
+repo_name: "2023.1-UniBuddy"
+repo_url: "https://github.com/mdsreq-fga-unb/2023.1-UniBuddy"
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  language: pt-BR
+  palette: 
+    - scheme: default
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  features:
+    - navigation.instant
+    - navigation.section
+    - navigation.path
+    - navigation.top
+    - tabs
+
+nav:
+  - Início: index.md
+
+  - Documentação: 
+    - Visão de Produto e Projeto: "visao-produto-projeto.md"
+    - Ciclos: 
+      - Planejamento dos Ciclos: "sprints/planejamento_ciclos.md"
+      - Ciclo 1: "ciclos/ciclo_1.md"
+      - Ciclo 2: "ciclos/ciclo_2.md"
+      - Ciclo 3: "ciclos/ciclo_3.md"
+      - Ciclo 4: "ciclos/ciclo_4.md"
+      - Ciclo 5: "ciclos/ciclo_5.md"
+      - Ciclo 6: "ciclos/ciclo_6.md"
+      - Ciclo 7: "ciclos/ciclo_7.md"
+      - Ciclo 8: "ciclos/ciclo_8.md"
+      - Ciclo 9: "ciclos/ciclo_9.md"
+      - Ciclo 10: "ciclos/ciclo_10.md"
+  
+    
+  - Entregas: 
+    - Unidade 1:
+      - Visão Geral do Produto: "unidade_1/material-processo-er-un1.md"
+      - Material do Seminario - Processo Unificado: "unidade_1/material-seminario-processo.md"
+    - Unidade 2:
+      - Atualização da Visão Geral: "unidade_2/material-processo-er-un2.md"
+      - Backlog do Produto: "unidade_2/backlog-mvps-un2.md"
+    - Unidade 3:
+      - Atualização da Visão Geral: "unidade_3/material-processo-er-un3.md"
+      - Atualização do Backlog do Produto: "unidade_3/backlog-mvps-un3.md"
+      - MVP1: "unidade_3/mvp1-un3.md"
+      - Feedback do Cliente: "unidade_3/feedback-cliente-un3.md"
+      - Backlog Estrutura SAFe: "unidade_3/backlog-safe-un3.md"
+      - Canvas PBB: "unidade_3/canvas-pbb-un3.md"
+    - Unidade 4:
+      - Atualização da Visão Geral: "unidade_4/material-processo-er-un4.md"
+      - Atualização do Backlog do Produto: "unidade_4/backlog-mvps-un4.md"
+      - Protótipo: "unidade_4/prototipo.md"
+      - MVP1: "unidade_4/mvp1-un4.md"
+      - MVP2: "unidade_4/mvp2-un4.md"
+      - Feedback do Cliente: "unidade_4/feedback-cliente-un4.md"
+      - Backlog Estrutura SAFe: "unidade_4/backlog-safe-un4.md"
+      - Canvas PBB: "unidade_4/canvas-pbb-un4.md"
+      - USM: "unidade_4/usm-un4.md"
+      - Diagrama de Casos de Uso: "unidade_4/diagrama_casos_uso.md"
+      - Especificações de Casos de Uso: "unidade_4/especificacoes_casos_uso.md"
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
