@@ -4,7 +4,7 @@ import axios from 'axios';
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
-  const [token, setToken] = useState(localStorage.getItem('token') || null);
+  const [token, setToken] = useState(null);
 
   const login = async (inputs) => {
     try {
@@ -27,7 +27,7 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    axios.defaults.headers.common['Authorization'] = token ? `Bearer ${token}` : '';
   }, [token]);
 
   return (

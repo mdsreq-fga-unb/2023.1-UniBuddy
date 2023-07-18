@@ -6,6 +6,7 @@ import './styles/Solicitacoes.css';
 const Solicitacoes = () => {
   const token = localStorage.getItem("token");
   const [notificacoes, setNotificacoes] = useState([]);
+  const [notificacao, setNotificacao] = useState({});
 
   useEffect(() => {
     const config = {
@@ -20,37 +21,55 @@ const Solicitacoes = () => {
         setNotificacoes(data.notificacoes);
       } catch (error) {
         console.log("Erro ao buscar as notificacoes solicitadas:", error);
-      }
+      } 
     };
 
     fetchSolicitacoes();
   }, [token]);
 
-  const handleAceitarNotificacao = (id) => {
-    // Atualiza o status da notificação para true
-    const updatedNotificacoes = notificacoes.map((notificacao) => {
-      if (notificacoes.id === id) {
-        return {
-          ...notificacao,
-          status: notificacoes.status ? false : true
-        };
-      }
-      return notificacao;
+  const handleAceitarNotificacao = async (idCarona, idCorrespondente) => {
+    const config = {
+      headers: { token: token }
+    };
+
+    const body = {
+      idCarona : idCarona,
+      idPassageiro : idCorrespondente
     }
-    )
+
+    try {
+      const response = await axios.post(`http://localhost:3000/caronas/aceitar-solicitacao`, body, config);
+      const data = response.data;
+      console.log("data>>", data)
+      setNotificacao(data);
+    } catch (error) {
+      console.log("Erro ao buscar as notificacoes solicitadas:", error);
+    } finally {
+      console.log("finally")
+    }
+
   };
 
-  const handleRejeitarNotificacao = (id) => {
-    // Atualiza o status da notificação para false
-    const updatedNotificacoes = notificacoes.map((notificacao) => {
-      if (notificacoes.id === id) {
-        return {
-          ...notificacao,
-          status: notificacoes.status ? false : true
-        };
-      }
-      return notificacao;
-    });
+  const handleRejeitarNotificacao = async (idCarona, idCorrespondente) => {
+    const config = {
+      headers: { token: token }
+    };
+
+    const body = {
+      idCarona : idCarona,
+      idPassageiro : idCorrespondente
+    }
+
+    try {
+      const response = await axios.post(`http://localhost:3000/caronas/recusar-solicitacao`, body, config);
+      const data = response.data;
+      console.log("data>>", data)
+      setNotificacao(data);
+    } catch (error) {
+      console.log("Erro ao buscar as notificacoes solicitadas:", error);
+    } finally {
+      console.log("finally")
+    }
   };
 
   return (
@@ -60,10 +79,10 @@ const Solicitacoes = () => {
         <div key={notificacao.id} className="solicitacao-div">
           <p className="p_solicitacao">{notificacao.conteudo}</p>
           <div className="button-container">
-            <button className="edit-button-solicitacao" onClick={() => handleAceitarNotificacao(notificacao.id)}>
+            <button className="edit-button-solicitacao" onClick={() => handleAceitarNotificacao(notificacao.idCarona, notificacao.idCorrespondente)}>
               Aceitar
             </button>
-            <button className="delete-button-solicitacao" onClick={() => handleRejeitarNotificacao(notificacao.id)}>
+            <button className="delete-button-solicitacao" onClick={() => handleRejeitarNotificacao(notificacao.idCarona, notificacao.idCorrespondente)}>
               Rejeitar
             </button>
           </div>

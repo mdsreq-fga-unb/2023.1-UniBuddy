@@ -36,6 +36,18 @@ const Carona = db.define('caronas', {
     horario: {
         type: Sequelize.STRING,
         allowNull: false
+    },
+    carro: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    cor: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    placa: {
+        type: Sequelize.STRING,
+        allowNull: true
     }
 });
 

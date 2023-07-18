@@ -21,7 +21,10 @@ router.post("/cadastrar", auth, async (req, res) => {
             destino: req.body.destino,
             descricao: req.body.descricao,
             data: req.body.data,
-            horario: req.body.horario
+            horario: req.body.horario,
+            carro: req.body.carro,
+            cor: req.body.cor,
+            placa: req.body.placa
         }
 
         const carona = await Carona.create(nova_carona);
@@ -51,7 +54,7 @@ router.post("/cadastrar", auth, async (req, res) => {
 router.put("/editar/:idCarona", auth, async (req, res) => {
     try {
       const caronaId = req.params.idCarona;
-      const { vagas, origem, destino, descricao, data, horario } = req.body;
+      const { vagas, origem, destino, descricao, data, horario, carro, cor, placa } = req.body;
   
       const carona = await Carona.findByPk(caronaId);
   
@@ -69,6 +72,9 @@ router.put("/editar/:idCarona", auth, async (req, res) => {
       carona.descricao = descricao;
       carona.data = data;
       carona.horario = horario;
+      carona.carro = carro;
+      carona.cor = cor;
+      carona.placa = placa;
   
       await carona.save();
   
@@ -141,23 +147,46 @@ router.post("/solicitar/:idCarona", auth, async (req, res) => {
         const vaga = await caronaUtils.getVagaCarona(req.params.idCarona);
 
         console.log(vaga);
-        
-        const nome = await userUtils.getNomeUsuario(req.usuario.id);
-        var obj = {};
-        obj[vaga] = req.usuario.id;
-        await Solicitacao.update(
-            obj,
-            {where: {idCarona: req.params.idCarona}}
-        );
 
-        const motorista = await caronaUtils.getIdMotorista(req.params.idCarona);
-        const notificacao = await notifiUtils.criaNotificacao(
-            motorista,
-            `${nome} está interessado na sua carona`
-        );
-        res.status(200).json({ message: "Solicitação feita com sucesso", vaga });
+        if (vaga !== null) {
+            const nome = await userUtils.getNomeUsuario(req.usuario.id);
+            var obj = {};
+            obj[vaga] = req.usuario.id;
+            await Solicitacao.update(
+                obj,
+                {where: {idCarona: req.params.idCarona}}
+            );
+
+            const motorista = await caronaUtils.getIdMotorista(req.params.idCarona);
+            const notificacao = await notifiUtils.criaNotificacao(
+                motorista,
+                `${nome} está interessado na sua carona`,
+                req.usuario.id,
+                req.params.idCarona
+            );
+            res.status(200).json({ message: "Solicitação feita com sucesso", vaga });
+        } else {
+            res.status(500).json({ message: "A carona não tem mais vagas"});
+        }
     } catch (error) {
         res.status(500).json({ message: 'Erro ao buscar caronas.', error: error.message });
+    }
+})
+
+router.post("/aceitar-solicitacao", auth, async (req, res) => {
+    try {
+        const idPassageiro = req.body.idPassageiro;
+        const idCarona = req.body.idCarona;
+        const notificacao = await notifiUtils.criaNotificacao(
+            idPassageiro,
+            "Sua solicitação para carona foi aceita pelo motorista."
+        );
+
+        await notifiUtils.apagaNotificacao(req.usuario.id, idPassageiro, idCarona);
+
+        return res.status(200).json({ message: 'Você aceitou uma solicitacao.' });
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao aceitar passageiro.', error: error.message });
     }
 })
 
@@ -174,17 +203,20 @@ router.post("/recusar-solicitacao", auth, async (req, res) => {
                 obj,
                 {where: {idCarona: idCarona}}
             );
-            const notificacao = await notifiUtils.criaNotificacao(
+
+            await notifiUtils.apagaNotificacao(req.usuario.id, idPassageiro, idCarona);
+            await notifiUtils.criaNotificacao(
                 idPassageiro,
                 `Sua solicitação para carona foi recusada pelo motorista.`
             );
-            return res.status(404).json({ message: 'Você recusou uma solicitacao.' });
+            
+            return res.status(200).json({ message: 'Você recusou uma solicitacao.' });
         } else {
             return res.status(404).json({ message: 'Passageiro não encontrado.' });
         }
 
     } catch (error) {
-        res.status(500).json({ message: 'Erro ao excluir passageiro.', error: error.message });
+        res.status(500).json({ message: 'Erro ao recusar passageiro.', error: error.message });
     }
 })
 

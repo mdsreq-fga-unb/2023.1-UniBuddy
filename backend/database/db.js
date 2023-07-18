@@ -6,4 +6,4 @@ const sequelize = new Sequelize("users", "root", "123456789", {
   port: 3306 
 });
 
-module.exports = sequelize;
+module.exports = sequelize;
