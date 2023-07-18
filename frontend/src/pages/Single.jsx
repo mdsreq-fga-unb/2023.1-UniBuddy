@@ -11,7 +11,7 @@ const Single = () => {
   const [caronasComNome, setCaronasComNome] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [motoristaSelecionado, setMotoristaSelecionado] = useState(null);
-  const [caronaMotorista, setCaronaMotorista] = useState([]);
+  const [caronaMotorista, setCaronaMotorista] = useState(null);
 
 
   const navigate = useNavigate();
@@ -35,8 +35,7 @@ const Single = () => {
       const buscarCaronasMotorista = async (idUsuario) => {
         try {
           const response = await axios.get(`http://localhost:3000/usuarios/caronas/${idUsuario}`, config);
-          const  caronas  = await response.data;
-          console.log("CARONAS DO MOTORISTA", caronas)
+          const  caronas  =  response.data;
           setCaronaMotorista(caronas);
         } catch (error) {
           console.log("Erro ao buscar caronas do motorista:", error);
@@ -142,6 +141,7 @@ const Single = () => {
           {/* Outras informações do perfil do motorista */}
         </div>
       )}
+      
       {caronaMotorista && (
         <div className="modal">
           <h2>Caronas do Motorista</h2>
