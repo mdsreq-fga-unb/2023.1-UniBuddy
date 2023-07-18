@@ -8,7 +8,23 @@ Site: <https://unibuddyunb.netlify.app/>
 ## Critérios de Aceitação
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3Kg5oBr4ZkIB7GxD0izNAElQgeqLWId0RLN7eslGaxbKZM5gWl3cptkTXYDAtR_C2VfP-_50NN6SJ/pubhtml?gid=1365527722&amp;single=true&amp;widget=true&amp;headers=false" width='100%' height='480px' style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef' sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'></iframe>
 
-<!-- ![Backlog](assets/criterios_mvp1_un3.png) -->
+## MVP2
+
+<center>
+
+![MVP2](../assets/MVP2_1.png)
+
+Figura 1:  MVP1 (Fonte: Autor, 2023).
+
+</center>
+
+<center>
+
+![MVP2](../assets/MVP2_2.png)
+
+Figura 2:  MVP2 (Fonte: Autor, 2023).
+
+</center>
 
 Data | Versão | Descrição | Autor(es) | Revisor(es)
 ---- | ------ | --------- | ----- | ---------

@@ -9,7 +9,7 @@ Neste tópico as entregas:
     * US’s
     * BDD’s
 * User Story Mapping
-* Casos de Uso @Pedro Henrique FGA 
+* Casos de Uso 
     * Diagrama
     * Especificação
 
