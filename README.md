@@ -38,22 +38,10 @@ cd frontend
 - Instale as dependências
 
 ```shell
-yarn install
+yarn
 ```
 
 #### Rodar
-
-- Entre na pasta frontend
-
-```shell
-cd frontend
-```
-
-- Execute o  caso não o tenha instalado
-
-```shell
-yarn
-```
 
 - Rodar o frontend da aplicação
 
