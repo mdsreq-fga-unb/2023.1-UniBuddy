@@ -16,6 +16,7 @@ const CadastrarCarona = () => {
     descricao: "",
     carro: "",
     cor: "",
+    placa: "",
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -186,6 +187,13 @@ const CadastrarCarona = () => {
           placeholder="Cor do Carro"
           name="cor"
           value={carona.cor}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          placeholder="Placa do Carro"
+          name="placa"
+          value={carona.placa}
           onChange={handleInputChange}
         />
 
