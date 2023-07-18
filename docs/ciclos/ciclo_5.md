@@ -38,4 +38,4 @@ Resumo: É preciso de correções necessárias para a prototipação do MVP1, ba
 
 Data | Versão | Descrição | Autor | Revisores
 ---- | ------ | --------- | ----- | ---------
-18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan
+18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan Mangueira

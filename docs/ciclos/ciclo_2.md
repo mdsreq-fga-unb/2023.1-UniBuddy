@@ -35,4 +35,4 @@ Resumo: O grupo precisa de um alinhamento maior entre os integrantes e com o mon
 
 Data | Versão | Descrição | Autor | Revisores
 ---- | ------ | --------- | ----- | ---------
-18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan
+18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan Mangueira

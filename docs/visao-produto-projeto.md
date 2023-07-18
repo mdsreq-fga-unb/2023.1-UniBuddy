@@ -71,16 +71,16 @@ A análise e gerenciamento de riscos referem-se à identificação dos possívei
 
 Segundo Charette, existem três tipos de riscos de Software (PRESSMAN,2006):
 
-1. Riscos de projeto: mostram problemas potenciais de orçamento, cronograma, organizacionais que impactam o projeto;
-2. Riscos técnicos: perturbam a qualidade e a entrega do software. Também mostram problemas potenciais de projeto, implementação, interface, verificação e manutenção;
-3. Riscos de negócio: ameaçam a viabilidade do software e do produto e apresentam 5 variações:
+1. **Riscos de projeto**: mostram problemas potenciais de orçamento, cronograma, organizacionais que impactam o projeto;
+2. **Riscos técnicos**: perturbam a qualidade e a entrega do software. Também mostram problemas potenciais de projeto, implementação, interface, verificação e manutenção;
+3. **Riscos de negócio**: ameaçam a viabilidade do software e do produto e apresentam 5 variações:
     1. Risco de Mercado: criar um excelente produto ou sistema que ninguém realmente quer;
     2. Risco Estratégico: criar um produto que não se encaixe mais na estratégia geral de negócios da empresa;
     3. Risco de Vendas: criar um produto que a equipe de vendas não sabe como vender;
     4. Risco Gerencial: perda de suporte da alta gerência devido à mudança no foco ou mudança de profissionais;
     5. Risco de Orçamento: perda do orçamento ou do comprometimento dos profissionais.
 
-Com isso, podemos avaliar o impacto causado pela consequência desse risco, segundo a categoria e os componentes, como vemos na imagem abaixo.
+Com isso, podemos avaliar o impacto causado pela consequência desses riscos, segundo a categoria e os componentes, como vemos na imagem abaixo.
 
 <center>
 
@@ -94,7 +94,7 @@ Figura 2 - Avaliação de impacto (fonte: autoures, 2023)
 
 Ciclo | Risco Encontrado | Categoria | Ação tomada
 ------ | ---------------- | ----- | ----
-Ciclo 2 | Risco de Projeto | Crítico 2 | Planejamento de troca de Procesos de Desenvolvimento e ER.
+Ciclo 2 | Risco de Projeto | Crítico 2 | Planejamento de troca de Processos de Desenvolvimento e ER.
 Ciclo 3 | Risco Técnicos | Crítico 2 | Conversa e feedbacks com a equipe, Alinhamento com o Cliente
 Ciclo 4 | Risco de Projeto | Crítico 2 | Planejamento de novo cronograma, Alinhamento com o Cliente
 Ciclo 6 | Risco Técnicos | Crítico 2 | Conversa e feedbacks com a equipe, Alinhamento com o Cliente
@@ -104,10 +104,10 @@ Os critérios de replanejamento referem-se à identificação dos pontos que, ca
 
 - Alteração nos prazos das entregas da Disciplina ou do Cliente
 - Alteração das ferramentas do projeto
-- Alteração no Processo de Engenharia de Requisito ou Desenvolvimento de Software
+- Alteração no Processo de Engenharia de Requisitos ou Desenvolvimento de Software
 - Alteração no Escopo do Projeto, a pedido do professor
 - Atrasos de mais de 2 semanas nas entregas
-- Barreiras externas para execução do projeto, tais como: aparatos legais, valor financeiro inacessível, capacidade dos hardwares dos desenvolvedores etc
+- Barreiras externas para execução do projeto, tais como: aparatos legais, valor financeiro inacessível, capacidade dos hardwares dos desenvolvedores, etc
 - Saída de algum membro da equipe
 
 Os critérios de replanejamento do projeto devem ser acompanhados e atualizados a cada fase. E, aplicados, conforme necessidade.
@@ -121,9 +121,9 @@ Ciclo 4 | Atrasos de mais de 2 semanas | Alterar entregas das fases | Adequaçã
 Ciclo 7 | Alteração nos prazos das entregas da Disciplina| Alterar entregas das fases | Adequação aos prazos solicitados
 
 
-## 3 PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
+## 3. PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
 ### 3.1 Metodologia
-Baseado na proposta do Gupta (2019), foi respondido um conjunto de questões distintas sobre determinados tópicos para definir a abordagem que melhor se encaixa ao projeto e time. Tópicos norteadores:
+Baseado na proposta de Gupta (2019), foi respondido um conjunto de questões distintas sobre determinados tópicos para definir a abordagem que melhor se encaixa ao projeto e time. Tópicos norteadores:
 
 1. Requisitos
 2. Equipe de Desenvolvimento
@@ -218,10 +218,21 @@ Considerando o foco principal no nosso usuário, a pouca experiência dos membro
 ### 3.2 Ferramentas
 Para a execução dessa metodologia, escolheu-se as seguintes Ferramentas de organização e controle da equipe:
 
-- Gerenciamento de tarefas: GitHub Projects
-- Comunicação: WhatsApp e Teams
-- Versionamento: GitHub
-- Interface de Desenvolvimento: VSCode
+- **Gerenciamento de tarefas**: GitHub Projects
+- **Comunicação: WhatsApp e Microsoft Teams**
+- **Versionamento**: GitHub
+- **Interface de Desenvolvimento**: VSCode
+- **Desenvolvimento de ideias e *frameworks* da disciplina**: Mural
+- **Prototipação**: Figma
+
+| Ferramenta | Finalidade |
+| :-: | :-: | 
+| ![Github](./assets/logo_github.png){width="25%"} |  Versionamento e Gerenciamento de tarefas |
+| ![Microsoft Teams](./assets/logo-microsoft-teams.png){width="25%"} | Comunicação |
+| ![WhatsApp](./assets/whats_app.png){width="25%"} | Comunicação |
+| ![Visual Studio Code](./assets/vscode.png){width="20%"} | Interface de Desenvolvimento |
+| ![Mural](./assets/mural.png){width="25%"} | Desenvolvimento de ideias e *frameworks* da disciplina |
+| ![Figma](./assets/figmaLogo.png){width="25%"} | Prototipação |
 
 ### 3.3 Processos e Procedimentos
 
@@ -235,7 +246,8 @@ Figura 8 - Faceta da engenharia de requisitos (fonte: MARSICANO, 2023)
 
 </center>
 
-Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é processo de ER orientado a produto, visto que: 
+Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é um processo de ER orientado a produto, visto que: 
+
 1. Alvo é o mercado; 
 2. O propósito é exploratório; 
 3. Tempo é interativo.
@@ -246,7 +258,7 @@ Com base nas Facetas do Processo de ER (IREB, 2022), foi definido que é process
 
 ![ER](assets/er_atividades_marsicano.png)
 
-Figura 9 - Atividades da ER (fonte: MARSICANO, 2023)
+Figura 9 - Atividades da ER (fonte: MARSICANO, 2023).
 
 </center>
 
@@ -281,21 +293,21 @@ Identificador | Atividade | Método | Ferramenta | Entrega
 AA-01 | Análise e Consenso | Análise de Viabilidade | Teams | Backlog de requisitos validados
 
 ###### 3.3.3.1.3 DECLARAÇÃO DE REQUISITOS
-Fase focada em comunicar os requisitos para os interessados em diferentes níveis de glanularidade e dividindo entre funcionais e não funcionais (MARSICANO, 2023)
+Fase focada em comunicar os requisitos para os interessados em diferentes níveis de glanularidade e dividindo entre funcionais e não funcionais (MARSICANO, 2023).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 DEC-01 | Declaração | Temas, Epicos e User Stories | Mural | User Stories representadas
 
 ###### 3.3.3.1.4 VERIFICAÇÃO E VALIDAÇÃO DE REQUISITOS
-Fase focada em manter os requisitos do produto estruturados, organizados e atualizados (MARSICANO, 2023)
+Fase focada em manter os requisitos do produto estruturados, organizados e atualizados (MARSICANO, 2023).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
 GEREN-01 | Verificação e Validação | Feedback | Reunião | User Stories validadas
 
 ###### 3.3.3.1.5 GERENCIAMENTO DE REQUISITOS (ORGANIZAÇÃO E ATUALIZAÇÃO)
-Fase focada em manter os requisitos do produto estruturados, organizados e atualizados (MARSICANO, 2023)
+Fase focada em manter os requisitos do produto estruturados, organizados e atualizados (MARSICANO, 2023).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
@@ -303,7 +315,7 @@ GEREN-01 | Organização e Atualização | MoSCoW | Mural e Excel | Definição 
 
 ##### 3.3.3.2 PROTOTIPAÇÃO E FEEDBACK
 ###### 3.3.3.2.1 REPRESENTAÇÃO DE REQUISITOS (PROTÓTIPO)
-Apresentação dos requisitos em modelos e/ou visualizações do produto (MARSICANO, 2023)
+Apresentação dos requisitos em modelos e/ou visualizações do produto (MARSICANO, 2023).
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
@@ -312,7 +324,7 @@ PRO-02 | Construção de prototipo de Média Fidelidade | Prototipagem | Figma |
 PRO-03 | Construção de prototipo de Alta Fidelidade | Prototipagem | Figma | Prototipo de alta fidelidade
 
 ###### 3.3.3.2.2    VALIDAÇÃO E VERIFICAÇÃO DE REQUISITOS (PROTÓTIPO)
-Validação é confirmar ou não se os requisitos definem a solução correta conforme consensuado entre os _stakeholders_ (MARSICANO, 2023). Enquanto verificação é garantir se os requisitos foram ou não executados na maneira correta (MARSICANO, 2023). Assim como faz parte dessa fase, definir o preparado (DoR) e o pronto (DoD).
+Validação é confirmar ou não se os requisitos definem a solução correta conforme consensuado entre os _stakeholders_ (MARSICANO, 2023). Enquanto verificação é garantir se os requisitos foram ou não executados na maneira correta (MARSICANO, 2023). Além disso, definir o preparado (DoR) e o pronto (DoD) também faz parte dessa fase.
 
 Identificador | Atividade | Método | Ferramenta | Entrega
 ------------- | --------- | ------ | ---------- | -------
@@ -350,40 +362,40 @@ TP-01 | Testagem do Produto | Teste Manual, Teste de Módulo, Teste de Integraç
 
 ## 4. LIÇÕES APRENDIDAS
 ### Unidade 1
-Com base nos feedbacks recebidos, podemos extrair algumas lições aprendidas importantes no projeto. Primeiramente, é notável que a Ciclo entre os membros do grupo está positiva e a comunicação está fluindo bem, o que pode ser atribuído ao fato de que o grupo está unido como um time e está passando feedbacks constantes. Além disso, o grupo está sendo proativo nas entregas e as tarefas estão bem divididas, o que demonstra organização e alinhamento, principalmente em momentos de necessidade.
+Com base nos feedbacks recebidos, podemos extrair algumas lições aprendidas importantes no projeto. Primeiramente, é notável que a interação entre os membros do grupo está positiva e a comunicação está fluindo bem, o que pode ser atribuído ao fato de que o grupo está unido como um time e está passando feedbacks constantes. Além disso, o grupo está sendo proativo nas entregas e as tarefas estão bem divididas, o que demonstra organização e alinhamento, principalmente em momentos de necessidade.
 
 Por outro lado, os feedbacks construtivos indicam que o grupo precisa melhorar em alguns aspectos, como a qualidade das atividades entregues, divisão equilibrada das responsabilidades entre os membros e organização da comunicação. Em relação à qualidade das entregas, o feedback construtivo recebido trás como medida sugestiva uma revisão mais criteriosa antes da entrega. Em seguida, é necessário repensar a forma como as atividades são divididas de modo a permitir que todos os membros do grupo produzam efetivamente. Além disso, a comunicação precisa ser mais organizada para evitar a mistura de informações importantes e irrelevantes simultaneamente.
 
-Sendo assim, é essencial que todos os membros do grupo estejam acompanhando bem as atividades e assumindo responsabilidades equilibradas, além de cada membro ter um papel claro dentro do grupo e que esteja engajado em acompanhar as atividades propostas, garantindo que não haja atrasos ou sobrecarga de responsabilidades em alguns membros. Como resultado, espera-se que após uma gestão de equipe eficiente e equilibrada, teremos uma maior efetividade do projeto. Além disso, aprendemos em sala de aula sobre processos, ciclos de vida e Abordagens de software sob a perspectiva de Engenharia de Requisitos e também sobre as Atividades de Engenharia de Requisitos (MARSICANO, 2023), facetas de ER (IREB, 2022).
+Sendo assim, é essencial que todos os membros do grupo estejam acompanhando bem as atividades e assumindo responsabilidades equilibradas, além de cada membro ter um papel claro dentro do grupo e que esteja engajado em acompanhar as atividades propostas, garantindo que não haja atrasos ou sobrecarga de responsabilidades em alguns membros. Como resultado, espera-se que após uma gestão de equipe eficiente e equilibrada, teremos uma maior efetividade do projeto. Além disso, aprendemos em sala de aula sobre processos, ciclos de vida e abordagens de software sob a perspectiva de Engenharia de Requisitos e também sobre as Atividades de Engenharia de Requisitos (MARSICANO, 2023), facetas de Engenharia de Requisitos (IREB, 2022).
 
 Por fim, nas atividades práticas, aprendemos como analisar um problema e suas causas para depois pensar sobre uma possível solução que irá resolver ou minimizar esse problema, propondo assim o objetivo da nossa aplicação, além de aprendermos sobre quais critérios devemos observar para selecionar nossa abordagem de desenvolvimento (GUPTA), para que nos possemos planejar as Atividades de Engenharia de Requisitos (MARSICANO, 2023).
 
 ### Unidade 2
-Na unidade 2 realizamos as Atividades de Engenharia de Requisitos (MARSICANO, 2023) que havíamos planejado, com alguns percalços no caminho que nos levaram a replanejar nosso cronograma e alterar a abordagem de desenvolvimento. Dentro das atividades de requisitos, iniciamos pela Elicitação e Descoberta, através de conversa com inteligência artificial (ChatGPT) e representantes dos usuários, e conseguimos criar uma listagem dos requisitos funcionais e não funcionais na qual conseguimos materializar os desejos e necessidades dos representantes. Seguimos com a Análise e Consenso através de negociações e análises, tendo discussões entre o time e com revisões do monitor. Com isso, prosseguimos para a Declaração e a fizemos através de Temas, Épicos e User Stories. Posteriormente fizemos a Verificação e Validação através de revisão em pares e feedbacks, além do uso do INVEST por meio da equipe GameKingdom, onde pudemos entender de uma forma mais concisa como nossos requisitos poderiam melhorar. Por fim, fizemos a Organização e Atualização através da técnica MoSCoW, onde avaliamos os critérios da técnica entre o time por meio de votação, onde tínhamos 5 pontos para valor de negócio, viabilidade e complexidade, assim conseguimos de uma maneira menos subjetiva (e mais objetiva), definir nossos MVP1 e MVP2.
+Na unidade 2 realizamos as Atividades de Engenharia de Requisitos (MARSICANO, 2023) que havíamos planejado, com alguns percalços no caminho que nos levaram a replanejar nosso cronograma e alterar a abordagem de desenvolvimento. Dentro das atividades de requisitos, iniciamos pela Elicitação e Descoberta, através de conversa com inteligência artificial (ChatGPT) e representantes dos usuários. Com isso, conseguimos criar uma listagem dos requisitos funcionais e não funcionais na qual conseguimos materializar os desejos e necessidades dos representantes. Seguimos com a Análise e Consenso através de negociações e análises, tendo discussões entre o time e com revisões do monitor. Com isso, prosseguimos para a Declaração e a fizemos através de Temas, Épicos e User Stories. Posteriormente fizemos a Verificação e Validação através de revisão em pares e feedbacks, além do uso do INVEST por meio da equipe GameKingdom, onde pudemos entender de uma forma mais concisa como nossos requisitos poderiam melhorar. Por fim, fizemos a Organização e Atualização através da técnica MoSCoW, onde avaliamos os critérios da técnica entre o time por meio de votação, onde tínhamos 5 pontos para valor de negócio, viabilidade e complexidade, assim conseguimos de uma maneira menos subjetiva (e mais objetiva), definir nossos MVP1 e MVP2.
 
-Portanto, com base no descrito acima, podemos dizer que aprendemos todo o processo de definição dos requisitos, de uma maneira objetiva, organizada e concisa, mesmo com diversas discordâncias e erros ao longo do processo, o que nos levou a mais aprendizados enquanto equipe. Em seguida, também aprendemos que muitas vezes pode ser necessário readaptar o cronograma e até mesmo a abordagem do processo de desenvolvimento, a depender do contexto. Ainda sim, temos que fazer alinhamentos constantes e validações com os representantes, professor e monitores para ter o melhor proveito da disciplina. Por fim, aprendemos que MVP1 e MVP2 são produtos que geram valor para o cliente, mesmo que limitados, mas que trazem a oportunidade do cliente experimentar e entender o diferencial do produto, em razão disso, torna-se uma das fases mais estratégicas de um produto, onde o usuário pode decidir comprar ou descartar a ideia.
+Portanto, com base no descrito acima, podemos dizer que aprendemos todo o processo de definição dos requisitos, de uma maneira objetiva, organizada e concisa, mesmo com diversas discordâncias e erros ao longo do processo, o que nos levou a mais aprendizados enquanto equipe. Em seguida, também aprendemos que muitas vezes pode ser necessário readaptar o cronograma e até mesmo a abordagem do processo de desenvolvimento, a depender do contexto. Ainda sim, temos que fazer alinhamentos constantes e validações com os representantes, o professor e os monitores para ter o melhor proveito da disciplina. Por fim, aprendemos que MVP1 e MVP2 são produtos que geram valor para o cliente, mesmo que limitados, mas que trazem a oportunidade do cliente experimentar e entender o diferencial do produto. Em razão disso, torna-se uma das fases mais estratégicas de um produto, onde o usuário pode decidir comprar ou descartar a ideia.
 ### Unidade 3
-Na unidade 3 realizamos os conhecimentos teóricos adquiridos nas unidades anteriores para aplicar em cima de técnicas e ferramentas específicas de organização e priorização de requisitos, como Canvas PBB (_Product Backlog Building_), BDD (_Behavior Driven Development_), COORG (Classificar, Ordenar e Organizar), _SAFe Backlog_ etc. Como resultado, tivemos o desenvolvimento de um novo backlog do zero, com fins para a disciplina, a partir do Canvas PBB, que usamos o BDD e COORG para nos guiar na construção, assim como também tivemos atualização do nosso backlog, com fins para o projeto, com o _SAFe Backlog_. Por fim, utilizamos a inteligência artificial generativa ChatGPT, que já havia sido usada anteriormente, para nos auxiliar nas tarefas manuais e na ideação conforme pressupunha as técnicas. 
+Na unidade 3 realizamos os conhecimentos teóricos adquiridos nas unidades anteriores para aplicar em cima de técnicas e ferramentas específicas de organização e priorização de requisitos, como Canvas PBB (_Product Backlog Building_), BDD (_Behavior Driven Development_), COORG (Classificar, Ordenar e Organizar), _SAFe Backlog_, etc. Como resultado, tivemos o desenvolvimento de um novo backlog do zero, com fins para a disciplina, a partir do Canvas PBB, que usamos o BDD e COORG para nos guiar na construção, assim como também tivemos atualização do nosso backlog, com fins para o projeto, com o _SAFe Backlog_. Por fim, utilizamos a inteligência artificial generativa ChatGPT, que já havia sido usada anteriormente, para nos auxiliar nas tarefas manuais e na ideação conforme pressupunha as técnicas. 
 
-Além do supracitado, aprendemos a utilizar ferramentas de organização de projetos como o GitHub Projects, com quadro Kanban, Teams e WhatsApp para garantir que todos do grupo estivessem desenvolvendo e que pudéssemos acompanhar o progresso de cada um. Por sua vez, a comunicação se fez presente em todas essas fases, mostrando sua importância para a harmonia do grupo, assim como a resolução de conflitos e maturação dos membros, por meio de feedbacks e reuniões de alinhamento individuais (_one-one_) e coletivas.
+Além do supracitado, aprendemos a utilizar ferramentas de organização de projetos como o GitHub Projects, com quadro Kanban, Microsoft Teams e WhatsApp para garantir que todos do grupo estivessem desenvolvendo e que pudéssemos acompanhar o progresso de cada um. Por sua vez, a comunicação se fez presente em todas essas fases, mostrando sua importância para a harmonia do grupo, assim como a resolução de conflitos e maturação dos membros, por meio de feedbacks e reuniões de alinhamento individuais (_one-one_) e coletivas.
 
 Em conclusão, maturamos nosso processo de ER, utilizando técnicas de Organização, Priorização, Atualização entre outras, para garantir um backlog cada vez mais viável e tangível. Assim, também garantimos um bom convívio e produção dos membros da equipe, para um ambiente eficiente e produtivo.
 
 ## 5. A MELHORAR
 ### Unidade 1
-- Lições Aprendidas
-- Planejamento das Ciclos
-- Critérios de riscos
-- Critérios de replanejamento
-- Processos e atividade de Requisitos
+- Lições Aprendidas;
+- Planejamento das Ciclos;
+- Critérios de riscos;
+- Critérios de replanejamento;
+- Processos e atividade de Requisitos;
 
 ### Unidade 2
-- Inserir introdução no Backlog do Produto
-- Algumas _User Stories_ possuem problemas na escrita e/ou estrutura
+- Inserir introdução no Backlog do Produto;
+- Algumas _User Stories_ possuem problemas na escrita e/ou estrutura;
 - Algumas _User Stories_ são Requisitos Não-Funcionais. Não devem ser USs.
 
 ### Unidade 3
-- BDD muito genérico
+- BDD muito genérico;
 - Site não está funcionando, ou seja, MVP1 não foi considerado entregue.
 
 
@@ -396,7 +408,7 @@ Em conclusão, maturamos nosso processo de ER, utilizando técnicas de Organiza�
 > 5. MARSICANO, George. Slides: Introdução a Engenharia de Requisitos. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518489/mod_folder/content/0/Unidade%201%20-%20Aula%20-%20Introducao%20a%20ER.pdf> 
 > 6. Software Engineering | Rapid application development model, 2023. Disponível em <https://www.geeksforgeeks.org/software-engineering-rapid-application-development-model-rad/> Acesso em 24 de maio de 2023.
 
-## Historico de Versão
+## 7. Historico de Versão
 
 Data | Versão | Descrição | Autor | Revisores
 ---- | ------ | --------- | ----- | ---------
