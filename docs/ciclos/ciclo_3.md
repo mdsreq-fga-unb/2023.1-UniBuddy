@@ -38,4 +38,4 @@ Resumo: O grupo recebeu os feedbacks do monitor sobre o escopo do projeto e do b
 
 Data | Versão | Descrição | Autor | Revisores
 ---- | ------ | --------- | ----- | ---------
-18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan
+18/06/23 | `1.0` | Criação do documento | Pedro Henrique | Juan Mangueira

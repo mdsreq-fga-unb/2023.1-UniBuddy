@@ -38,4 +38,4 @@
 
 Data | Versão | Descrição | Autor | Revisores
 ---- | ------ | --------- | ----- | ---------
-15/07/23 | `1.0` | Criação do documento | Pedro Henrique | Juan
+15/07/23 | `1.0` | Criação do documento | Pedro Henrique | Juan Mangueira
