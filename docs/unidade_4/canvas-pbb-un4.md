@@ -46,10 +46,6 @@ Para uma visualização mais detalhada dos artefatos, a seguir está disponível
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3Kg5oBr4ZkIB7GxD0izNAElQgeqLWId0RLN7eslGaxbKZM5gWl3cptkTXYDAtR_C2VfP-_50NN6SJ/pubhtml?gid=2146737397&amp;single=true&amp;widget=true&amp;headers=false" width='100%' height='480px' style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef' sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'></iframe>
 
-## Apresentação
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## Referência Bibliográficas
 > 1. MARSICANO, George. Slides: Unidade 3 - Aula - Atividades da ER e PBB. 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2603800/mod_folder/content/0/Unidade%203%20-%20Aula%20-%20Atividades%20da%20ER%20e%20PBB.pdf>
 

@@ -17,10 +17,6 @@ Para uma visualização mais detalhada dos artefatos, a seguir está disponível
 
 <iframe src='https://app.mural.co/embed/1b1a8780-fe0a-47ed-914b-eb237d9edb1a' width='100%' height='480px' style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef' sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'></iframe>
 
-## Apresentação
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## Referência Bibliográficas
 > 1. MARSICANO, George. Slides: Unidade 4 - Aula - USM 2023. Disponível em: <https://aprender3.unb.br/pluginfile.php/2518546/mod_folder/content/0/Unidade%204%20-%20Aula%20-%20USM.pdf>
 
