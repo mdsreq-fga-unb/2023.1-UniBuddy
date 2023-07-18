@@ -55,7 +55,7 @@ cd frontend
 yarn
 ```
 
-- Rode o frontend da aplicação
+- Rodar o frontend da aplicação
 
 ```shell
 yarn run dev
