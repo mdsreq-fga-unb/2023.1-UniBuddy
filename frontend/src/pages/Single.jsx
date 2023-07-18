@@ -11,6 +11,7 @@ const Single = () => {
   const [caronasComNome, setCaronasComNome] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [motoristaSelecionado, setMotoristaSelecionado] = useState(null);
+  const [caronaMotorista, setCaronaMotorista] = useState([]);
 
 
   const navigate = useNavigate();
@@ -19,15 +20,28 @@ const Single = () => {
     headers: { token: `${token}`}
   };
 
-  const buscarMotorista = async (idUsuario) => {
-    try {
-      const response = await axios.get(`http://localhost:3000/usuarios/perfil/${idUsuario}`, config);
-      const { usuario } = response.data;
-      setMotoristaSelecionado(usuario);
-    } catch (error) {
-      console.log("Erro ao buscar perfil do motorista:", error);
-    }
-  };
+
+
+    const buscarMotorista = async (idUsuario) => {
+        try {
+          const response = await axios.get(`http://localhost:3000/usuarios/perfil/${idUsuario}`, config);
+          const { usuario } = response.data;
+          setMotoristaSelecionado(usuario);
+        } catch (error) {
+          console.log("Erro ao buscar perfil do motorista:", error);
+        }
+      };
+
+      const buscarCaronasMotorista = async (idUsuario) => {
+        try {
+          const response = await axios.get(`http://localhost:3000/usuarios/caronas/${idUsuario}`, config);
+          const  caronas  = await response.data;
+          console.log("CARONAS DO MOTORISTA", caronas)
+          setCaronaMotorista(caronas);
+        } catch (error) {
+          console.log("Erro ao buscar caronas do motorista:", error);
+        }
+    };
 
   useEffect(() => {
     const fetchCarona = async () => {
@@ -48,6 +62,11 @@ const Single = () => {
     vaga: "",
     message: ""
   });
+
+  const handleBuscarMotoristaECaronas = (idUsuario) => {
+    buscarMotorista(idUsuario);
+    buscarCaronasMotorista(idUsuario);
+  };
 
   const handleSolicitarCarona = async (e) => {
     e.preventDefault();
@@ -82,7 +101,8 @@ const Single = () => {
     <div className="create">
       <div className="card">
         <h1 className="Titulo">Carona Selecionada</h1>
-        <button className="profile-button-single" onClick={() => buscarMotorista(caronasComNome.id_usuario)}>Perfil do Motorista</button>
+        <button className="profile-button-single" onClick={() => buscarMotorista(caronasComNome.id_usuario)} >Perfil do Motorista</button>
+        <button className="profile-button-single" onClick={() => buscarCaronasMotorista(caronasComNome.id_usuario)}>Caronas do Motorista</button>
         <p>Nome do Motorista: {caronasComNome.nome}</p>
         <p>Origem da Carona: {caronasComNome.origem}</p>
         <p>Destino da Carona: {caronasComNome.destino}</p>
@@ -120,6 +140,22 @@ const Single = () => {
           <p>Telefone: {motoristaSelecionado.telefone}</p>
           <button onClick={() => setMotoristaSelecionado(null)}>Fechar</button>
           {/* Outras informações do perfil do motorista */}
+        </div>
+      )}
+      {caronaMotorista && (
+        <div className="modal">
+          <h2>Caronas do Motorista</h2>
+          {caronaMotorista.map((carona) => (
+            <div key={carona.id}>
+              <p>Origem: {carona.origem}</p>
+              <p>Destino: {carona.destino}</p>
+              <p>Data: {carona.data}</p>
+              <p>Horário: {carona.horario}</p>
+              <p>Vagas: {carona.vagas}</p>
+              <p>Descrição: {carona.descricao}</p>
+            </div>
+          ))}
+          <button onClick={() => setCaronaMotorista(null)}>Fechar</button>
         </div>
       )}
     </div>
