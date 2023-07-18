@@ -184,7 +184,7 @@ router.post("/aceitar-solicitacao", auth, async (req, res) => {
 
         await notifiUtils.apagaNotificacao(req.usuario.id, idPassageiro, idCarona);
 
-        return res.status(404).json({ message: 'Você aceitou uma solicitacao.' });
+        return res.status(200).json({ message: 'Você aceitou uma solicitacao.' });
     } catch (error) {
         res.status(500).json({ message: 'Erro ao aceitar passageiro.', error: error.message });
     }
@@ -210,7 +210,7 @@ router.post("/recusar-solicitacao", auth, async (req, res) => {
                 `Sua solicitação para carona foi recusada pelo motorista.`
             );
             
-            return res.status(404).json({ message: 'Você recusou uma solicitacao.' });
+            return res.status(200).json({ message: 'Você recusou uma solicitacao.' });
         } else {
             return res.status(404).json({ message: 'Passageiro não encontrado.' });
         }
