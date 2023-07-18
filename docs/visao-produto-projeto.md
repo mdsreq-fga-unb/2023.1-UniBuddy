@@ -381,6 +381,17 @@ Além do supracitado, aprendemos a utilizar ferramentas de organização de proj
 
 Em conclusão, maturamos nosso processo de ER, utilizando técnicas de Organização, Priorização, Atualização entre outras, para garantir um backlog cada vez mais viável e tangível. Assim, também garantimos um bom convívio e produção dos membros da equipe, para um ambiente eficiente e produtivo.
 
+### Unidade 4
+Na unidade 4 tivemos a chance de aprender frameworks que trabalham a engenharia de requisitos. Um dos frameworks que tivemos a chance de aprender foi o de Declarações com Casos de Uso. Nesse contexto, nos familiarizamos com o Diagrama de Casos de Uso, uma poderosa ferramenta que nos permite visualizar de forma clara as interações entre os atores (usuários) e o sistema em questão. Compreendemos como identificar os atores relevantes, descrever seus papéis e responsabilidades, além de mapear os casos de uso e suas relações. Além disso, também aprofundamos nosso conhecimento na elaboração de especificações de casos de uso. Aprendemos a descrever de forma detalhada as ações, os pré e pós-condições, além das principais sequências de eventos envolvidas em cada caso de uso. Essa prática nos permite uma compreensão mais precisa dos requisitos funcionais do sistema e facilita a comunicação entre os membros da equipe de desenvolvimento.
+
+Outro framework abordado foi o User Story Mapping, uma técnica ágil que nos auxilia na criação de um plano estruturado para o desenvolvimento do software. Com o User Story Mapping, aprendemos a construir um mapa visual que organiza as funcionalidades do sistema de acordo com o valor que entregam ao usuário. Dessa forma, é possível ter uma visão clara das histórias de usuário, suas prioridades e interdependências, facilitando o planejamento e a tomada de decisões durante o desenvolvimento.
+
+Além dos frameworks, também tivemos a oportunidade de receber feedbacks professor em relação ao Canvas PBB e realizamos as alterações necessárias no Behavior-Driven Development (BDD).  Essa prática nos ensinou a importância da comunicação clara e eficiente, tanto com a equipe de desenvolvimento quanto com os stakeholders do projeto, a fim de garantir que as expectativas sejam atendidas e que o software final seja de qualidade.
+
+No decorrer dessa jornada, aprendemos que a engenharia de requisitos é fundamental para o sucesso de um projeto de software. Os frameworks estudados nos proporcionaram uma base sólida para identificar, documentar e comunicar os requisitos de forma eficaz. Através do Diagrama de Casos de Uso, das especificações de casos de uso e do User Story Mapping, conseguimos visualizar e compreender melhor as necessidades dos usuários, possibilitando um desenvolvimento mais assertivo e alinhado às expectativas. Ademais, a experiência de receber feedbacks e realizar as adaptações necessárias no Canvas PBB e no BDD nos mostrou a importância da flexibilidade e da adaptação durante o processo de desenvolvimento. Estar aberto a ajustes e melhorias contínuas é essencial para atendermos às mudanças e às evoluções que surgem ao longo do projeto.
+
+Em resumo, aprendemos com a engenharia de requisitos durante todo as unidades sobre o quaõ importante ela é para guiar no processo de construção de um software e percebemos que a comunicação entra como elemento chave para o sucesso da engenharia de requisitos e, consequentemente, para o desenvolvimento de um produto viável e que atenda as necessidades do cliente.
+
 ## 5. A MELHORAR
 ### Unidade 1
 - Lições Aprendidas;

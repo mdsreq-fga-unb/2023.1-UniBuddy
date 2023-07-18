@@ -22,7 +22,25 @@ Durante essa fase nos verificamos se os requisitos estão corretamente descritos
 
 Na fase de Organização e Atualização através da técnica MoSCoW, onde avaliamos os critérios da técnica entre o time por meio de votação, onde tínhamos 5 pontos para valor de negócio, viabilidade e complexidade, assim conseguimos de uma maneira menos subjetiva (e mais objetiva), definir nossos MVP1 e MVP2.
 
-Durante a unidade 4, foi reavaliado o escopo do MVP2 considerando o entendimento da equipe sobre o produto e suas tecnologia, principalmente, a complexidade técnica das _User Stories_, assim percebemos que a *_US16 - Eu, como usuário, quero poder adicionar foto no perfil para que os usuários me reconheçam_* possuía uma complexidade acima do estabelecido. Ao reajustar o seu valor, consequentemente a matriz MoSCoW programada desceu a prioridade, visto sua pontuação total de 8 de 15, classificado como poderia, e a retirou do MVP2. Validamos com o cliente e o mesmo já havia avaliado anteriormete como baixo valor de negócio, assim retiramos definitivamente do escopo.
+Durante a unidade 4, foi reavaliado o escopo do MVP2 considerando o entendimento da equipe sobre o produto e suas tecnologia, principalmente, a complexidade técnica das _User Stories_, assim percebemos que a *_US16 - Eu, como usuário, quero poder adicionar foto no perfil para que os usuários me reconheçam_* possuía uma complexidade acima do estabelecido. Ao reajustar o seu valor, consequentemente a matriz MoSCoW programada desceu a prioridade, visto sua pontuação total de 8 de 15, classificado como poderia, e a retirou do MVP2. Validamos com o cliente e o mesmo já havia avaliado anteriormete como baixo valor de negócio, assim retiramos definitivamente do escopo. A seguir nas figuras 1 e 2 pode ser visualizado o backlog dos MVPs.
+
+
+<center>
+
+![Backlog MVPS](../assets/US_pontuacao1.png)
+
+Figura 1:  Backlog (Fonte: Autor, 2023).
+
+</center>
+
+<center>
+
+![Backlog MVPS](../assets/US_pontuacao2.png)
+
+Figura 2:  MoSCoW utilizado (Fonte: Autor, 2023).
+
+</center>
+
 
 ### Material
 
