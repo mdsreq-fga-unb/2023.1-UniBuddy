@@ -1,5 +1,5 @@
 # Especificações de Casos de Uso - Excluir Carona
-Baseado no Diagrama de Casos de Uso, foram criados 5 especificações de casos de usos presente no diagrama. As 5 especificações em questão são:
+Baseado no Diagrama de Casos de Uso, foram criados 5 especificações de casos de usos presente no diagrama de acordo com o número de integrantes da equipe. As 5 especificações em questão são:
 
 - [Realizar cadastro como passageiro](../unidade_4/esp_cadastro_pass.md)
 - [Realizar cadastro como motorista](../unidade_4/esp_cadastro_mot.md)
