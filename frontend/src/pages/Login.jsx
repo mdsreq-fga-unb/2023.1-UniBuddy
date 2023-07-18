@@ -26,7 +26,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/usuarios/login', inputs);
+      const response = await axios.post('https://nice-puce-lovebird-cape.cyclic.app/usuarios/login', inputs);
       const { token } = response.data;
       if (token) {
         await login(inputs);

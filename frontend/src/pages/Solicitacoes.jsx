@@ -15,7 +15,7 @@ const Solicitacoes = () => {
 
     const fetchSolicitacoes = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/notificacoes/buscar`, config);
+        const response = await axios.get(`https://nice-puce-lovebird-cape.cyclic.app/notificacoes/buscar`, config);
         const data = response.data;
         console.log("data>>", data)
         setNotificacoes(data.notificacoes);
@@ -38,7 +38,7 @@ const Solicitacoes = () => {
     }
 
     try {
-      const response = await axios.post(`http://localhost:3000/caronas/aceitar-solicitacao`, body, config);
+      const response = await axios.post(`https://nice-puce-lovebird-cape.cyclic.app/caronas/aceitar-solicitacao`, body, config);
       const data = response.data;
       console.log("data>>", data)
       setNotificacao(data);
@@ -61,7 +61,7 @@ const Solicitacoes = () => {
     }
 
     try {
-      const response = await axios.post(`http://localhost:3000/caronas/recusar-solicitacao`, body, config);
+      const response = await axios.post(`https://nice-puce-lovebird-cape.cyclic.app/caronas/recusar-solicitacao`, body, config);
       const data = response.data;
       console.log("data>>", data)
       setNotificacao(data);

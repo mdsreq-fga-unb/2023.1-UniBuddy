@@ -31,7 +31,7 @@ const CadastrarCarona = () => {
     };
     try {
       const response = await axios.post(
-        "http://localhost:3000/caronas/cadastrar",
+        "https://nice-puce-lovebird-cape.cyclic.app/caronas/cadastrar",
         carona,
         config
       );
