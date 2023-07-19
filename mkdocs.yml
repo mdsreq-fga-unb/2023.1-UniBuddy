@@ -38,7 +38,7 @@ nav:
   - Documentação: 
     - Visão de Produto e Projeto: "visao-produto-projeto.md"
     - Ciclos: 
-      - Planejamento dos Ciclos: "sprints/planejamento_ciclos.md"
+      - Planejamento dos Ciclos: "ciclos/planejamento_ciclos.md"
       - Ciclo 1: "ciclos/ciclo_1.md"
       - Ciclo 2: "ciclos/ciclo_2.md"
       - Ciclo 3: "ciclos/ciclo_3.md"
