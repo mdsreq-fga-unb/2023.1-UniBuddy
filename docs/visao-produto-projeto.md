@@ -86,7 +86,7 @@ Com isso, podemos avaliar o impacto causado pela consequência desses riscos, se
 
 ![Riscos](assets/avaliacao_impacto.png)
 
-Figura 2 - Avaliação de impacto (fonte: autoures, 2023)
+Figura 2 - Avaliação de impacto (fonte: autores, 2023)
 
 </center>
 
@@ -390,7 +390,7 @@ Além dos frameworks, também tivemos a oportunidade de receber feedbacks profes
 
 No decorrer dessa jornada, aprendemos que a engenharia de requisitos é fundamental para o sucesso de um projeto de software. Os frameworks estudados nos proporcionaram uma base sólida para identificar, documentar e comunicar os requisitos de forma eficaz. Através do Diagrama de Casos de Uso, das especificações de casos de uso e do User Story Mapping, conseguimos visualizar e compreender melhor as necessidades dos usuários, possibilitando um desenvolvimento mais assertivo e alinhado às expectativas. Ademais, a experiência de receber feedbacks e realizar as adaptações necessárias no Canvas PBB e no BDD nos mostrou a importância da flexibilidade e da adaptação durante o processo de desenvolvimento. Estar aberto a ajustes e melhorias contínuas é essencial para atendermos às mudanças e às evoluções que surgem ao longo do projeto.
 
-Em resumo, aprendemos com a engenharia de requisitos durante todo as unidades sobre o quaõ importante ela é para guiar no processo de construção de um software e percebemos que a comunicação entra como elemento chave para o sucesso da engenharia de requisitos e, consequentemente, para o desenvolvimento de um produto viável e que atenda as necessidades do cliente.
+Em resumo, aprendemos com a engenharia de requisitos durante todo as unidades sobre o quão importante ela é para guiar no processo de construção de um software e percebemos que a comunicação entra como elemento chave para o sucesso da engenharia de requisitos e, consequentemente, para o desenvolvimento de um produto viável e que atenda as necessidades do cliente.
 
 ## 5. A MELHORAR
 ### Unidade 1

@@ -5,7 +5,9 @@ repo_url: "https://github.com/mdsreq-fga-unb/2023.1-UniBuddy"
 
 theme:
   name: material
-  icon:
+  logo: assets/logoUniBuddy.png
+  favicon: assets/logoUniBuddy.png
+  icon: 
     repo: fontawesome/brands/github
   language: pt-BR
   palette: 
