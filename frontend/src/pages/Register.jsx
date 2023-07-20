@@ -18,6 +18,8 @@ const Register = () => {
     axios.defaults.headers.post['Content-Type'] = 'application/json';
     const [err, setError] = useState(null);
 
+    const [showModal, setShowModal] = useState(false);
+
     const navigate = useNavigate();
 
     const config = {
@@ -26,6 +28,13 @@ const Register = () => {
         }
       };
       
+      const openModal = () => {
+        setShowModal(true);
+      };
+
+      const closeModal = () => {
+        setShowModal(false);
+      };
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -34,6 +43,18 @@ const Register = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        if (!inputs.senha) {
+          setError("Digite a senha antes de registrar.");
+          return;
+        }
+        if (!inputs.email) {
+          setError("Digite o email antes de registrar.");
+          return;
+        }
+        if (!inputs.nomeCompleto) {
+          setError("Digite o nome antes de registrar.");
+          return;
+        }
         console.log(inputs);
         try {
             const res = await axios.post("https://nice-puce-lovebird-cape.cyclic.app/usuarios/registro", inputs, config);
@@ -50,10 +71,37 @@ const Register = () => {
         }
       };
 
+      //campos obrigatorios : nome, email, senha, telefone
+
 
     return (
         <div className="auth">
             <img className="carro" src={"https://cdn-icons-png.flaticon.com/128/2766/2766737.png"} alt="carro" />
+            <div className="info-button">
+              <button onClick={openModal}>ℹ</button>
+            </div>
+            {showModal && (
+              <div className="modal">
+                <div className="modal-content">
+                  <h2>Regras dos Campos</h2>
+                  <ul>
+                    <li>
+                      Nome Completo: Apenas letras e espaços são permitidos.
+                    </li>
+                    <li>
+                      Email : Deve ser um email válido.
+                    </li>
+                    <li>
+                      Telefone: Deve ser um número de telefone válido.
+                    </li>
+                    <li>
+                      Senha : É um campo obrigatório.
+                    </li>
+                  </ul>
+                  <button onClick={closeModal}>Fechar</button>
+                </div>
+              </div>
+            )}
             <h1>Crie o seu Perfil</h1>
             <form>
                 <input required type="text" placeholder="Nome Completo" name="nomeCompleto" onChange={handleInputChange}/>
